@@ -4,7 +4,12 @@
 @import"{{ site.theme }}";
 
 .page-header{
-  color:#ffff;
-  background-color:#007CFF;
+  color: #ffff;
+  background-color: #007CFF;
   }
 
+.main-content {
+  h1 {
+   color: #007CFF;
+ }
+}
