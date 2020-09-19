@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## FRC Training
 
 You can use the [editor on GitHub](https://github.com/mjwhite8119/FRCTraining/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
