@@ -1,6 +1,6 @@
-# Introduction to Motion Control
+## Motion Control
 
-## Open Loop Motion Control
+### Open Loop Motion Control
 Basic forward, backward, left, and right motion with no feedback control from sensors such as an encoder or a gyro. 
 
 Open loop diagram...
@@ -11,7 +11,7 @@ Explain PWM signals.
 
 Use time and velocity to move a specified distance.
 
-## Closed Loop Motion Control
+### Closed Loop Motion Control
 
 Closed loop control using encoders and PID.
 
