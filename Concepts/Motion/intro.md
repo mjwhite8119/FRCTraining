@@ -18,6 +18,6 @@ Closed loop control using encoders and PID.
 Closed loop diagram...
 
 <h3><span style="float:left">
-<a href="../Kinematics/intro.md">Previous</a></span>
+<a href="../Kinematics/intro">Previous</a></span>
 <span style="float:right">
-<a href="../Trajectory/intro.md">Next</a></span></h3>
+<a href="../Trajectory/intro">Next</a></span></h3>
