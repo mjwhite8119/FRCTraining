@@ -1,4 +1,4 @@
-## Introduction
+## FRC Programmer Training
 
 This site host training material for teams involved in the First Robotics Competition (FRC). The subjects that will be covered in this course of training include:
 
@@ -6,9 +6,10 @@ This site host training material for teams involved in the First Robotics Compet
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md)
   - [Training Robot](Tools/trainingRobot.md)
-- Programming Languages
+- Programming
   - [Java](Languages/Java/intro.md)
   - [C++](Languages/CPP/intro.md)
+  - [WPILib](Languages/CPP/wpi.md)
 - Robotics Concepts
   - [Robot Structure](Concepts/RobotStructure/intro.md)
   - [Geometry](Concepts/Geometry/intro.md)
