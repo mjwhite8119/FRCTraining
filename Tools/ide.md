@@ -8,6 +8,14 @@ Once you have the PlatformIO plugin installed the FRCRobot code can be cloned fr
 - You'll then be prompted to enter a directory location on your local machine in which to store the project.
 - Finally, open the project in VSCode.
 
+Edit file connectWiFi.h to add your WiFi SSID and password.
+
+Open a terminal and type the command:
+
+ `run -vv -e esp32dev -t uploadfs`
+ 
+This is required to load the HTML and CSS files into the ESP32 SPIFFS file system. 
+
 <h3><span style="float:left">
 <a href="trainingRobot">Previous</a></span>
 <span style="float:right">
