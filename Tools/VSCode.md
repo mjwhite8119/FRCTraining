@@ -8,6 +8,4 @@ Here are some videos that give you a good introduction to VSCode:
 [How to Install Visual Studio Code on Mac](https://www.youtube.com/watch?v=tCfbi5PF1y0)
 
 <h3><span style="float:left">
-<a href="../index">Previous</a></span>
-<span style="float:right">
-<a href="git">Next</a></span></h3>
+<a href="../index">Home</a></span>
