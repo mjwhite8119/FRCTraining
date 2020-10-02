@@ -1,5 +1,3 @@
-## FRC Programmer Training
-
 This site host training material for teams involved in the First Robotics Competition (FRC). The subjects that will be covered in this course of training include:
 
 - Development Tools
