@@ -1,4 +1,4 @@
-## <a name="code"></a>Gyroscope and Angular Motion
+# <a name="code"></a>Lesson 6 - Gyroscope and Angular Motion
 Add in the gyroscope and use it to introduce angular motion.
 
 <h3><span style="float:left">

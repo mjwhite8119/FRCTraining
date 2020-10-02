@@ -1,4 +1,5 @@
 # Git Repository
+Instructions on how we'll be using GitHub...
 
 <h3><span style="float:left">
 <a href="vscode">Previous</a></span>

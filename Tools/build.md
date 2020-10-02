@@ -1,7 +1,7 @@
-## <a name="build"></a>Robot Construction
-Well, here's what I have so far... Probably not the final build but it shows all of the hardward components that will be on the robot.
+# <a name="build"></a>Robot Construction
+Picture of the prototype...
 
-![Robot photo](../images/FRCRobot/FRCRobot.002.jpeg)
+![Robot photo](../images/FRCRobot/FRCRobot.010.jpeg)
 
 Wiring diagram...
 

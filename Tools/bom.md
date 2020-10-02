@@ -1,4 +1,4 @@
-## <a name="bom"></a>Robot Hardware Components
+# <a name="bom"></a>Robot Hardware Components
 The links in this BOM will show multiple pieces for most products.  It's assumed that teams will want to build more than one robot and this will reduce the cost per unit. Single pieces are available but at a higher cost per item.  Most items come with the screws and wires. Some additional hardware items maybe required.
 - [ESP32 ESP-32S WiFi Development Board NodeMCU-32S](https://www.amazon.com/dp/B086MGH7JV/?coliid=I25TTO5GWWP44Q&colid=18A3P3KX2X6RJ&psc=1&ref_=lv_ov_lig_dp_it)
 - [L298N Motor Drive Controller Board](https://www.amazon.com/gp/product/B07PDDZM9L/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
