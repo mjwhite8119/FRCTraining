@@ -1,5 +1,5 @@
 # <a name="code"></a>Lesson 3 - Adding Wheel Encoders
-In <i>FRCRobot-version-3</i> we will learn about two major topics in robotics programming, encoders and interrupts. This version adds wheel encoders to the project. In order to do this we will have to learn about both external interrupts and timer interrupts.
+In <i>[FRCRobot-lesson-3](https://github.com/mjwhite8119/FRCRobot/tree/FRCRobot-lesson-3)</i> we will learn about two major topics in robotics programming, encoders and interrupts. This version adds wheel encoders to the project. In order to do this we will have to learn about both external interrupts and timer interrupts.
 
 An explaination of wheel encoders can be found in these videos:
 - Video1

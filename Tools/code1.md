@@ -17,6 +17,13 @@ The <i>Command</i> class accepts a direction and a duration to move (1, 2, or 3 
 
 ![Command](../images/FRCRobot/FRCRobot.002.jpeg)
 
+## Controlling Motors
+From the diagram above you can see that the <i>Robot</i> class contains the <i>DriveTrain</i> that has a left and right <i>Wheel</i> that are attached to <i>DCMotor</i>s.  In order to move the motors you need to send them a direction, and a PWM signal that determines how fast they move. This is done from the `applyPower()` function that takes the two parameters `dir` and `PWM`.  A PWM signal value can be between 0 and 255, although the motor will normally not run until the value reaches at least 160 PWM. In this first lesson the PWM signal is set to 190. In the next lesson we'll be able to control this value. The motor will keep running until a PWM value of zero is sent to the function.
+
+The `isRunning()` function can be called to find out if the motor is running. The <i>MotorPinGroup</i>, which is defined in the `config.h` file, tells the program which of the microcontroller's GPIO pins the motor is using.
+
+![DCMotor](../images/FRCRobot/FRCRobot.006.jpeg)
+
 <h3><span style="float:left">
 <a href="trainingRobot">Previous</a></span>
 <span style="float:right">
