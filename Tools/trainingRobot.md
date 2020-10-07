@@ -7,9 +7,10 @@ The code is installed on a small Arduino based training robot that uses an ESP32
 - [Lesson 1 - Basic Robot Structure](code1)
 - [Lesson 2 - Controlling Motor PWM](code2)
 - [Lesson 3 - Adding Wheel Encoders](code3)
-- [Lesson 4 - Open Loop Motor Control](code4)
-- [Lesson 5 - Closed Loop Motor Control](code5)
-- [Lesson 6 - Gyroscope and Angular Motion](code6)
+- [Lesson 4 - Open Loop Velocity Control](code4)
+- [Lesson 5 - Closed Loop Velocity Control](code5)
+- [Lesson 6 - Closed Loop Position Control](code6)
+- [Lesson 7 - Gyroscope and Angular Motion](code7)
 
 ## Hardware Components and Contruction
 To build the robot for these lessons you will need to get the following components and follow the construction steps:

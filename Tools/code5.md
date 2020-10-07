@@ -1,4 +1,4 @@
-# <a name="code"></a>Lesson 5 - Closed Loop Motor Control
+# <a name="code"></a>Lesson 5 - Closed Loop Velocity Control
 Introduce the PID loop to control the speed of each motor....
 
 ## Closed Loop Control
