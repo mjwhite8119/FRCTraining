@@ -1,7 +1,21 @@
 # <a name="code"></a>Lesson 4 - Open Loop Motor Control
 Up to this point we have been using PWM signals to directly power the motors. To simplify our motion control commands it would be better to send a signal between -1 and +1, where -1 is full speed backwards and +1 is full speed forward. This gives us a smooth transition of speed values which are easy to understand and hides the messy details of the PWM signals. 
 
-Explain Open Loop Control...
+Another lesson objective is to begin to understand <i>Control Systems Theory</i>.  Control systems are used extensively in robotics.
+
+## Open Loop Control
+
+Talk about open loop..
+
+Open loop diagram...
+
+## Wheel Speed Proportional Values
+
+wheel speeds need to float values...
+
+## Drivetrain Charaterization
+
+Talk about static, velocity, acceleration...
 
 <!-- ![Robot Model](../images/FRCRobot/FRCRobot.001.jpeg) -->
 

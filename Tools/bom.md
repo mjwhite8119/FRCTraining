@@ -8,6 +8,7 @@ The links in this BOM will show multiple pieces for most products.  It's assumed
 - [I2C Display Module 0.91 Inch](https://www.amazon.com/dp/B08CDN5PSJ/?coliid=IPPZF5KYF3ZDQ&colid=18A3P3KX2X6RJ&psc=1&ref_=lv_ov_lig_dp_it)
 - [18650 Battery Holder with ON/Off Switch](https://www.amazon.com/gp/product/B071DF4ZFG/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1)
 - [Samsung 25R 18650 2500mAh 20A Battery](https://www.18650batterystore.com/18650-p/samsung-25r-18650.htm?gclid=CjwKCAjwkoz7BRBPEiwAeKw3q0UdWyndKWW0d0Z4SdPLWF9pgRI892BRPVXSbqOe6H6sriTIbdVDzhoC-gMQAvD_BwE)
+- [18650 Battery Charger](https://www.amazon.com/EBL-Universal-Battery-Rechargeable-Batteries/dp/B07PRJRHHB/ref=sr_1_4?crid=3Q8MO89GSELLD&dchild=1&keywords=18650+charger&qid=1602111457&sprefix=18650+%2Caps%2C208&sr=8-4)
 - [1" Caster Wheels Single Wheel Swivel Casters](https://www.amazon.com/gp/product/B07TXP54KG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
 
 ## ESP32 Microcontroller

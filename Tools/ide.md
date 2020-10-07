@@ -15,9 +15,10 @@ Under the `include` directory of the project you will find a file called <i>conn
 
 `// inline const char* password = "PASSWORD";`
 
-Uncomment these lines and add your WiFi SSID and password.  When you start the robot your WiFi router will assign it an IP address which will be displayed on the OLED display.  You will need this address to open the web page used as the controller. Connect a UBS cable from your computer to the ESP32 to compile and upload the code. 
+Uncomment these lines and add your WiFi SSID and password.  When you start the robot your WiFi router will assign it an IP address which will be displayed on the OLED display.  You will need this address to open the web page used as the controller. 
 
-Click the upload `->` link in VSCode to compile and upload, and then press the <i>BOOT</i> button on the ESP32 microcontroller until the upload starts.
+## Compile and Upload Code to the ESP32
+Connect a UBS cable from your computer to the ESP32.  Click the upload `->` link in the status bar at the bottom of VSCode to compile and upload. If the upload fails to start you may have to press the <i>BOOT</i> button on the ESP32 microcontroller until the upload starts.
 
 ![Task Bar](../images/FRCRobot/FRCRobot.009.jpeg)
 
