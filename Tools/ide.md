@@ -22,16 +22,7 @@ Connect a UBS cable from your computer to the ESP32.  Click the upload `->` link
 
 ![Task Bar](../images/FRCRobot/FRCRobot.009.jpeg)
 
-You're all done!  You don't need to read the next section unless you want to change how the robots' web page controller looks and functions.
-
-## Updating HTML and CSS Files
-The ESP32 contains a Serial Peripheral Interface Flash File System (SPIFFS). SPIFFS is a lightweight filesystem created for microcontrollers with a flash memory chip.  For our project we use this flash memory to store the HTML and CSS files that are used by the controller.  If you want to make any changes to these files then you would need to reload them into the ESP32 flash memory.  This does not happen when you do a normal code upload, which goes into program memory.  You must use a special command to upload into SPIFFS.
-
-Open a terminal and type the command:
-
- `run -vv -e esp32dev -t uploadfs`
- 
-All of the files that are in the <i>data</i> directory will be uploaded. 
+You're all done! 
 
 <h3><span style="float:left">
 <a href="trainingRobot">Previous</a></span>
