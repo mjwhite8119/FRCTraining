@@ -18,8 +18,6 @@ The first parameter is the GPIO pin that the will detect the interrupt.  This is
 
 The main thing to consider when coding an ISR is to keep the routine short.  The routine code block must complete before the next interrupt fires.  This means that you cannot have a `delay()` in the routine since that will most likely still be active when the next interrupt fires.  Another piece of code that takes a long time to run is a serial print.  Serial prints need to write out to the terminal which takes a long time.    
 
-A detailed explaination of interrupts can be found on [Nick Gammons] site (http://gammon.com.au/interrupts)
-
 The following diagram of the <i>Encoder</i> class shows the encoder IR sensor attached via the GPIO pin to the ISR.  The ISR calls the code block `encoderFired()` to be executed. This code block increments or decrements the `pulses` variable.  The `pulses` variable is declared as `volatile` since it is referenced outside of the ISR and may be changed during the course of an interrupt. This tells the compiler that such variables might change at any time, and thus the compiler must reload the variable whenever you reference it, rather than relying upon a copy it might have in a processor register.
 
 Interrupt service routines must be declared to be executed in instruction RAM (IRAM). The execution of a function called by an interrupt is blocking, meaning that it is necessary to wait for the end of its execution before any other code can continue.  Usually the code is executed directly in the flash memory of the microcontroller. It is possible to move the function to the internal RAM of the ESP32 which is much faster. This is done by placing the `IRAM_ATTR` attribute just before the name of the function like so:
@@ -48,6 +46,10 @@ And finally start the timer running, telling it how long to run for. In our case
 Notice the word <i>periodic</i> in the timer setup.  This tells us that the timer will reset itself to zero after the timeout period and start counting up to the timeout period again. Therefore, our ISR will execute every 50 micro seconds.
 
 ![DCMotor](../images/FRCRobot/FRCRobot.008.jpeg)
+
+## Other References
+A detailed explaination of interrupts for the Arduino can be found on [Nick Gammons](http://gammon.com.au/interrupts) site.
+
 
 <h3><span style="float:left">
 <a href="code2">Previous</a></span>
