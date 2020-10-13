@@ -1,9 +1,8 @@
 # <a name="build"></a>Robot Construction
 Picture of the prototype...
 
-![Robot photo](../images/FRCRobot/FRCRobot.010.jpeg)
+![Robot photo](../images/FRCRobot/FRCRobot.013.jpeg)
 
-Wiring diagram...
 
 <h3><span style="float:left">
 <a href="bom">Previous</a></span>

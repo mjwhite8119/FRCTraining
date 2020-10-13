@@ -11,6 +11,10 @@ The links in this BOM will show multiple pieces for most products.  It's assumed
 - [18650 Battery Charger](https://www.amazon.com/EBL-Universal-Battery-Rechargeable-Batteries/dp/B07PRJRHHB/ref=sr_1_4?crid=3Q8MO89GSELLD&dchild=1&keywords=18650+charger&qid=1602111457&sprefix=18650+%2Caps%2C208&sr=8-4)
 - [1" Caster Wheels Single Wheel Swivel Casters](https://www.amazon.com/gp/product/B07TXP54KG/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
 
+## Prototype
+
+![Robot photo](../images/FRCRobot/FRCRobot.013.jpeg)
+
 ## ESP32 Microcontroller
 
 [Getting started with ESP32](https://dronebotworkshop.com/esp32-intro/)
@@ -30,6 +34,8 @@ The links in this BOM will show multiple pieces for most products.  It's assumed
 ## OLED Display
 
 [Using OLED Displays](https://dronebotworkshop.com/oled-arduino/)
+
+
 
 <h3><span style="float:left">
 <a href="ide">Previous</a></span>
