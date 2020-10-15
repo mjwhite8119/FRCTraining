@@ -5,7 +5,7 @@ This site host training material for teams involved in the First Robotics Compet
   - [Git](Tools/git.md)
   - [Training Robot](Tools/trainingRobot.md)
 - Programming
-  - [Introduction to Programming](Languages/intro.md)
+  - [Introduction to Programming](Languages/Intro/intro.md)
   - [The Java Programming Language](Languages/Java/intro.md)
   - [The C++ Programming Language](Languages/CPP/intro.md)
   - [The WPI Robotics Library](Languages/WPILib/wpilib.md)
