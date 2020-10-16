@@ -8,7 +8,7 @@ The main program creates a <i>Robot</i> class that is composed of a <i>DriveTrai
 ![Robot Model](../images/FRCRobot/FRCRobot.001.jpeg)
 
 ## Robot Controller
-In order to control the training robot we get the ESP32 microcontroller to display a WebSite on it's IP address. This is done in the <i>Controller</i> class.  For the first lesson we just display some buttons to move the robot in each direction for either 1, 2, or 3 seconds. The <i>Controller</i> class schedules the new command.
+In order to control the training robot we get the ESP32 microcontroller to display a WebSite on it's IP address. This is done in the <i>Controller</i> class.  For the first lesson we just display some buttons to move the robot in each direction for either 1, 2, or 3 seconds. The <i>Controller</i> class schedules the new command.  
 
 ![Robot Controller](../images/FRCRobot/FRCRobot.003.jpeg)
 

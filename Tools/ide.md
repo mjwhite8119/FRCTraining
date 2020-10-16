@@ -9,16 +9,20 @@ Once you have the PlatformIO plugin installed the FRCRobot code can be cloned fr
 - Finally, click the button to open the project in VSCode.
 
 ## Connecting the Robot to your WiFi
-Under the `include` directory of the project you will find a file called <i>connectWiFi</i>.h.  Open this file and locate the following lines:
+Follow these steps to connect the robot to your home WiFi:
 
-`// inline const char* ssid = "SSID";`
+1. Create a file under the `include` directory called `wifiConfig.h`.
+2. Paste the following two lines into the file.
 
-`// inline const char* password = "PASSWORD";`
+        inline const char* ssid = "SSID";
+        inline const char* password = "PASSWORD";
 
-Uncomment these lines and add your WiFi SSID and password.  When you start the robot your WiFi router will assign it an IP address which will be displayed on the OLED display.  You will need this address to open the web page used as the controller. 
+3. Add your WiFi SSID and password in place of SSID and PASSWORD.
 
 ## Compile and Upload Code to the ESP32
 Connect a UBS cable from your computer to the ESP32.  Click the upload `->` link in the status bar at the bottom of VSCode to compile and upload. If the upload fails to start you may have to press the <i>BOOT</i> button on the ESP32 microcontroller until the upload starts.
+
+After the upload completes your WiFi router will assign the robot an IP address which will be displayed on the OLED display.  You will need this address to open the web page used as the controller. 
 
 ![Task Bar](../images/FRCRobot/FRCRobot.009.jpeg)
 
