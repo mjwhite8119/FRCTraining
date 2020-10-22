@@ -10,7 +10,7 @@ A class is a representation of an object, idea, or concept in the real world.  A
 
 Examples of classes:
 
-![Classes](../../images/FRCRobot/FRCRobot.017.jpeg)
+<!-- ![Classes](../../images/FRCRobot/FRCRobot.017.jpeg) -->
 
 
 
