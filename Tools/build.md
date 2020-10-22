@@ -1,5 +1,5 @@
 # <a name="build"></a>Robot Construction
-Picture of the prototype...
+Images of the Training Robot.
 
 ![Robot photo](../images/FRCRobot/FRCRobot.013.jpeg)
 

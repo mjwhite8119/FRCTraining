@@ -47,7 +47,7 @@ Notice the word <i>periodic</i> in the timer setup.  This tells us that the time
 
 ![DCMotor](../images/FRCRobot/FRCRobot.008.jpeg)
 
-## References
+## Additional References
 FRC Documentation [Encoders - Software](https://docs.wpilib.org/en/latest/docs/software/sensors/encoders-software.html)
 
 A detailed explaination of interrupts for the Arduino can be found on [Nick Gammons](http://gammon.com.au/interrupts) site.

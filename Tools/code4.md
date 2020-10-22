@@ -21,11 +21,11 @@ The <i>DCMotor</i> model is very similar to that of lesson 3.  The difference is
 
 ![DCMotor](../images/FRCRobot/FRCRobot.015.jpeg)
 
-## Drivetrain Charaterization
+## Drivetrain Characterization
 
 Talk about static, velocity, acceleration...
 
-<!-- ![Robot Model](../images/FRCRobot/FRCRobot.001.jpeg) -->
+![Robot Model](../images/FRCRobot/FRCRobot.018.jpeg)
 
 
 <h3><span style="float:left">

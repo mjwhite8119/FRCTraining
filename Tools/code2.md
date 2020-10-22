@@ -11,7 +11,9 @@ For this lesson we'll only need the forward and backward controls.  We'll be abl
 
 The controls will still allow you to move forward or backward for 1, 2, or 3 seconds, but there are also slider controls to adjust the speed of each motor independently.  This opens up a lot more possibilities to control the robot. You can do a very wide or very tight turn depending on how you set the value of each wheel. You can still go straight forward and backwards (kind of) as long as you set the value of each wheel the same.
 
-One thing that you'll immediately notice is that you'll need to set the PWM value to at least 160. This is to overcome inertia of the motor and the weight of the robot. Once you get passed that value the speed starts to pick up quickly. If you set it to the maximum value and let it go for 3 seconds you're going to need a lot of runway. Please don't break my robot or run over any sleeping pets!
+One thing that you'll immediately notice is that you'll need to set the PWM value to at least 160 before the robot starts to move. This is to overcome inertia of the motor and the weight of the robot. Once you get passed that value the speed starts to pick up quickly. If you set it to the maximum value and let it go for 3 seconds you're going to need a lot of runway. Please don't run over any sleeping pets!
+
+![Speed PWM](../images/FRCRobot/FRCRobot.017.jpeg)
 
 <h3><span style="float:left">
 <a href="code1">Previous</a></span>
