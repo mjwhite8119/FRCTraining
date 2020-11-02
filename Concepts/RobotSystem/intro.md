@@ -1,4 +1,6 @@
-## Robot Structure
+## Robot System
+
+![Robot System](../../images/FRCConcepts/FRCConcepts.001.jpeg)
 
 <h3><span style="float:left">
 <a href="../../index">Previous</a></span>
