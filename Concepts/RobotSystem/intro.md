@@ -47,6 +47,10 @@ Robots rely heavily on <i>Active Ranging</i> for obstacle detection and avoidanc
 ![Robot System](../../images/FRCConcepts/FRCConcepts.004.jpeg)
 
 # Motion Control
+- Path and Action Planners
+- Controllers
+- State Estimators
+- Recovery Algorithms
 
 ![Robot System](../../images/FRCConcepts/FRCConcepts.005.jpeg)
 
