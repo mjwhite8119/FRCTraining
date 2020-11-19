@@ -9,6 +9,10 @@ Git is a <i>Version Control System (VCS)</i> for keeping track of changes in fil
 
 - Other users can clone the repository, which gives them a local version of it that they can work on independently.  Therefore, you can have an entire development team working on the same project.
 
+If you are on Windows you may need to download git bash from the following URL:
+
+[Git bash for Windows](https://gitforwindows.org)
+
 ## Initializing the Repository
 Let's start a new project at the command line:
 
