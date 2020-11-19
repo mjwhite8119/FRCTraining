@@ -13,8 +13,11 @@ Git is a <i>Version Control System (VCS)</i> for keeping track of changes in fil
 Let's start a new project at the command line:
 
 `$ mkdir MyProject`
+
 `$ cd MyProject`
+
 `$ mkdir lib src`
+
 `$ cd src`
 
 Create your first project file using a command line editor and enter the following lines:
@@ -44,7 +47,8 @@ Git comes with a tool called `git config` that lets you get and set configuratio
 
 The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:
 
-`$ git config --global user.name 'Martin White'` 
+`$ git config --global user.name 'John Doe'` 
+
 `$ git config --global user.email johndoe@example.com`
 
 To view your configuration you can use:
@@ -59,6 +63,7 @@ Now that we have initialized and configured the repository we can now stage and 
 ![Stage and Commit](../images/FRCTools/FRCTools.002.jpeg)
 
 First, let's get a status from Git by typing the following command and reviewing the output:
+
 `$ get status`
 
       On branch master
@@ -96,6 +101,7 @@ Our files are now in the staging area and are ready to be committed to the repos
 The output tells us that this is the initial commit to the repository and lists the files that have been committed.  The value `8877fba` is the last few characters of a unique commit tag.
 
 We can always see what status the Git repository is in by typing:
+
 `$ git status`
 
       On branch master
@@ -145,6 +151,7 @@ The primary reason for creating repositories is so that other people can view an
 Then create a local directory in which to store the repository and change into that directory:
 
 `$ mkdir MyClonedProject`
+
 `$ cd MyClonedProject/`
 
 Clone the repository:
@@ -162,13 +169,13 @@ The output will tell you how many file objects have been downloaded.  Conceptual
 
 ![Clone Repository](../images/FRCTools/FRCTools.008.jpeg)
 
-## The README.md File
-
-## The `.gitignore` File
-
 ## Branching
 
 ## Merging
+
+## The README.md File
+
+## The `.gitignore` File
 
 <h3><span style="float:left">
 <a href="../index">Home</a></span>
