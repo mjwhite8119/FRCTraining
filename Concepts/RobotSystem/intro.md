@@ -88,6 +88,6 @@ The programming team is primarily tasked with controlling the robot.  Robot cont
 ![Robot System](../../images/FRCConcepts/FRCConcepts.005.jpeg)
 
 <h3><span style="float:left">
-<a href="../../index">Previous</a></span>
+<a href="index">Previous</a></span>
 <span style="float:right">
 <a href="sensors">Next</a></span></h3>
