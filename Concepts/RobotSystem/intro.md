@@ -1,4 +1,5 @@
-# Robot System
+# Robot Systems
+A robot is largely classified into hardware and software. Mechanical components, motors, gears, circuits, sensors are categorized as hardware. The microcontroller firmware that drives or controls the robot’s hardware, and the application software that builds maps, navigates, creates motion and perceives environment based on sensor data are classified as software.
 
 ![Robot System](../../images/FRCConcepts/FRCConcepts.001.jpeg)
 
