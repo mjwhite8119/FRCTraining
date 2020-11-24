@@ -90,4 +90,4 @@ The programming team is primarily tasked with controlling the robot.  Robot cont
 <h3><span style="float:left">
 <a href="../../index">Previous</a></span>
 <span style="float:right">
-<a href="../Geometry/intro">Next</a></span></h3>
+<a href="sensors">Next</a></span></h3>
