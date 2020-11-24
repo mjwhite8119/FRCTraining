@@ -10,7 +10,7 @@ This site host training material for teams involved in the First Robotics Compet
   - [The C++ Programming Language](Languages/CPP/intro.md)
   - [The WPI Robotics Library](Languages/WPILib/wpilib.md)
 - Robotics Concepts
-  - [Robot System](Concepts/RobotSystem/intro.md)
+  - [Robot Systems](Concepts/RobotSystem/index.md)
   - [Geometry](Concepts/Geometry/intro.md)
   - [Kinematics](Concepts/Kinematics/intro.md)
   - [Motion Control](Concepts/Motion/intro.md)
