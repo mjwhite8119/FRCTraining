@@ -60,11 +60,29 @@ Pneumatic actuators work on compressed air.  Used for fast on/off tasks with a h
 
 ![Pneumatic Actuator](../../images/FRCConcepts/FRCConcepts.010.jpeg)
 
-# Motion Control
-- Path and Action Planners
-- Controllers
-- State Estimators
-- Recovery Algorithms
+# Robot Control
+The programming team is primarily tasked with controlling the robot.  Robot control can be grouped into a few broad categories some of which are explained below.
+
+- **Motion Control** 
+            In order to ensure a smooth transition from one physical state to the next it's important to ensure that the robot does not undergo any sudden accelerations and decelerations.  Severe sudden movements of the robot will over time require more maintenance and could cause damage.
+
+- **PID Control**
+            PID control is at the core of many control algorithms.  PID control ensures that the robot arrives at its target state in the most efficient manner while observing all of its physical contraints.  PID stands for <i>Proportional, Integral, Devirative</i>.
+
+- **Localization**
+            In order to control a robot we always need to know what its position and orientation in space is at all times. Localization routines deal with this task and are also referred to as <i>State Estimation</i>. 
+
+- **Projectile Motion**
+            Projectile motion is concerned with firing some kind of projectile with the goal of hitting a target.  Calculations used in these motion algorithms are taken directly from the study on Newtonian physics.
+
+- **Mapping**
+            Mapping is a process that a robot might undertake in order to know what its working environment is.  Mapping is done using laser range finders and/or cameras.  The resulting map is stored in memory for contiuous use.
+
+- **Path Planning**
+            In order for a robot to get from its current physical state to its target state it needs to plan a path. This path may not nessicarily be a straight line since it may need to route around objects as described in a map of its environment.      
+
+- **Recovery Routines** 
+            At some point the robot is going to be confronted with an unexpected situation that gets in the way of completing its mission.  For instance, some obstical like a person might step into its planned path.  In this situation a recovery algorithm might kick in to route around the person.                           
 
 ![Robot System](../../images/FRCConcepts/FRCConcepts.005.jpeg)
 
