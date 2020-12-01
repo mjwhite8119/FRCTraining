@@ -1,13 +1,16 @@
 # Robot Systems
-In order to write programs for <i>First Robotics</i> you need to understand the subject area that you are automating. This section will help you understand robotic systems in general so as you can communicate effectively with other students who are on the electrical and mechanical teams.
+In order to write programs for <i>First Robotics</i> you need to understand the subject area that you are automating. This section will give you a general understanding of robotic systems so as you can communicate effectively with other students who are on the Electrical and Mechanical teams.
 
 - [Introduction to Robotic Systems](intro.md)
 
-- [Sensors used for Perception](sensors.md)
+- Sensors used in First Robotics
 
-- [Actuators](actuators.md)
+- Actuators used in First Robotics
 
-- [Network Communcations](networking.md)
+- [Control Algorithms](control.md)
+
+- Robot Hardware
+<!-- - [Network Communcations](networking.md) -->
 
 <h3><span style="float:left">
 <a href="../../index">Previous</a></span>
