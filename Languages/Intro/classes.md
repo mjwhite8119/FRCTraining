@@ -39,6 +39,15 @@ It's often a good idea to hide parts of a classes' implementation by making meth
 
 ![Encapsulation](../../images/FRCProgramming/FRCProgramming.005.jpeg)
 
+## Inheritance
+Different kinds of objects often have a certain amount in common with each other. Mountain bikes, road bikes, and tandem bikes, for example, all share the characteristics of bicycles (current speed, current pedal cadence, current gear). Yet each also defines additional features that make them different: tandem bicycles have two seats and two sets of handlebars; road bikes have drop handlebars, etc.
+
+When a class derives from another class. The child class will inherit all the `public` and `protected` properties and methods from the parent class. In addition, it can have its own properties and methods. An inherited class is defined by using the extends keyword. We often use the terms <i>sub-class</i> and <i>superclass</i> when we talk about inheritance.
+
+![Inheritance](../../images/FRCProgramming/FRCProgramming.006.jpeg)
+
+When a property or class has the `protected` modifier it means that a sub-class may access the variable but it is still `private` to the superclass.  Therefore, the variable <i>brand</i> is only accessible from the class <i>Car</i>.
+
 <h3><span style="float:left">
 <a href="intro.md">Home</a></span>
 <span style="float:right">
