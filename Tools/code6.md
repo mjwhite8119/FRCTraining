@@ -1,5 +1,8 @@
-# <a name="code"></a>Lesson 6 - Closed Loop Position Control
-Control the position of the robot using closed loop control.
+# <a name="code"></a>Lesson 6 - Odometry
+Odometry involves using sensors on the robot to create an estimate of the position of the robot on the field. In FRC, these sensors are typically encoders and a gyroscope to measure robot angle.
+
+## Robot Geometry
+Introduce the concept of a <i>Pose</i>
 
 <h3><span style="float:left">
 <a href="code5">Previous</a></span>

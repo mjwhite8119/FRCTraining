@@ -1,4 +1,4 @@
-## Introduction to Robot Kinematics
+## Introduction to Robot Kinematics & Odometry
 
 <h3><span style="float:left">
 <a href="../Geometry/intro">Previous</a></span>

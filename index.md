@@ -1,9 +1,9 @@
 This site host training material for teams involved in the First Robotics Competition (FRC). The subjects that will be covered in this course of training include:
 
-- Development Tools
+- Development & Learning Tools
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md)
-  - [Training Robot](Tools/trainingRobot.md)
+  - [BabyBot](Tools/trainingRobot.md)
 - Programming
   - [Introduction to Programming](Languages/Intro/intro.md)
   - [The Java Programming Language](Languages/Java/intro.md)
@@ -11,8 +11,8 @@ This site host training material for teams involved in the First Robotics Compet
   - [The WPI Robotics Library](Languages/WPILib/wpilib.md)
 - Robotics Concepts
   - [Robot Systems](Concepts/RobotSystem/index.md)
-  - [Geometry](Concepts/Geometry/intro.md)
-  - [Kinematics](Concepts/Kinematics/intro.md)
+  - [Robot Geometry](Concepts/Geometry/intro.md)
+  - [Kinematics & Odometry](Concepts/Kinematics/intro.md)
   - [Motion Control](Concepts/Motion/intro.md)
   - [Paths and Trajectories](Concepts/Trajectory/intro.md)
   - [Vision](Concepts/Vision/intro.md)
