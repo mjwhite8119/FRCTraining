@@ -8,11 +8,10 @@ The Bill-of-Materials and construction of this robot is described below. To setu
 - [Lesson 1 - Basic Robot Structure](code1)
 - [Lesson 2 - Controlling Motor PWM](code2)
 - [Lesson 3 - Adding Wheel Encoders](code3)
-- [Lesson 4 - Open Loop Velocity Control](code4)
-- [Lesson 5 - Closed Loop Velocity Control](code5)
-- [Lesson 6 - Odometry](code6)
-- [Lesson 7 - Gyroscope and Angular Motion](code7)
-- [Lesson 8 - Sensor Fusion](code8)
+- [Lesson 4 - Velocity Control & Kinematics](code4)
+- [Lesson 5 - Closed Loop PID Control](code5)
+- [Lesson 6 - Gyroscope and Angular Motion](code6)
+- [Lesson 7 - Odometry](code7)
 
 ## Hardware Components and Contruction
 To build the robot for these lessons you will need to get the following components and follow the construction steps:

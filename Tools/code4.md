@@ -1,14 +1,7 @@
-# <a name="code"></a>Lesson 4 - Open Loop Velocity Control
+# <a name="code"></a>Lesson 4 - Velocity Control & Kinematics
 Up to this point we have been using PWM signals to directly power the motors. To simplify our motion control commands it would be better to send a velocity value between -1 and +1, where -1 is full speed backwards and +1 is full speed forward. This gives us a smooth transition of velocity values which are easy to understand and hides the messy details of the PWM signals. 
 
-Another lesson objective is to begin to understand <i>Control Systems</i>.  Control systems are used extensively in robotics.
-
-## Open Loop vs Closed Loop Control
-There are two main control system mechanisms, <i>Open Loop</i> and <i>Closed Loop</i>.  For an open loop system you just set an input control signal and let it go. There's no adjustment along the way. The system doesn't self correct itself.  The only way to change the signal is through manual input. This is the system that we've been using so far to control our robot. We set a PWM value for the motor and that same PWM value remains until the system times out.  We'll continue to use the open loop system in this lesson.  
-
-An <i>Open Loop</i> verses <i>Closed Loop</i> system is shown below.  The closed loop system takes input from it's sensors and uses that information to adjust the control signal to the motor.  In the next lesson we'll switch to a closed loop system. 
-
-![Open Loop Control](../images/FRCRobot/FRCRobot.010.jpeg)
+The other main topic is the <i>Kinematics</i> of the <i>Differential Drive</i> robot.  Kinematics is the study of the geometry of motion. Kinematics is the branch of classical mechanics that describes various aspects of motion such as velocity, acceleration, displacement, time, and trajectory.  The word “kinematics” comes from a Greek word “kinesis” meaning motion, and is related to other English words such as “cinema” (movies) and “kinesiology” (the study of human motion).
 
 ## Wheel Velocity Proportional Values
 So instead of sending a PWM signal to the motors we just want to send a value between -1 and +1.  Where +1 is full speed forward and -1 is full speed backward. From the perspective of the controller that will look like this:
@@ -33,13 +26,11 @@ Once we know the distance for each wheel rotation we can figure out how the robo
 
 ## Differential Drive Kinematics
 
-Since the BabyBot is a <i>Differential Drive</i> robot we need to understand its kinematics.  Kinematics is the study of the geometry of motion. Kinematics is the branch of classical mechanics that describes various aspects of motion such as velocity, acceleration, displacement, time, and trajectory.  There is no description of the forces that cause the motion to happen. The word “kinematics” comes from a Greek word “kinesis” meaning motion, and is related to other English words such as “cinema” (movies) and “kinesiology” (the study of human motion).
-
-An explanation of the math is described in the <a href="../Concepts/Kinematics/intro">Kinematics & Odometry</a> section of this training guide, but the main idea is that we take the speed of each of the two wheels in order to figure out the overall speed of the chassis.  We'll calculate the linear velocity of the robot in the **X** direction together with its angular velocity. The angular velocity is the movement around the robots' **Z** axis.  See the section on <a href="../Concepts/Geometry/intro">Robot Geometry</a> for more information to how to determine a robots' position and orientation.  Notice that there is no movement in the **Y** direction.  This is because the robot cannot move instantaneously sideways.
+Since the BabyBot is a <i>Differential Drive</i> robot we need to understand its kinematics. An explanation of the math is described in the <a href="../Concepts/Kinematics/intro">Kinematics & Odometry</a> section of this training guide, but the main idea is that we take the speed of each of the two wheels in order to figure out the overall speed of the chassis.  We'll calculate the linear velocity of the robot in the **X** direction together with its angular velocity. The angular velocity is the movement around the robots' **Z** axis.  See the section on <a href="../Concepts/Geometry/intro">Robot Geometry</a> for more information to how to determine a robots' position and orientation.  Notice that there is no movement in the **Y** direction.  This is because the robot cannot move instantaneously sideways.
 
 ![Differential Drive Model](../images/FRCRobot/FRCRobot.027.jpeg)
 
-To implement all of this the <i>DriveTrain</i> class has been updated to include its kinematics.  Two new classes have been introduced to hold the required data.  The <i>DifferentialDriveWheelSpeeds</i> class simply groups the left and right wheel speeds into a single data structure. This is passed to the <i>toChassisSpeeds</i> function to calculate the overall linear and angular velocity of the robot. The resulting data is held in the <i>ChassisSpeeds</i> data structure. 
+To implement all of this, the <i>DriveTrain</i> class has been updated to include its kinematics.  Two new classes have been introduced to hold the required data.  The <i>DifferentialDriveWheelSpeeds</i> class simply groups the left and right wheel speeds into a single data structure. This structure is returned from the `getWheelSpeeds()` function and is passed to the `toChassisSpeeds()` function to calculate the overall linear and angular velocity of the robot. The resulting data is held in the <i>ChassisSpeeds</i> data structure. 
 
 ![Differential Drive Code](../images/FRCRobot/FRCRobot.028.jpeg)
 

@@ -1,8 +1,6 @@
-# <a name="code"></a>Lesson 6 - Odometry
-Odometry involves using sensors on the robot to create an estimate of the position of the robot on the field. In FRC, these sensors are typically encoders and a gyroscope to measure robot angle.
+# <a name="code"></a>Lesson 6 - Gyroscope and Angular Motion
+Add in the gyroscope and use it to introduce angular motion.
 
-## Robot Geometry
-Introduce the concept of a <i>Pose</i>
 
 <h3><span style="float:left">
 <a href="code5">Previous</a></span>
