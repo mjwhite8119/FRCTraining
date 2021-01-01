@@ -13,6 +13,10 @@ In other words, the wider the pulse width, the more average voltage applied to t
 ![PWM](../images/FRCRobot/FRCRobot.019.jpeg)
 
 ## Controlling the Robot
+The BabyBot has two wheels each connected to a motor.  The wheels are aligned on a common axis.  When both motors rotate forward or backward at the same speed then the robot will move in a straight line.  If one motor rotates faster than the other then the robot will take a curved path. One very useful feature of our robot is its ability to rotate on the spot which enables it to move in tight spaces.  This is acheived by rotating each motor in a different direction.
+
+![Differential Drive](../images/Kinematics&Odometry/Kinematics&Odometry.002.jpeg)
+
 For this lesson we'll only need the forward and backward controls.  We'll be able to control each wheel separately, so turning is still possible.  We just won't need a separate button for it.  Here's what our new controller will look like:
 
 ![Robot Controller](../images/FRCRobot/FRCRobot.004.jpeg)
