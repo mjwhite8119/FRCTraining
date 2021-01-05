@@ -16,15 +16,13 @@ Now that we have wheel encoders we can **Control the Velocity** of the robot, wh
 
 Lesson 5 sets up a **PID Loop** to control each individual motor so as the robot will travel in a straight line. Each motor is different and requires a different power level to produce a desired speed.  The PID loop is designed to take care of this.
 
-When we get to lesson 6 we'll have all the pieces that we need to setup our **Odometry** system. Odometry involves using sensors to estimate the position of the robot on the field.  To describe the data coming from our odometry we introduce the concept of a <i>Pose</i>. This is a data structure that holds the robots' position and orientation.
+Lesson 6 brings a **Gyro** into our robot system.  A gyro is used to keep track of the orientation of the robot.  Since our robot only operates in a 2D plane we only need to know one of the three orientation values.  For wheeled robots the orientation is also referred to as the heading.
 
 ![Lessons 5 & 6](../images/FRCRobot/FRCRobot.022.jpeg)
 
-Lesson 7 brings a **Gyro** into our robot system.  A gyro is used to keep track of the orientation of the robot.  Since our robot only operates in a 2D plane we only need to know one of the three orientation values.  For wheeled robots the orientation is also referred to as the heading.
+When we get to lesson 7 we'll have all the pieces that we need to setup our **Odometry** system. Odometry involves using sensors to estimate the position of the robot on the field.  To describe the data coming from our odometry we introduce the concept of a <i>Pose</i>. This is a data structure that holds the robots' position and orientation.
 
-Finally in lesson 8, we will combine the encoders and gyro together to give us a complete picture of the robots position and orientation.  Although it's possible to calculate the robots' heading using just the encoders, the gyro can give us a more accurate estimate of heading and is commonly used in FRC.  The combining of multiple sensors into our odometry system is called **Sensor Fusion**.
-
-![Lessons 7 & 8](../images/FRCRobot/FRCRobot.023.jpeg)
+![Lessons 7](../images/FRCRobot/FRCRobot.023.jpeg)
 
 So that's the plan. The code is installed on a small Arduino based training robot that uses an ESP32 microcontroller.  
 

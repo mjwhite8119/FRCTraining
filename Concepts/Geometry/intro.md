@@ -1,10 +1,46 @@
 ## Robot Geometry
+In order to control a robot it’s necessary to know its position and orientation — where it is at any particular time.  Its position in 3-D space is defined using the set of coordinates X, Y, and Z.  This coordinate system is called the Cartesian coordinate system.  When the robot moves from one position to another it’s referred to as a translation.  When it changes its direction then it has changed orientation.  The orientation of a robot is described in terms of Roll, Pitch, Yaw.  
 
-In order to describe the motion of an object, you must first describe its position — where it is at any particular time.  Moreover, the position needs to be specifed relative to a suitable reference frame.  When we are navigating in a car using a GPS system our reference frame is the Earth.  In the case of FRC, a suitable reference frame is the competition field.  The position of an object is generally represented by the variable **x**.
+![Position & Orientation](../../images/FRCGeometry/FRCGeometry.001.jpeg)
 
-The position of a robot can be represented as a point in 3D space.
+Moreover, the position needs to be specifed relative to a suitable reference frame.  When we are navigating in a car using a GPS system our reference frame is the Earth.  In the case of FRC, a suitable reference frame is the competition field.
 
-If the robot moves then this can be modelled using a transformation.
+![Position & Orientation](../../images/FRCGeometry/FRCGeometry.006.jpeg)
+
+Let's start by examining the orientation or rotation of the robot.  This is commonly done by using <i>Euler Angles</i>.
+
+## Euler Angles and Rotation
+The Euler angles are three angles introduced by Leonhard Euler to describe the orientation of an object with respect to a fixed coordinate system. The order in which you specify a change in orientation is <i>Yaw, Pitch, Roll</i>.  One way to remember this is to think of plane about to take off from an airport.  While it’s on the ground it can only change its heading, which is done by a Yaw rotation.  At take-off the pilot will pull up the nose, changing its Pitch.  Finally, once the plane is in the air it’s free to execute a Roll.  Moving from one orientation to another is called a <i>Rotation</i>.  
+
+A robot that can move in all three dimensions of space and can orient itself about all three axis would have 6-degrees-of-freedom (6-DOF).  An object in space can have at most only 6-degrees-of-freedom.  An example of such a robot would be a drone or aircraft. 
+
+![Yaw Pitch Roll](../../images/FRCGeometry/FRCGeometry.002.jpeg)
+
+Each Yaw, Pitch, Roll maneuver can be represented by a rotation matrix that uses sines and cosines to describe the offset from the previous orientation.
+
+![Rotation Matrix](../../images/FRCGeometry/FRCGeometry.003.jpeg)
+
+In <i>First Robotics</i> we don't use flying robots so we usually don't need to keep track of objects in 3D space.  The <i>WPI Library</i> therefore has a set of data structures that keeps track of things in 2D space. Since we're looking at Euler Angles let's first examine the <i>Rotation2d</i> class that keeps track of rotations in 2D space.  When creating an object from this class you can pass it a starting angle that describes a rotation offset from the (𝑥, 𝑦) orientation of the game field. This offset represents the orientation at which you placed the robot down on the field.  If no starting angle is passed then it's assumed that you aligned the robot with the fields' (𝑥, 𝑦) orientation.
+
+![Rotation2d Constructor](../../images/FRCGeometry/FRCGeometry.014.jpeg)
+
+Once you have a <i>Rotation2d</i> object you can continuously track the robots' orientation by adding or subtracting changes that are sensed from the gyro. This is done using the rotation matrixes shown in a previous diagram. 
+
+![Rotation2d Plus & Minus](../../images/FRCGeometry/FRCGeometry.015.jpeg)
+
+## Translation - Change in Position
+Translation is the change in position of an object. It's also referred to as <i>displacment</i> - how far has the object moved from the last position relative to a fixed frame of reference.  In our case, the fixed reference frame would be the competition field.  In order to represent how a robot changes its position we use the <i>Translation2d</i> data structure. When creating an object from this class you can pass in a starting position for the robot, which represents its (𝑥, 𝑦) displacement from the origin.  If no starting position is defined then it's assumed that the robot starts at the origin (0, 0).  Note that the origin of the reference frame can be different in various cases.  For the FRC field it's placed at the top left corner as you look down on the field.
+
+![Translation2d Constructor](../../images/FRCGeometry/FRCGeometry.010.jpeg)
+
+When the robot moves from one position to another you can update the <i>Translation2d</i> data structure by sending it the change in position since the last update. The change is added to the current position to represent the robots' new location.
+
+![Translation2d Translate](../../images/FRCGeometry/FRCGeometry.008.jpeg)
+
+## Robot Pose
+The common way to keep track of the position and orientation of a robot is to create a class called a <i>Pose</i>.  This class comprises the two subclasses described previously, namely <i>Translation2d</i> and <i>Rotation2d</i>.  The translation class keeps track of the robot’s position whereas the rotation keeps track of its orientation.  Why use translation and rotation instead of position and orientation?  We want to know where the robot is as it travels from one position to another.  We also want to know the robot’s heading as is rotates from one orientation to another.
+
+![Pose2d](../../images/FRCGeometry/FRCGeometry.017.jpeg)
 
 <h3><span style="float:left">
 <a href="../RobotStructure/intro">Previous</a></span>
