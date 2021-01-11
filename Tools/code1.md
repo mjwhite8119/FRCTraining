@@ -7,6 +7,11 @@ The main program creates a <i>Robot</i> class that is composed of a <i>DriveTrai
 
 ![Robot Model](../images/FRCRobot/FRCRobot.001.jpeg)
 
+## Main Program
+When the main program starts it will create any objects and variables at the top of the file and then run all of the code that's in the `setup()` function.  Once the `setup()` function has finished the main `loop()` will be run.  This loop continues until the program exits.  This program structure is called a <i>Super Loop</i>.  The super loop will run each task in order. After finishing each task it will start over with the first task. You can also implement <i>Interupt Service Routines (ISR's)</i> that will go off and process other code and then return to the point at which the interupt occurred and continue processing. We'll look more at <i>ISR's</i> in a later lesson.    
+
+![Super Loop](../images/FRCConcepts/FRCConcepts.014.jpeg)
+
 ## Robot Controller
 In order to control the training robot we get the ESP32 microcontroller to display a WebSite on it's IP address. This is done in the <i>Controller</i> class.  For the first lesson we just display some buttons to move the robot in each `direction` for a `period` of either 1, 2, or 3 seconds. The <i>Controller</i> class then schedules the new command to be run.  
 

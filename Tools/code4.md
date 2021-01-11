@@ -18,11 +18,11 @@ The <i>DCMotor</i> model is very similar to that of lesson 3.  The difference is
 
 Instead of outputting the number of pulses per second to the OLED, we're now going to display the speed of our robot in meters per/second.  To do this we'll need to get the diameter of our wheels so that we can calculate the linear distance travelled for each wheel rotation.  This process is shown in the following diagram.
 
-![Wheel Linear Distance](../images/Kinematics&Odometry/Kinematics&Odometry.004.jpeg)
+![Wheel Linear Distance](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.004.jpeg)
 
 Once we know the distance for each wheel rotation we can figure out how the robot travels for each encoder pulse.  We can then then multiple this value by the number of encoder pulses per second to get the average velocity per second of the robot.  This is summarized in the following illustration.
 
-![Wheel Velocity](../images/Kinematics&Odometry/Kinematics&Odometry.005.jpeg)
+![Wheel Velocity](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.005.jpeg)
 
 ## Differential Drive Kinematics
 

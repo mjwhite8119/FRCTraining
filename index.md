@@ -12,7 +12,8 @@ This site host training material for teams involved in the First Robotics Compet
 - Robotics Concepts
   - [Robot Systems](Concepts/RobotSystem/index.md)
   - [Robot Geometry](Concepts/Geometry/intro.md)
-  - [Kinematics & Odometry](Concepts/Kinematics/intro.md)
+  - [Kinematics](Concepts/Kinematics/intro.md)
+  - [Odometry](Concepts/Odometry/intro.md)
   - [Motion Control](Concepts/Motion/intro.md)
   - [Paths and Trajectories](Concepts/Trajectory/intro.md)
   - [Vision](Concepts/Vision/intro.md)
