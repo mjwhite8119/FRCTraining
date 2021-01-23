@@ -43,6 +43,6 @@ The common way to keep track of the position and orientation of a robot is to cr
 ![Pose2d](../../images/FRCGeometry/FRCGeometry.017.jpeg)
 
 <h3><span style="float:left">
-<a href="../RobotStructure/intro">Previous</a></span>
+<a href="../../index">Previous</a></span>
 <span style="float:right">
 <a href="../Kinematics/intro">Next</a></span></h3>

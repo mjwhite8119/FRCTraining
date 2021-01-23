@@ -1,5 +1,9 @@
 # <a name="ide"></a>Development Environment Setup
-The code must be run on an ESP32 NodeMCU development board, which is an embedded Arduino based microcontroller with built-in WiFi.  For the development environment (IDE) we'll be using VSCode.  This is the IDE most commonly used by <i>First Robotics</i> teams.  In order to install code onto the ESP32 microcontoller you have to install the PlatformIO plugin for VSCode. The PlatformIO plugin install is explained in this [YouTube video](https://www.youtube.com/watch?v=5edPOlQQKmo)
+The code must be run on an ESP32 NodeMCU development board, which is an embedded Arduino based microcontroller with built-in WiFi.  For the development environment (IDE) we'll be using VSCode.  This is the IDE most commonly used by <i>First Robotics</i> teams.  In order to install code onto the ESP32 microcontoller you have to install the PlatformIO plugin for VSCode. Information about the PlatformIO plugin can be found here:
+
+[Getting Started with PlatformIO](https://dronebotworkshop.com/platformio/)
+
+[How To Install PlatformIO ](https://www.youtube.com/watch?v=5edPOlQQKmo)
 
 Once you have the PlatformIO plugin installed the FRCRobot code can be cloned from Github following these instructions:
 - From VSCode go to `View->Command Palette`.
