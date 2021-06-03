@@ -61,6 +61,22 @@ To view your configuration you can use:
 
 These configuration variables are stored in the `.gitconfig` file that can be found in your HOME directory.
 
+If you'd like to hide your email address then in GitHub go to **Settings – Email – Keep my email address private**.
+
+![Hide Email](../images/Tools/hideGitEmail.png)
+
+You’ll notice a new email address `<nnn>-username@users.noreply.github.com` for you to use for your Git commits.
+
+Next, you’ll need to update Git to use this new noreply email instead of your real one. From the command line, type:
+
+` git config –global user.email “<nnn>-username@users.noreply.github.com”`
+
+This will change your email address globally across all repositories.
+
+To verify, type
+
+`git config –global user.email`
+
 ## Staging and Committing
 Now that we have initialized and configured the repository we can now stage and commit our files.  We're going to move our files to a staging area in preparation for a commit to the repository.
 
@@ -68,7 +84,7 @@ Now that we have initialized and configured the repository we can now stage and 
 
 First, let's get a status from Git by typing the following command and reviewing the output:
 
-`$ get status`
+`$ git status`
 
       On branch master
 
@@ -83,7 +99,7 @@ First, let's get a status from Git by typing the following command and reviewing
 
 The output is telling use that we are on the master branch, we'll look at branches later, and that there have been no commits. It also lists the untracked files.  These are files that have not yet been added to Gits' staging area. Let's do that now:
 
-`$ get add .`
+`$ git add .`
 
       On branch master
 
@@ -132,6 +148,10 @@ We now have to connect our local Git repository with the remote GitHub repositor
 
 `$ git remote add origin https://github.com/mjwhite8119/MyProject.git`
 
+You can confirm the remote repository location by typing:
+
+`git remote -v`
+
 And now we can push our code to the remote GitHub repository:
 
 `$ git push -u origin master`
@@ -145,6 +165,7 @@ And now we can push our code to the remote GitHub repository:
       To https://github.com/mjwhite8119/MyProject.git
       * [new branch]      master -> master
       Branch 'master' set up to track remote branch 'master' from 'origin'.
+
 
 
 ## Cloning a Repository

@@ -3,7 +3,8 @@ This site host training material for teams involved in the First Robotics Compet
 - Development & Learning Tools
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md)
-  - [BabyBot](Tools/trainingRobot.md)
+  - [Romi](Tools/romi.md)
+  <!-- - [BabyBot](Tools/trainingRobot.md) -->
 - Programming
   - [Introduction to Programming](Languages/Intro/intro.md)
   - [The Java Programming Language](Languages/Java/intro.md)
