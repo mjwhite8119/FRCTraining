@@ -1,10 +1,13 @@
 # <a name="code"></a>Programming Servos
+Servos work using a Pulse Width Modulation (PWM) signal that is passed to the servo every 20 milliseconds.  The pulse width is between 1 and 2 m/s where 1 m/s moves the servo to the 0 degree position and 2 m/s moves it a full 180 degrees.  Values in between those two time values move it to degrees in between 0 and 180 degrees.  
 
-The following diagram shows you how to connect the servos to the Romi's GPIO pins. The power connections for the GPIO channels are initially left unconnected, but should be hooked into the Romi’s on-board 5V supply by using a jumper to connect the 5V pin to the power bus. Additionally, if more power than the Romi can provide is needed, the user can provide their own 5V power supply and connect it directly to power bus and ground pins.
+![Servo Configuration](../images/Romi/Romi.023.jpeg)
+
+The following diagram shows how to connect the power and where to connect the servos to the Romi's GPIO pins. In order to supply enough power for the servos you will need to connect to the VSW pin on the Romi board.  For this you'll need a buck converter to drop the battery voltage down from ~7.5V to ~6V.  
 
 Connect the servos to EXT3 and EXT4 as shown in the diagram.  The ground wire (black or brown) goes towards the outside of the board. Then go to the **Romi** section of the Romi Web UI and ensure that the ports are set to PWM.
 
-![Servo Configuration](../images/Romi/Romi.004.jpeg)
+![Servo Connection](../images/Romi/Romi.004.jpeg)
 
 The servos are controlled via buttons on the gamepad.  Your WPI based program runs on the laptop and launches the Robot Simulator tool.  The simulator communicates with the NodeJS application that runs on the Raspberry Pi. This application passes requests onto the microcontroller to control the GPIO ports that the servos are connected to.
 

@@ -32,6 +32,6 @@ The <i>MotorPinGroup</i>, which is defined in the `config.h` file, tells the pro
 In the next lesson we'll learn more about PWM signals and also add the functionality to control the PWM value that is sent to the motors. 
 
 <h3><span style="float:left">
-<a href="code0">Previous</a></span>
+<a href="romi">Previous</a></span>
 <span style="float:right">
 <a href="code2">Next</a></span></h3>

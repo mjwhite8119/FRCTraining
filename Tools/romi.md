@@ -3,8 +3,9 @@ The <i>Romi</i> is designed to be used as a teaching tool for programming teams 
 
 <!-- The code for this robot can be found in the [Romi Github Repository](https://github.com/mjwhite8119/FRCRomi). There are multiple <i>Git</i> code branches in this repository and each branch builds on the previous one to create a functioning mobile robot.  -->
 
+## Basic Programming
 - [Romi Development Environment](romiDev)
-- [Romi Example Code](romiExampleCode)
+- [Romi Example Code](romiExample)
 - [Basic Robot Structure](romiCode1)
 - [Subsystems](romiCode2)
 - [Commands](romiCode3)
@@ -12,6 +13,10 @@ The <i>Romi</i> is designed to be used as a teaching tool for programming teams 
 - [SmartDashboard](romiCode5)
 - [Sequential Commands](romiCode6)
 - [Programming Servos](romiCode7)
+
+## Advanced Programming
+- [Robot Arm](romiArm)
+- [Color Sensor](colorSensor)
 - [Micro Controller Firmware](romiFirmware)
 - [Vision Programming](romiVision)
 

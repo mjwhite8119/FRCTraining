@@ -9,9 +9,16 @@ In order to develop programs for the Romi you have to use and IDE, most commonly
 
 ## Robot Simulator
 Explain the simulator.
+
+![Simulator](../images/Romi/Romi.008.jpeg)
+
 Here's the documentation for the [Robot Simulator](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/introduction.html)
 
 Make sure that desktop support is enabled.
+
+## Shuffleboard
+
+![Shuffleboard](../images/Romi/Romi.009.jpeg)
 
 ## Raspberry Pi Software
 ![Development Environment](../images/Romi/Romi.003.jpeg)

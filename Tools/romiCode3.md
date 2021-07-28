@@ -9,7 +9,7 @@ Runs the Scheduler.  This is responsible for polling buttons, adding newly-sched
 For more details see [The Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) documentation.
 
 ## Lab - Create the ArcadeDrive Command
-Create a new command called ArcadeDrive.
+Create a new command called **ArcadeDrive**.  In the VSCode file menu right click on the **commands** folder and select "Create a new class/command".  Enter the name of the command in the box.  This will give you a template for creating your new command. 
 
     import java.util.function.Supplier;
 
