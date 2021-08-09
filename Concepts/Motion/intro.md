@@ -17,6 +17,11 @@ Closed loop control using encoders and PID.
 
 Closed loop diagram...
 
+## References
+[FRC Documentation - PID Control](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html)
+
+[FRC Documentation - Controllers](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/controllers/index.html)
+
 <h3><span style="float:left">
 <a href="../Kinematics/intro">Previous</a></span>
 <span style="float:right">

@@ -1,4 +1,4 @@
-# <a name="code"></a>Lesson 5 - SmartDashboard
+# <a name="code"></a>SmartDashboard
 Add the SmartDashboard options
 
 Run in Autonomous mode

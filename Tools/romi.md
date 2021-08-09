@@ -12,13 +12,17 @@ The <i>Romi</i> is designed to be used as a teaching tool for programming teams 
 - [Default Commands and Joystick](romiCode4)
 - [SmartDashboard](romiCode5)
 - [Sequential Commands](romiCode6)
-- [Programming Servos](romiCode7)
 
 ## Advanced Programming
+- [Path Planning and Trajectory Following](romiPathPlanning)
+- [Vision Programming](romiVision)
+- [PID and Line Following](romiPID)
+- [Programming Servos](romiServos)
 - [Robot Arm](romiArm)
+- [Filters](romiFilters)
 - [Color Sensor](colorSensor)
 - [Micro Controller Firmware](romiFirmware)
-- [Vision Programming](romiVision)
+
 
 <h3><span style="float:left">
 <a href="../index">Home</a></span>

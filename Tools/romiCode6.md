@@ -1,4 +1,4 @@
-# <a name="code"></a>Lesson 6 - Sequential Commands
+# <a name="code"></a>Sequential Commands
 Add sequential commands
 
 Add DriveTime and DriveDistance commands.

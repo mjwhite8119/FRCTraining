@@ -1,4 +1,4 @@
-# <a name="code"></a>Lesson 3 - Commands
+# <a name="code"></a>Commands
 Commands define high-level robot actions or behaviors that utilize the methods defined by the subsystems. A command is a simple state machine that is either initializing, executing, ending, or idle. Users write code specifying which action should be taken in each state. Subsystems are used by the CommandScheduler resource management system to ensure multiple robot actions are not "fighting" over the same hardware resource. Commands that use a subsystem should include that subsystem in their getRequirements() method.
 
 ![Commands](../images/Romi/Romi.015.jpeg)

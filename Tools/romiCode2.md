@@ -1,4 +1,4 @@
-# <a name="code"></a>Lesson 2 - Subsystems
+# <a name="code"></a>Subsystems
 Subsystems are the basic unit of robot organization in the Command-based framework.  They encapsulate low-level hardware objects (motor controllers, sensors, etc) and provide methods that can be used by Commands.  Hardware resources used within a subsystem should generally remain encapsulated and not be shared by other parts of the robot.
 
 ![Subsystems](../images/Romi/Romi.012.jpeg)

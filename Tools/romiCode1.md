@@ -1,4 +1,4 @@
-# <a name="code"></a>Lesson 1 - Basic Robot Structure
+# <a name="code"></a>Basic Robot Structure
 There are four basic components that you'll need to create a program for an FRC robot.  The code for each component is in a separate file.  
 
 ![Robot Structure](../images/Romi/Romi.010.jpeg)

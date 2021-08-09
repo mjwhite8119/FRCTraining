@@ -1,4 +1,6 @@
 ## Robot Geometry
+[FRC Documentation - Geometry](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/index.html)
+
 In order to control a robot it’s necessary to know its position and orientation — where it is at any particular time.  Its position in 3-D space is defined using the set of coordinates X, Y, and Z.  This coordinate system is called the Cartesian coordinate system.  When the robot moves from one position to another it’s referred to as a translation.  When it changes its direction then it has changed orientation.  The orientation of a robot is described in terms of Roll, Pitch, Yaw.  
 
 ![Position & Orientation](../../images/FRCGeometry/FRCGeometry.001.jpeg)
@@ -41,6 +43,9 @@ When the robot moves from one position to another you can update the <i>Translat
 The common way to keep track of the position and orientation of a robot is to create a class called a <i>Pose</i>.  This class comprises the two subclasses described previously, namely <i>Translation2d</i> and <i>Rotation2d</i>.  The translation class keeps track of the robot’s position whereas the rotation keeps track of its orientation.  Why use translation and rotation instead of position and orientation?  We want to know where the robot is as it travels from one position to another.  We also want to know the robot’s heading as is rotates from one orientation to another.
 
 ![Pose2d](../../images/FRCGeometry/FRCGeometry.017.jpeg)
+
+## References
+[FRC Documentation - Geometry](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/index.html)
 
 <h3><span style="float:left">
 <a href="../../index">Previous</a></span>
