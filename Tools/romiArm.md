@@ -1,4 +1,8 @@
 # <a name="code"></a>Romi Robot Arm
+In this lesson we'll be creating code to control the [Robot Arm kit for Romi](https://www.pololu.com/product/3550) from Pololu. This program will be called [BasicArm](https://github.com/mjwhite8119/romi-examples/tree/main/BasicArm) which will include the following updates to the **RomiReference** project.
+
+![BasicArm](../images/Romi/Romi.029.jpeg)
+
 Before reading this section please review the [SimpleArm documentation](https://github.com/bb-frc-workshops/romi-examples/tree/main/simpleArm) on the BB FRC Workshops site.
 
 ## Controlling the Robot Arm
@@ -6,6 +10,8 @@ This is how the software stack works together to operate the robot arm.
 ![Servo Control](../images/Romi/Romi.006.jpeg)
 
 A button is attached to each of the three arm components Lift, Tilt, and Gripper.  Every time a button is pressed the related arm component is moved.  This is done incrementally.  There are min and max limits to the range of motion of the arm.  The range of the servo is 0 to 180 degrees but that is too large a range for the arm.
+
+The `Constants` file needs to be updated to include `Joystick` and `Arm` values.
 
 ![Arm Motor Control](../images/Romi/Romi.005.jpeg)
 
@@ -39,7 +45,10 @@ Example...
 
 Now let's figure out what we're going to do with these. 
 
+## References
+[Robot Arm kit for Romi](https://www.pololu.com/product/3550)
 
+[Romi Arm example - github](https://github.com/Pearadox/Romi/tree/master/src/main/java/frc/robot)
 
 <h3><span style="float:left">
 <a href="romiCode7">Previous</a></span>

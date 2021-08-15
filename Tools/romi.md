@@ -19,6 +19,7 @@ The <i>Romi</i> is designed to be used as a teaching tool for programming teams 
 - [PID and Line Following](romiPID)
 - [Programming Servos](romiServos)
 - [Robot Arm](romiArm)
+- [Robot Arm and Vision](romiArmVision)
 - [Filters](romiFilters)
 - [Color Sensor](colorSensor)
 - [Micro Controller Firmware](romiFirmware)

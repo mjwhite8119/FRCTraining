@@ -1,8 +1,12 @@
 # <a name="code"></a>Programming Servos
+In this lesson we'll create a program to control servos that are attached to the Romi.  The program called [BasicServo](https://github.com/mjwhite8119/romi-examples/tree/main/BasicServo)
+
+## How Servos Work
 Servos work using a Pulse Width Modulation (PWM) signal that is passed to the servo every 20 milliseconds.  The pulse width is between 1 and 2 m/s where 1 m/s moves the servo to the 0 degree position and 2 m/s moves it a full 180 degrees.  Values in between those two time values move it to degrees in between 0 and 180 degrees.  
 
-![Servo Configuration](../images/Romi/Romi.023.jpeg)
+![Servo Motor Control](../images/Romi/Romi.023.jpeg)
 
+## Servo Connection
 The following diagram shows how to connect the power and where to connect the servos to the Romi's GPIO pins. In order to supply enough power for the servos you will need to connect to the VSW pin on the Romi board.  For this you'll need a buck converter to drop the battery voltage down from ~7.5V to ~6V.  
 
 Connect the servos to EXT3 and EXT4 as shown in the diagram.  The ground wire (black or brown) goes towards the outside of the board. Then go to the **Romi** section of the Romi Web UI and ensure that the ports are set to PWM.
@@ -11,9 +15,12 @@ Connect the servos to EXT3 and EXT4 as shown in the diagram.  The ground wire (b
 
 The servos are controlled via buttons on the gamepad.  Your WPI based program runs on the laptop and launches the Robot Simulator tool.  The simulator communicates with the NodeJS application that runs on the Raspberry Pi. This application passes requests onto the microcontroller to control the GPIO ports that the servos are connected to.
 
+## Controlling the Servos
 ![Servo Control](../images/Romi/Romi.006.jpeg)
 
 The following sections explain the how to create the java classes that your WPI program needs to control the servos.
+
+![BasicServo](../images/Romi/Romi.028.jpeg)
 
 ## Create the RomiServo Subsystem
 This class will use the Servo base class provided by the WPI library.
@@ -48,6 +55,8 @@ This command will use a joystick to control the RomiServo subsystem.
 
     import frc.robot.subsystems.RomiServo;
     import edu.wpi.first.wpilibj.Joystick;
+
+Add joystick constants to the `Contants` file.
 
 As always, the subsystem is added as a command requirement.
 
@@ -94,6 +103,8 @@ Inside the **configureButtonBindings()** method create a default command for the
     m_servo.setDefaultCommand( new ServoCommand(m_servo, m_controller));
 
 
+## References
+[Servos and Feedback](https://learn.adafruit.com/analog-feedback-servos)
 
 <h3><span style="float:left">
 <a href="romiPID">Previous</a></span>
