@@ -45,6 +45,12 @@ Example...
 
 Now let's figure out what we're going to do with these. 
 
+## Testing the Arm Command
+We can test the Arm command either by using the joystick or from Shuffleboard.  We'll setup our program to use both methods.  
+To use the joystick
+
+To use Shuffleboard add the following code to the `RobotContainer` class.
+
 ## References
 [Robot Arm kit for Romi](https://www.pololu.com/product/3550)
 

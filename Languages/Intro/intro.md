@@ -1,8 +1,10 @@
 ## Introduction to Programming
-This is a general introduction to programming.  It covers concepts that apply to almost all Object Oriented Languages (OLL) and doesn't focus on a particular language.  The goal is to help you understand how code works at a more basic level and will help you to interpret the some of the cryptic error messages that you get back when you compile a program.
+This is a general introduction to programming.  It covers concepts that apply to almost all Object Oriented Languages (OLL) and doesn't focus on a particular language.  The goal is to help you understand programming at a conceptual level.  Especially in the context of programming robots.
 
 ## Proposed Topics
-- Program files, compilers, linkers, and loaders.
+- [Procedures](procedures.md)
+- [Data Structures](datastructures.md)
+<!-- - Program files, compilers, linkers, and loaders.
 - Stacks, Heaps, and program execution.
 - Memory allocation.
 - Variable storage and memory pointers.
@@ -11,8 +13,9 @@ This is a general introduction to programming.  It covers concepts that apply to
 - Functions and parameter passing.
   - Pass by value
   - Pass by reference
-  - Return values
-- [Object Oriented Programming (OOP)](classes.md) 
+  - Return values -->
+- [Classes and Objects (OOP)](classes.md) 
+- [State Machines](statemachines.md)
 
 
 

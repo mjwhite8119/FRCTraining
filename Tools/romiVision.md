@@ -48,29 +48,41 @@ Shuffleboard uses the Network Tables to display the camera data so your java pro
 2. The python program has multiple files so you need to upload them all.  This is done with a zip file.  Run `python3 build.py` to build the zip file.
 3. On the Romi WPILibPi.local webpage. Go to **Application**.
 4. Put Raspberry Pi file system into Writable mode.
-5. In the **File Upload** select the file wpilib.tar.gz file for upload.  Make sure that file extract is selected. Click the **Upload** button.
+5. In the **Vision Application Configuration** section select "Uploaded Python File" from the dropdown menu.
+6. In the **File Upload** section select the file `wpilib.tar.gz` file for upload.  Make sure that file **Extract** is selected. Click the **Upload** button.
+
+
 <!-- 6. Select "Uploaded Python file" in the dropdown.
 7. Select multiCameraServer.py for the file.  You only need to upload this if you change it, which shouldn't be very often.  -->
 
 ![Upload Camera Program](../images/Romi/Romi.019.jpeg)
 
-Issues:
-When you first turn the Romi on the Application seems to default to "Custom".  You have to switch it to "Uploaded Python File" and restart the application via the **Vision Status** tab.
-
-The runCamera file keeps getting overwritten when you upload a new multiCameraServer.py file.  So just upload the tar file and then `Terminate` the application on the **Vision Status** page, and then press the `Up` button.
-
-
-
-## Upload Java Program
+<!-- ## Upload Java Program
 1. cd ~/Documents/romi-examples/java-multiCameraServer
 2. run `./gradlew build` to build the jar file.  Make sure that the build is successful.
 3. On the Romi WPILibPi.local webpage, click on **Application** in the left panel.
 4. Put into Writable mode
 5. Select "Uploaded Java jar" in the dropdown.
-6. Click on **Choose File** file and upload the file `build/libs/java-multiCameraServer-all.jar`.
+6. Click on **Choose File** file and upload the file `build/libs/java-multiCameraServer-all.jar`. -->
 
 ## Test your Program
-Run the your java program from VSCode. In the Simulator you will see the Network Tables showing the data coming in from the python camera server program.  You can use this data to control the robot.
+Run the your java program from VSCode by pressing the F5 key. In the **Simulator** you will see the Network Tables showing the `targetData` coming in from the python camera server program.  You can use this data to control the robot.
+1. Connect the Joystick and drag it from **System Joysticks** window to the **Joysticks** window.
+2. Put the robot in **Teleoperated** mode.
+3. Press the joystick START button to run your custom PID line following routine.
+3. Press the joystick SELECT button to run the WPI `PIDCommand` line following routine.
+
+
+## Notes on Restarting the Romi
+When you first turn the Romi on the Application will default to "Custom".  You have to switch it to run the the your Python camera program and restart it: 
+1. Go to the Application tab and switch the application from "Custom" to "Uploaded Python File" 
+2. Go to the **Vision Status** tab and click on the "Down" button.
+3. Click the Enable button on the Console Output so as you can see the vision status as the program starts up.
+4. Click on the "Up" button to restart the application, and observe the output to make sure it restarts successfully.
+5. In VSCode start you java program by pressing F5.  This will start the **Simulator** which is responsible for starting the Network Tables.  The Network Tables are used to stream the camera data.
+
+Caution:
+The runCamera file keeps getting overwritten when you upload a new multiCameraServer.py file.  So just upload the tar file and then `Terminate` the application on the **Vision Status** page, and then press the `Up` button.
 
 ## References
 [OpenCV](https://opencv.org/)

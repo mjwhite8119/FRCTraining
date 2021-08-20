@@ -10,7 +10,7 @@ The <i>Romi</i> is designed to be used as a teaching tool for programming teams 
 - [Subsystems](romiCode2)
 - [Commands](romiCode3)
 - [Default Commands and Joystick](romiCode4)
-- [SmartDashboard](romiCode5)
+- [Shuffleboard](romiShuffleboard)
 - [Sequential Commands](romiCode6)
 
 ## Advanced Programming
@@ -22,6 +22,9 @@ The <i>Romi</i> is designed to be used as a teaching tool for programming teams 
 - [Robot Arm and Vision](romiArmVision)
 - [Filters](romiFilters)
 - [Color Sensor](colorSensor)
+
+## Romi Robot Software
+- [Romi RaspberryPi Software](romiPiSoftware)
 - [Micro Controller Firmware](romiFirmware)
 
 

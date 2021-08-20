@@ -1,6 +1,6 @@
 This site host training material for teams involved in the First Robotics Competition (FRC). The subjects that will be covered in this course of training include:
 
-- Development & Learning Tools
+- Development Environment
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md)
   - [Romi](Tools/romi.md)

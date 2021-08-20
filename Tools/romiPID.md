@@ -29,11 +29,20 @@ Create a new command called `LineFollowPIDCommand`.
 In the RobotContainer class change the Drivetrain definition from `private final` to `public static final`.  Why...?
 Use the WPILib `PIDCommand` to control the motors to follow the line.
 
+## Testing the LineFollowing Command
+We can test the line following command either by using the joystick or from Shuffleboard.  We'll setup our program to use both methods.  
+To use the joystick
+
+To use Shuffleboard add the following code to the `RobotContainer` class.
+
+
 
 ## References
 [FRC Documentation - PID Control](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html)
 
 [FRC Documentation - Controllers](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/controllers/index.html)
+
+[Testing Commands with Shuffleboard](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robotbuilder/introduction/robotbuilder-testing-with-shuffleboard.html)
 
 [Controls Engineering in FRC](https://file.tavsys.net/control/controls-engineering-in-frc.pdf)
 

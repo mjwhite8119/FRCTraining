@@ -1,4 +1,9 @@
-# <a name="code"></a>SmartDashboard
+# <a name="code"></a>Shuffleboard
+To start Shuffleboard:
+1. Open a terminal.
+2. Go to the directory ~/wpilib/2021/tools
+3. Type `python3 shuffleboard.py`
+
 Add the SmartDashboard options
 
 Run in Autonomous mode
