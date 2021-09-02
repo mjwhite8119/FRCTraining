@@ -1,9 +1,7 @@
-# <a name="code"></a>Default Command and Joystick
-Explain default commands
+# <a name="code"></a>Joysticks
+Explain joysticks
 
-Create the ArcadeDrive command
-
-Get the Joystick working
+![Commands](../images/Romi/Romi.032.jpeg)
 
 Use a slew rate filter
 

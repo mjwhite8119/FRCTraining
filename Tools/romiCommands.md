@@ -8,6 +8,9 @@ Runs the Scheduler.  This is responsible for polling buttons, adding newly-sched
 
 For more details see [The Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) documentation.
 
+## Default Commands
+Explain default commands
+
 ## Lab - Create the ArcadeDrive Command
 Create a new command called **ArcadeDrive**.  In the VSCode file menu right click on the **commands** folder and select "Create a new class/command".  Enter the name of the command in the box.  This will give you a template for creating your new command. 
 
@@ -53,8 +56,7 @@ Add the DriveDistance and TurnDegrees commands.
 Configure joystick buttons to run commands.
 
 
-## Command Groups
-Simple commands can be composed into “command groups” to accomplish more-complicated tasks. Commands, including command groups, implement the Command interface.
+
 
 ## References
 [Amazon Example](https://s3.amazonaws.com/screensteps_live/exported/Wpilib/2078/2286/Command_based_programming.pdf?1478686718)
