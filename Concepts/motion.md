@@ -22,6 +22,8 @@ Closed loop diagram...
 
 [FRC Documentation - Controllers](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/controllers/index.html)
 
+- QUT Robot Academy [Rigid Body Dynamics](https://robotacademy.net.au/masterclass/rigid-body-dynamics/)
+
 <h3><span style="float:left">
 <a href="../Kinematics/intro">Previous</a></span>
 <span style="float:right">

@@ -12,7 +12,11 @@ They will often change the state of a system.
   - Pass by reference
   - Return values
 
+## References
+
+Java Tutorial on [W3Schools](https://www.w3schools.com/java/default.asp)
+
 <h3><span style="float:left">
-<a href="dataStructures">Home</a></span>
+<a href="dataStructures">Previous</a></span>
 <span style="float:right">
 <a href="objects">Next</a></span></h3>

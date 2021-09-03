@@ -73,8 +73,8 @@ The programming team is primarily tasked with controlling the robot.  Robot cont
 - **Localization**
             In order to control a robot we always need to know what its position and orientation in space is at all times. Localization routines deal with this task and are also referred to as <i>State Estimation</i>. 
 
-- **Projectile Motion**
-            Projectile motion is concerned with firing some kind of projectile with the goal of hitting a target.  Calculations used in these motion algorithms are taken directly from the study on Newtonian physics.
+<!-- - **Projectile Motion**
+            Projectile motion is concerned with firing some kind of projectile with the goal of hitting a target.  Calculations used in these motion algorithms are taken directly from the study on Newtonian physics. -->
 
 - **Mapping**
             Mapping is a process that a robot might undertake in order to know what its working environment is.  Mapping is done using laser range finders and/or cameras.  The resulting map is stored in memory for contiuous use.
@@ -86,6 +86,9 @@ The programming team is primarily tasked with controlling the robot.  Robot cont
             At some point the robot is going to be confronted with an unexpected situation that gets in the way of completing its mission.  For instance, some obstical like a person might step into its planned path.  In this situation a recovery algorithm might kick in to route around the person.                           
 
 ![Robot System](../../images/FRCConcepts/FRCConcepts.005.jpeg)
+
+## References 
+- QUT Robotics Academy [Introduction to Robotics](https://robotacademy.net.au/masterclass/introduction-to-robotics/)
 
 <h3><span style="float:left">
 <a href="index">Previous</a></span>

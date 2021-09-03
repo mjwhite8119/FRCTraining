@@ -8,13 +8,13 @@ We want to examine the constraints that exist by the connection of the wheels to
 
 Our next constraint comes in when we have more than one wheel on the robot, which is of course the common configuration.  When we have multiple wheels we must ensure that they have a common <i>Instantaineous Center of Curvature (ICC)</i>.  This means that the wheels must be connected in a way that they are all aligned towards the same point.  If this is not the case then the wheels will slip in a sideways direction making it extremely difficult to control the motion of the robot.  This is illustrated below.  Typically, there are two wheels on the same axel which causes them to be aligned towards the same center point.  However, with a 4-wheeled robot there are two sets of wheels and two axels which means that the back wheels will always slip.  These are called skid drive robots.
 
-![Wheel Motion & ICC](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.001.jpeg)
+![Wheel Motion & ICC](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.001.jpeg)
 
 ## Differential Drive Robots
 
 The most common robot configuration is the <i>Differential Drive</i> robot, so let's look at its kinematics.  This robot will have two wheels each connected to a motor.  The wheels will be aligned on a common axis.  If both motors rotate forward or backward at the same speed then the robot will move in a straight line.  If one motor rotates faster than the other then the robot will take a curved path. One very useful feature of this robot is its ability to rotate on the spot which enables it to move in tight spaces.  This is acheived by rotating each motor in a different direction.
 
-![Differential Drive](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.002.jpeg)
+![Differential Drive](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.002.jpeg)
 
 Let's look at some of the mathematics behind differential drive robot kinematics.  While we can vary the velocity of each wheel, for the robot to perform rolling motion, the robot must rotate about a point that lies along its common left and right wheel axis. The point that the robot rotates about is known as the ICC - Instantaneous Center of Curvature.
 
@@ -22,14 +22,17 @@ By varying the velocities of the two wheels, we can vary the trajectories that t
 
 At any instance in time we can compute the distance to the ICC <span style="color:green"><bold>R</bold></span>, and the radians per/second that the chassis is moving **ω**.  These two calculations are also shown in the diagram.
 
-![ICC](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.003.jpeg)
+![ICC](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.003.jpeg)
 
 
-![Code Sample](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.006.jpeg)
+![Code Sample](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.006.jpeg)
 
 These formulars are used in the <i>DifferentialDriveKinematics</i> class of the WPI library.
 
-![Global Frame](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.007.jpeg)
+![Global Frame](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.007.jpeg)
+
+
+## References
 
 <h3><span style="float:left">
 <a href="../Geometry/intro">Previous</a></span>

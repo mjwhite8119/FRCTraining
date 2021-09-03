@@ -6,8 +6,11 @@ The nature of an object limits the procedures that it can perform.
 
 Are derived from [classes](./classes)
 
+## References
+
+Java Tutorial on [W3Schools](https://www.w3schools.com/java/default.asp)
 
 <h3><span style="float:left">
-<a href="procedures">Home</a></span>
+<a href="procedures">Previous</a></span>
 <span style="float:right">
 <a href="stateMachines">Next</a></span></h3>

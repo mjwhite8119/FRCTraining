@@ -6,15 +6,15 @@ The following diagram shows our objective.  The FRC field is our <i>Global Frame
 
 We also need to know what our heading is, which is represented by the angle between the 𝒙 axis of our coordinate system and the current heading angle of the robot.
 
-![Global Frame](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.009.jpeg)
+![Global Frame](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.009.jpeg)
 
 So what algorithm is required to compute the robots' odometry?  We can implement this by the following three steps that will require input from the encoders and the gyro (IMU). Remember that our robot code runs in a loop which means that these three steps will execute over and over at about 20 times per second. Each iteration of the loop we will call a <i>time step</i>.
 
-![Odometry Calculation](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.010.jpeg)
+![Odometry Calculation](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.010.jpeg)
 
 The encoders will send the total linear distance that has been covered by each wheel since the was robot started, or the wheel encoders were reset.  The linear distance is calculated as shown in the following diagram.  **Step 1** of our algorithm will take the total distance covered by the left and right wheel and compute the <i>delta distance</i> travelled by each wheel since the last <i>time step</i>.
 
-![Encoder Position](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.011.jpeg)
+![Encoder Position](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.011.jpeg)
 
 In **step 2** we calculate the distance travelled by the chassis of the robot since the last time step.  This is done by simply taking the delta distance travelled by each wheel and averaging them.  
 
@@ -22,7 +22,12 @@ In **step 2** we calculate the distance travelled by the chassis of the robot si
 
 It's important that this calculation is done based on the change in heading since the last time step. That's why we go to the trouble of computing the delta distance travelled instead of using the total distance.  Consider that the heading will most likely be changing continuouly during our journey.  If we computed the position based solely on our current heading then the calculation would be way off.
 
-![Translation Calculation](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.012.jpeg)
+![Translation Calculation](../images/FRCKinematics&Odometry/FRCKinematics&Odometry.012.jpeg)
+
+## References
+- QUT Robot Academy [Paths & Trajectories](https://robotacademy.net.au/masterclass/paths-and-trajectories/)
+
+- QUT Robot Academy [Measuring Motion](https://robotacademy.net.au/masterclass/measuring-motion/)
 
 <h3><span style="float:left">
 <a href="../Kinematics/intro">Previous</a></span>
