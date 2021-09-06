@@ -8,7 +8,7 @@ The <i>Romi Robot</i> is designed to be used as a teaching tool for programming 
 - [Subsystems](romiSubsystems)
 - [Commands](romiCommands)
 - [Configuring Joysticks](romiJoysticks)
-- [Advanced Commands](romiAdvancedCommands)
+- [Command Groups](romiCommandGroups)
 
 ## Advanced Programming
 - [Network Tables](romiNetworkTables)
@@ -17,10 +17,11 @@ The <i>Romi Robot</i> is designed to be used as a teaching tool for programming 
 - [Vision Programming](romiVision)
 - [PID and Line Following](romiPID)
 - [Programming Servos](romiServos)
-- [Robot Arm](romiArm)
-- [Robot Arm and Vision](romiArmVision)
 - [Filters](romiFilters)
-- [Color Sensor](colorSensor)
+<!-- - [Robot Arm](romiArm)
+- [Robot Arm and Vision](romiArmVision) -->
+
+<!-- - [Color Sensor](colorSensor) -->
 
 ## Romi Robot Software
 - [Romi RaspberryPi Software](romiPiSoftware)

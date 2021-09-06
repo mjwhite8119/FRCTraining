@@ -52,6 +52,6 @@ The common way to keep track of the position and orientation of a robot is to cr
 - QUT Robot Academy [3D Geometry](https://robotacademy.net.au/masterclass/3d-geometry/)
 
 <h3><span style="float:left">
-<a href="../../index">Previous</a></span>
+<a href="RobotSystem/intro">Previous</a></span>
 <span style="float:right">
-<a href="../Kinematics/intro">Next</a></span></h3>
+<a href="timeMotion">Next</a></span></h3>

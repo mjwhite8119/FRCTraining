@@ -7,6 +7,7 @@ In the `RobotContainer` class create the Joystick object:
 
     private final Joystick m_controller = new Joystick(0);
 
+Configure joystick buttons to run commands.
 
 ## Slew Rate Filter
 

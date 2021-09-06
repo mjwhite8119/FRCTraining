@@ -37,6 +37,6 @@ These formulars are used in the <i>DifferentialDriveKinematics</i> class of the 
 - FRC Documentation - [Kinematics and Odometry](https://docs.wpilib.org/en/latest/docs/software/kinematics-and-odometry/index.html)
 
 <h3><span style="float:left">
-<a href="../Geometry/intro">Previous</a></span>
+<a href="timeMotion">Previous</a></span>
 <span style="float:right">
-<a href="../Odometry/intro">Next</a></span></h3>
+<a href="navigation">Next</a></span></h3>

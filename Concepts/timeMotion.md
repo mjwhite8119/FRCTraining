@@ -17,14 +17,19 @@ Closed loop control using encoders and PID.
 
 Closed loop diagram...
 
-## References
-[FRC Documentation - PID Control](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html)
+## Paths and Trajectories
 
-[FRC Documentation - Controllers](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/controllers/index.html)
+
+## References
+- QUT Robot Academy [Paths & Trajectories](https://robotacademy.net.au/masterclass/paths-and-trajectories/)
+
+- FRC Documentation - [PID Control](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html)
+
+- FRC Documentation - [Controllers](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/controllers/index.html)
 
 - QUT Robot Academy [Rigid Body Dynamics](https://robotacademy.net.au/masterclass/rigid-body-dynamics/)
 
 <h3><span style="float:left">
-<a href="../Kinematics/intro">Previous</a></span>
+<a href="timeMotion">Previous</a></span>
 <span style="float:right">
-<a href="../Trajectory/intro">Next</a></span></h3>
+<a href="kinematics">Next</a></span></h3>

@@ -1,19 +1,15 @@
 # Robotics Programmer Training
 
-This site hosts training material for teams involved in the First Robotics Competition (FRC). The aim is to give student a good grounding in both robotics and programming.  The outline of the course is based on the book [Robotics, Vision and Control](https://petercorke.com/rvc/home/) by Peter Corke, although most of the training will focus on the documentation shown on the [FIRST Robotic Competition](https://docs.wpilib.org/en/latest/index.html) Website.  This will prepare you to write code for the competition robot that your mechanical and electrical engineering teams will build.
-
-The subjects that will be covered in this course of training include:
+This site hosts training material for teams involved in the First Robotics Competition (FRC). The aim is to give student a good grounding in both robotics and programming.  The outline of the course is based on the book [Robotics, Vision and Control](https://petercorke.com/rvc/home/) by Peter Corke, although most of the training will focus on the documentation shown on the [FIRST Robotic Competition](https://docs.wpilib.org/en/latest/index.html) Website.  This will prepare you to write code for the competition robot that your mechanical and electrical engineering teams will build. The subjects that will be covered in this course of training include:
 
 ![Course Overview](images/FRCConcepts/FRCConcepts.016.jpeg)
 
 So let's get started.
 
-- Development Environment 
+- Development Tools 
   - [Romi Training Robot](Tools/romi.md)
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md) 
-  
-- Tools
   - [Robot Simulator](Tools/simulator.md)
   - [Shuffleboard](Tools/romiShuffleboard)
   <!-- - [BabyBot](Tools/trainingRobot.md) -->
@@ -25,12 +21,10 @@ So let's get started.
   - [State Machines](Programming/stateMachines)
 
 - Robotics Concepts
-  - [Robot Systems](Concepts/RobotSystem/index.md)
+  - [Robot Systems](Concepts/RobotSystem/intro)
   - [Position & Orientation](Concepts/geometry)
-  - [Paths & Trajectories](Concepts/trajectories)
-  <!-- - [Motion Control](Concepts/Motion/intro.md) -->
-  - [Robot Kinematics](Concepts/kinematics)
-  <!-- - [Odometry](Concepts/Odometry/intro.md) -->
+  - [Time & Motion](Concepts/timeMotion)
+  - [Mobile Robot Kinematics](Concepts/kinematics)
   - [Navigation](Concepts/navigation)
   - [Localization](Concepts/localization)
   

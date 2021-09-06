@@ -13,7 +13,7 @@ For more details see [The Command Scheduler](https://docs.wpilib.org/en/latest/d
 ## Default Commands
 Explain default commands
 
-## Lab - Create the ArcadeDrive Command
+## ArcadeDrive Command
 Create a new command called **ArcadeDrive**.  In the VSCode file menu right click on the **commands** folder and select "Create a new class/command".  Enter the name of the command in the box.  This will give you a template for creating your new command. 
 
     import java.util.function.Supplier;
@@ -40,6 +40,7 @@ Update the execute() method:
     public void execute() {
       m_drivetrain.arcadeDrive(m_xaxisSpeedSupplier.get(),m_zaxisRotateSupplier.get());
     }
+
 ## Add the Joystick
 In the `RobotContainer` class create the Joystick object:
 
@@ -52,10 +53,8 @@ Now we'll create a function in the `RobotContainer` class that we'll use the joy
             m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
       }
 
-## Lab - DriveDistance and TurnDegrees Commands
+## DriveDistance and TurnDegrees Commands
 Add the DriveDistance and TurnDegrees commands.
-
-Configure joystick buttons to run commands.
 
 
 ## References
