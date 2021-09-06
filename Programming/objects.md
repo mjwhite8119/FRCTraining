@@ -8,7 +8,7 @@ Are derived from [classes](./classes)
 
 ## References
 
-Java Tutorial on [W3Schools](https://www.w3schools.com/java/default.asp)
+- W3Schools -  [Java Classes and Objects](https://www.w3schools.com/java/java_classes.asp)
 
 <h3><span style="float:left">
 <a href="procedures">Previous</a></span>

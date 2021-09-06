@@ -202,5 +202,9 @@ The output will tell you how many file objects have been downloaded.  Conceptual
 
 ## The `.gitignore` File
 
+## References
+
+- FRC Documentation - [Git Version Control](https://docs.wpilib.org/en/latest/docs/software/basic-programming/git-getting-started.html)
+
 <h3><span style="float:left">
 <a href="../index">Home</a></span>

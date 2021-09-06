@@ -1,5 +1,7 @@
 # <a name="code"></a>Commands
-Commands define high-level robot actions or behaviors that utilize the methods defined by the subsystems. A command is a simple state machine that is either initializing, executing, ending, or idle. Users write code specifying which action should be taken in each state. Subsystems are used by the CommandScheduler resource management system to ensure multiple robot actions are not "fighting" over the same hardware resource. Commands that use a subsystem should include that subsystem in their getRequirements() method.
+Commands define high-level robot actions or behaviors that utilize the methods defined by the subsystems. Before looking at the commands that are implemented on the Romi you should be very familiar with [Procedures](../Programming/procedures) and [State Machines](../Programming/stateMachines) from the programming sections.  You should also review the FRC Documentation on [Commands](https://docs.wpilib.org/en/latest/docs/software/commandbased/commands.html) before continuing.
+
+A command is a simple state machine that is either initializing, executing, ending, or idle. Users write code specifying which action should be taken in each state. Subsystems are used by the CommandScheduler resource management system to ensure multiple robot actions are not "fighting" over the same hardware resource. Commands that use a subsystem should include that subsystem in their `getRequirements()` method.
 
 ![Commands](../images/Romi/Romi.015.jpeg)
 
@@ -56,9 +58,10 @@ Add the DriveDistance and TurnDegrees commands.
 Configure joystick buttons to run commands.
 
 
-
-
 ## References
+
+- FRC Documentation - [Command Based Programming](https://docs.wpilib.org/en/latest/docs/software/commandbased/index.html)
+
 [Amazon Example](https://s3.amazonaws.com/screensteps_live/exported/Wpilib/2078/2286/Command_based_programming.pdf?1478686718)
 
 <h3><span style="float:left">

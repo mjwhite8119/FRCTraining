@@ -1,5 +1,19 @@
 # Sensors
 
+## Encoders
+FRC Documentation - [Encoders](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/encoders-software.html)
+
+## Gyros
+FRC Documentation - [Gyros](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/gyros-software.html)
+
+Also QUT Robot Academy [Measuring Motion](https://robotacademy.net.au/masterclass/measuring-motion/)
+
+## Accelerometers
+FRC Documentation - [Accelerometers](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/accelerometers-software.html)
+
+## Cameras
+The camera corresponds to the eye in the robot. The images obtained from the camera are very useful for recognizing the environment around the robot. For example, object recognition using a camera image, facial recognition, a distance value obtained from the difference between two different images using two cameras (stereo camera), mono camera visual SLAM, color recognition using information obtained from an image and object tracking are very useful.
+
 ## Laser Distance Sensors (LDS)
 Edit all of this....
 Laser Distance Sensors (LDS) are referred to various names such as Light Detection And Ranging (LiDAR), Laser Range Finder (LRF) and Laser Scanner. LDS is a sensor used to measure the distance to an object using a laser as its source. The LDS sensor has the advantage of high performance, high speed, real time data acquisition, so it has a wide range of applications in relation to distance measurement. This is a sensor widely used in the field of robots for recognition of objects and people, and distance sensor based SLAM (distance-based sensor), and also widely used in unmanned vehicles due to its real time data acquisition.
@@ -12,9 +26,8 @@ Also, because the horizontal plane is scanned, only objects on the horizontal pl
 
 There are infinite usages of LDS, and SLAM (Simultaneous Localization And Mapping)16 is one of the most well known examples of using LDS. SLAM creates a map by recognizing obstacles around the robot and estimates current position of the robot within a map. As another example of using LDS, the robot is able to detect various objects in the surroundings and react based on the current environment. 
 
-## Cameras
-The camera corresponds to the eye in the robot. The images obtained from the camera are very useful for recognizing the environment around the robot. For example, object recognition using a camera image, facial recognition, a distance value obtained from the difference between two different images using two cameras (stereo camera), mono camera visual SLAM, color recognition using information obtained from an image and object tracking are very useful.
-
+## References
+- FRC Documentation - [Sensors](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/index.html)
 
 <h3><span style="float:left">
 <a href="intro">Previous</a></span>

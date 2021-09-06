@@ -8,11 +8,14 @@ The subjects that will be covered in this course of training include:
 
 So let's get started.
 
-- Development Environment
+- Development Environment 
   - [Romi Training Robot](Tools/romi.md)
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md) 
+  
+- Tools
   - [Robot Simulator](Tools/simulator.md)
+  - [Shuffleboard](Tools/romiShuffleboard)
   <!-- - [BabyBot](Tools/trainingRobot.md) -->
 - Programming
   - [Introduction to Programming](Programming/introProgramming)
@@ -30,7 +33,6 @@ So let's get started.
   <!-- - [Odometry](Concepts/Odometry/intro.md) -->
   - [Navigation](Concepts/navigation)
   - [Localization](Concepts/localization)
-  
   
 - Vision  
   - [Vision](Vision/intro.md)

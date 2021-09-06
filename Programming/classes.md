@@ -48,6 +48,10 @@ When a class derives from another class. The child class will inherit all the `p
 
 When a property or class has the `protected` modifier it means that a sub-class may access the variable but it is still `private` to the superclass.  Therefore, the variable <i>brand</i> is only accessible from the class <i>Car</i>.
 
+## References
+
+- W3Schools -  [Java Classes and Objects](https://www.w3schools.com/java/java_classes.asp)
+
 <h3><span style="float:left">
 <a href="intro.md">Home</a></span>
 <span style="float:right">

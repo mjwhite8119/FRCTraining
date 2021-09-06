@@ -2,13 +2,17 @@
 Use Ramsete controller to follow a path.
 
 ## References
-[FRC Documentation - Path Planning](https://docs.wpilib.org/en/latest/docs/software/pathplanning/index.html)
+- FRC Documentation - [Path Planning](https://docs.wpilib.org/en/latest/docs/software/pathplanning/index.html)
 
-[FRC Documentation - Trajectory Following](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/trajectories/index.html)
+- FRC Documentation - [Trajectory Following](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/trajectories/index.html)
 
-[Ramsete Example Code - github](https://github.com/bb-frc-workshops/romi-examples/tree/main/romi-trajectory-ramsete)
+- FRC Documentation - [Robot Characterization](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-characterization/index.html)
 
-[Auto driving example - github](https://github.com/calcmogul/auton-driving-presentation)
+- FRC Documentation - [PathWeaver](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/pathweaver/index.html)
+
+- [Ramsete Example Code - github](https://github.com/bb-frc-workshops/romi-examples/tree/main/romi-trajectory-ramsete)
+
+- [Auto driving example - github](https://github.com/calcmogul/auton-driving-presentation)
 
 
 <h3><span style="float:left">

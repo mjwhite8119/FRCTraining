@@ -1,7 +1,6 @@
 # Romi Training Robot
 The <i>Romi Robot</i> is designed to be used as a teaching tool for programming teams involved in the <i>First Robotics Competition (FRC)</i>.  The following tutorials make use of the Romi Robot to teach beginning and intermediate programming.  By the time you finish the tutorials you will have a firm grasp on how to program robots, and the code that you develop will translate almost directly over to programming the robots used for FRC.
 
-
 ## Basic Programming
 - [Romi Development Environment](romiDev)
 - [Romi Example Code](romiExample)
@@ -9,11 +8,11 @@ The <i>Romi Robot</i> is designed to be used as a teaching tool for programming 
 - [Subsystems](romiSubsystems)
 - [Commands](romiCommands)
 - [Configuring Joysticks](romiJoysticks)
-- [Shuffleboard](romiShuffleboard)
 - [Advanced Commands](romiAdvancedCommands)
 
 ## Advanced Programming
 - [Network Tables](romiNetworkTables)
+- [Motion Control](romiMotion)
 - [Path Planning and Trajectory Following](romiPathPlanning)
 - [Vision Programming](romiVision)
 - [PID and Line Following](romiPID)

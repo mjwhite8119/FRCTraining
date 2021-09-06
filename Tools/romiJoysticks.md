@@ -3,7 +3,12 @@ Explain joysticks
 
 ![Commands](../images/Romi/Romi.032.jpeg)
 
-Use a slew rate filter
+In the `RobotContainer` class create the Joystick object:
+
+    private final Joystick m_controller = new Joystick(0);
+
+
+## Slew Rate Filter
 
 <h3><span style="float:left">
 <a href="romiCode3">Previous</a></span>

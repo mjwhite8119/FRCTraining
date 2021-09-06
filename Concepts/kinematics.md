@@ -34,6 +34,8 @@ These formulars are used in the <i>DifferentialDriveKinematics</i> class of the 
 
 ## References
 
+- FRC Documentation - [Kinematics and Odometry](https://docs.wpilib.org/en/latest/docs/software/kinematics-and-odometry/index.html)
+
 <h3><span style="float:left">
 <a href="../Geometry/intro">Previous</a></span>
 <span style="float:right">

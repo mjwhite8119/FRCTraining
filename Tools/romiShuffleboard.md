@@ -8,6 +8,10 @@ Add the SmartDashboard options
 
 Run in Autonomous mode
 
+## References
+
+- FRC Documentation - [Shuffleboard](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/shuffleboard/index.html)
+
 <h3><span style="float:left">
 <a href="romiCode4">Previous</a></span>
 <span style="float:right">
