@@ -1,14 +1,18 @@
 # State Machines
+State Machines represent the state of a system at any point in time.  As time passes a state machine usually transitions from one state to another.  Its state can change based on inputs to the system or as a result of a specific period of time passing. In programming it usually consists of a finite number of states and is therefore called a Finite State Machine (FSM).
 
-1. Initial State
+A State Machine operates in the following manner:
 
-2. Next Step (receive and process new input)
+1. **Initial State** - This where inputs to the system are often zero'ed out or saved to data structure for later comparison.  Timers are either reset or saved to a timestamp.  In code, this is often carried out in an initialization routine.
 
-3. Measurement Update (transduce, make repeated calls to Step)
+2. **Next Step** - Receives and processes new input to the system.  This may change the systems incremental state via some kind of summation of integration routine.  This may eventually cause it to transition to another state when some threshold is met. 
+
+3. **Input Update** - This is the process of making repeated calls to the next step.  This will often be carried out by using a programmatic timer.  In an FRC program the input update step will be carried out by the [Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) that runs every 20 milliseconds.
 
 ![State Machines](../images/FRCProgramming/FRCProgramming.009.jpeg)
 
-Let's look at code from the Romi reference program to see an example of a State Machine.
+## State Machine Example
+Let's look at code from the Romi project to see an example of a State Machine.  This code is from a **Command** object.  It starts in the `initialize()` state that runs procedures to stop the motors and zero out the encoder values.  Stopping the motors ensures that we are at some initially known state.  After initialization it transitions to the `execute()` state that performs the **Next Step**.  It'll continue in that state, driven by the **Input Update** process (CommandScheduler) until it reaches some threshold, at which point is transitions into the state controlled by the `end()` method.  The threshold is defined and triggered by the `isFinished()` method.
 
     // Called when the command is initially scheduled.
       public void initialize() {
@@ -31,6 +35,12 @@ Let's look at code from the Romi reference program to see an example of a State 
       // Compare distance travelled from start to desired distance
       return Math.abs(m_drive.getAverageDistanceInch()) >= m_distance;
     }
+
+## References
+
+- Wikipedia [Finite State Machines](https://en.wikipedia.org/wiki/Finite-state_machine)
+
+- FRC Documentation - [The Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html)
 
 <h3><span style="float:left">
 <a href="objects">Previous</a></span>

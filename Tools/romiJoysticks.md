@@ -1,7 +1,7 @@
-# <a name="code"></a>Joysticks
-Explain joysticks
+# <a name="code"></a>Joystick Controllers
+A joystick/gamepad can be connected to your laptop via a USB port or Bluetooth.  The WPI Library provides all of the necessary software to interface with XBox, PS3/4, or Logitech game controllers.
 
-![Commands](../images/Romi/Romi.032.jpeg)
+![Joysticks](../images/Romi/Romi.032.jpeg)
 
 In the `RobotContainer` class create the Joystick object:
 

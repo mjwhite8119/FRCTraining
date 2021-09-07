@@ -24,7 +24,7 @@ Because it measures the return of the laser source, therefore, is useless if not
 
 Also, because the horizontal plane is scanned, only objects on the horizontal plane are detected by the sensor. In other words, you need to know that it is 2D data.
 
-There are infinite usages of LDS, and SLAM (Simultaneous Localization And Mapping)16 is one of the most well known examples of using LDS. SLAM creates a map by recognizing obstacles around the robot and estimates current position of the robot within a map. As another example of using LDS, the robot is able to detect various objects in the surroundings and react based on the current environment. 
+There are infinite usages of LDS, and SLAM (Simultaneous Localization And Mapping) is one of the most well known examples of using LDS. SLAM creates a map by recognizing obstacles around the robot and estimates current position of the robot within a map. As another example of using LDS, the robot is able to detect various objects in the surroundings and react based on the current environment. 
 
 ## References
 - FRC Documentation - [Sensors](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/index.html)

@@ -37,4 +37,6 @@ So let's get started.
   - [Vision-Based Control](Vision/control)
 
 ## References
-[QUT Robot Academy](https://robotacademy.net.au)
+- [FIRST Robotic Competition Website](https://docs.wpilib.org/en/latest/index.html) 
+- [Robotics, Vision and Control](https://petercorke.com/rvc/home/)
+- [QUT Robot Academy](https://robotacademy.net.au)

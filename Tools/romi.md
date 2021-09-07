@@ -1,5 +1,5 @@
 # Romi Training Robot
-The <i>Romi Robot</i> is designed to be used as a teaching tool for programming teams involved in the <i>First Robotics Competition (FRC)</i>.  The following tutorials make use of the Romi Robot to teach beginning and intermediate programming.  By the time you finish the tutorials you will have a firm grasp on how to program robots, and the code that you develop will translate almost directly over to programming the robots used for FRC.
+The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as a teaching tool for programming teams involved in the <i>First Robotics Competition (FRC)</i>.  The following tutorials make use of the Romi Robot to teach beginning and intermediate programming.  By the time you finish the tutorials you will have a firm grasp on how to program robots, and the code that you develop will translate almost directly over to programming the robots used for FRC.
 
 ## Basic Programming
 - [Romi Development Environment](romiDev)
