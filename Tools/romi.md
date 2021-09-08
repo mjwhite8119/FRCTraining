@@ -18,10 +18,11 @@ The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as 
 - [PID and Line Following](romiPID)
 - [Programming Servos](romiServos)
 - [Filters](romiFilters)
-<!-- - [Robot Arm](romiArm)
+
+<!-- [Robot Arm](romiArm)
 - [Robot Arm and Vision](romiArmVision) -->
 
-<!-- - [Color Sensor](colorSensor) -->
+<!-- [Color Sensor](colorSensor) -->
 
 ## Romi Robot Software
 - [Romi RaspberryPi Software](romiPiSoftware)

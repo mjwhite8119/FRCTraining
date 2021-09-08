@@ -32,6 +32,6 @@ The four commands are composed in the class constructor using the `addCommands()
 - FRC Documentation - [Command Groups](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-groups.html)
 
 <h3><span style="float:left">
-<a href="romiCode5">Previous</a></span>
+<a href="romiCommands">Previous</a></span>
 <span style="float:right">
-<a href="romiCode7">Next</a></span></h3>
+<a href="romiMotion">Next</a></span></h3>

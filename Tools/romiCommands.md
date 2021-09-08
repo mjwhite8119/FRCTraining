@@ -95,6 +95,6 @@ Another command in the Romi example code is used to drive the robot for a specif
 - [Amazon Example](https://s3.amazonaws.com/screensteps_live/exported/Wpilib/2078/2286/Command_based_programming.pdf?1478686718)
 
 <h3><span style="float:left">
-<a href="romiCode2">Previous</a></span>
+<a href="romiSubsystems">Previous</a></span>
 <span style="float:right">
-<a href="romiCode4">Next</a></span></h3>
+<a href="romiCommandGroups">Next</a></span></h3>

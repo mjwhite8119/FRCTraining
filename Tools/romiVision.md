@@ -92,4 +92,6 @@ The runCamera file keeps getting overwritten when you upload a new multiCameraSe
 [Robotpy examples - github](https://github.com/robotpy/robotpy-cscore/tree/main/examples)
 
 <h3><span style="float:left">
-<a href="romiFirmware">Previous</a></span>
+<a href="romiNetworkTables">Previous</a></span>
+<span style="float:right">
+<a href="romiPID">Next</a></span></h3>

@@ -36,6 +36,6 @@ This method is called periodically by the CommandScheduler. Useful for updating 
 - QUT Robot Academy [Measuring Motion](https://robotacademy.net.au/masterclass/measuring-motion/)
 
 <h3><span style="float:left">
-<a href="romiCode1">Previous</a></span>
+<a href="romiJoysticks">Previous</a></span>
 <span style="float:right">
-<a href="romiCode3">Next</a></span></h3>
+<a href="romiCommands">Next</a></span></h3>

@@ -8,6 +8,6 @@
 
 
 <h3><span style="float:left">
-<a href="romi">Previous</a></span>
+<a href="romiPathPlanning">Previous</a></span>
 <span style="float:right">
-<a href="romiMotion">Next</a></span></h3>
+<a href="romiVision">Next</a></span></h3>
