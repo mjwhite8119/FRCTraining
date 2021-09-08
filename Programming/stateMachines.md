@@ -7,7 +7,7 @@ A State Machine operates in the following manner:
 
 2. **Next Step** - Receives and processes new input to the system. It takes the current state applies new input data and produces a new state.  This incremental change of state maybe done via some kind of summation of integration function.  Eventually it may cause the system to a transition to new major state, such as a terminal or idle state, when some threshold is met. 
 
-3. **Input Update** - This is the process of making repeated calls to the next step.  This will often be carried out by using a programmatic timer.  In an FRC program the input update step will be carried out by the [Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) that runs every 20 milliseconds.
+3. **Input Update** - This is the process of making repeated calls to the next step.  This will often be carried out by using a programmatic timer.  In an FRC program the input update step will be carried out by the [Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) that runs every 20 milliseconds.  The Input process would be responsible for checking on the transitioning event.
 
 ![State Machines](../images/FRCProgramming/FRCProgramming.009.jpeg)
 
@@ -47,4 +47,4 @@ Other prime examples of State Machines are [PID Controllers](../Tools/romiPID) u
 <h3><span style="float:left">
 <a href="objects">Previous</a></span>
 <span style="float:right">
-<a href="../../index">Home</a></span></h3>
+<a href="../index">Home</a></span></h3>

@@ -6,7 +6,7 @@ A command is a simple state machine that is either initializing, executing, endi
 ![Commands](../images/Romi/Romi.015.jpeg)
 
 ## The CommandScheduler
-Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled commands, running already-scheduled commands, removing finished or interrupted commands, and running subsystem periodic() methods.  This must be called from the robot's periodic block in order for anything in the Command-based framework to work.
+Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled commands, running already-scheduled commands, removing finished or interrupted commands, and running the subsystem `periodic()` methods.  This must be called from the robot's `periodic()` block in order for anything in the Command-based framework to work.
 
 For more details see [The Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) documentation.
 
@@ -41,7 +41,7 @@ Update the execute() method:
       m_drivetrain.arcadeDrive(m_xaxisSpeedSupplier.get(),m_zaxisRotateSupplier.get());
     }
 
-## Add the Joystick
+## Use the Joystick
 In the `RobotContainer` class create the Joystick object:
 
     private final Joystick m_controller = new Joystick(0);
@@ -53,8 +53,37 @@ Now we'll create a function in the `RobotContainer` class that we'll use the joy
             m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
       }
 
-## DriveDistance and TurnDegrees Commands
-Add the DriveDistance and TurnDegrees commands.
+## The DriveDistance Command
+Another command in the Romi example code is used to drive the robot for a specified distance.  This is where [Parameters](https://www.w3schools.com/java/java_methods_param.asp) are very useful since we can decide how far to drive when the program runs.  This command demonstrates the classic [State Machine](../Programming/stateMachines) programming paradigm where we have an **Initialization Step** `initialize()` followed the **Next Step** `execute()` and an **Input Update** that repeatedly calls `execute()` until that threshold is met `isFinished()` and transititions it to the next major state `end()`.
+
+        public DriveDistance(double speed, double inches, Drivetrain drive) {
+            m_distance = inches;
+            m_speed = speed;
+            m_drive = drive;
+            addRequirements(drive);
+        }
+
+        // Called when the command is initially scheduled.
+        public void initialize() {
+            m_drive.arcadeDrive(0, 0);
+            m_drive.resetEncoders();
+        }
+
+        // Called every time the scheduler runs while the command is scheduled.
+        public void execute() {
+            m_drive.arcadeDrive(m_speed, 0);
+        }
+
+        // Called once the command ends or is interrupted.
+        public void end(boolean interrupted) {
+            m_drive.arcadeDrive(0, 0);
+        }
+
+        // Returns true when the command should end.
+        public boolean isFinished() {
+            // Compare distance travelled from start to desired distance
+            return Math.abs(m_drive.getAverageDistanceInch()) >= m_distance;
+        }
 
 
 ## References
