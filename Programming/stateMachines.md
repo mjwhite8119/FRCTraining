@@ -5,7 +5,7 @@ A State Machine operates in the following manner:
 
 1. **Initial State** - This where inputs to the system are often zero'ed out or saved to data structure for later comparison.  Timers are either reset or saved to a timestamp.  In code, this is often carried out in an initialization routine.
 
-2. **Next Step** - Receives and processes new input to the system.  This may change the systems incremental state via some kind of summation of integration routine.  This may eventually cause it to transition to another state when some threshold is met. 
+2. **Next Step** - Receives and processes new input to the system. It takes the current state applies new input data and produces a new state.  This incremental change of state maybe done via some kind of summation of integration function.  Eventually it may cause the system to a transition to new major state, such as a terminal or idle state, when some threshold is met. 
 
 3. **Input Update** - This is the process of making repeated calls to the next step.  This will often be carried out by using a programmatic timer.  In an FRC program the input update step will be carried out by the [Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) that runs every 20 milliseconds.
 
@@ -35,6 +35,8 @@ Let's look at code from the Romi project to see an example of a State Machine.  
       // Compare distance travelled from start to desired distance
       return Math.abs(m_drive.getAverageDistanceInch()) >= m_distance;
     }
+
+Other prime examples of State Machines are [PID Controllers](../Tools/romiPID) used for motion control or [Kalman Filters](../Concepts/kalmanFilters) used for [Robot Localization](../Concepts/localization).
 
 ## References
 

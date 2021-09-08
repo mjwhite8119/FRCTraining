@@ -14,10 +14,10 @@ Let's go over each of these categories in detail.
 - [Objects](objects)
 - [State Machines](stateMachines)
 
+## Program Files
+Most programs will be composed of multiple files that separate the various components of the program.  This makes it much easier to work on specific parts of the program without scrolling through a single large file.  It also allows the project to be worked on by a team of programmers since you would not all be working on the same file. When the program is compiled all of the files are combined, or linked, together to form a single executable file.  In order to associate all of the files that are part of the same project we use an `import` statement as shown below. 
 
-<!-- These four programming categories map quite well, although not exactly, to the mechanisms that are required to control a robot.  We'll examine these mechanisms in more detail in the tutorial on [Robot Systems](../../Concepts/RobotSystem/intro).  
-
-![Programming-system Mapping](../images/FRCProgramming/FRCProgramming.008.jpeg) -->
+![Program Files](../images/FRCProgramming/FRCProgramming.001.jpeg)
 
 <h3><span style="float:left">
 <a href="../index">Home</a></span>

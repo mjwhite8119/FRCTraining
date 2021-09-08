@@ -3,7 +3,7 @@
 ## Encoders
 FRC Documentation - [Encoders](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/encoders-software.html)
 
-## Gyros
+## <a name="gyros"></a>Gyros
 FRC Documentation - [Gyros](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/gyros-software.html)
 
 Also QUT Robot Academy [Measuring Motion](https://robotacademy.net.au/masterclass/measuring-motion/)
