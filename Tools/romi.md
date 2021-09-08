@@ -5,15 +5,15 @@ The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as 
 - [Romi Development Environment](romiDev)
 - [Romi Example Code](romiExample)
 - [Basic Robot Structure](romiStructure)
+- [Configuring Joysticks](romiJoysticks)
 - [Subsystems](romiSubsystems)
 - [Commands](romiCommands)
-- [Configuring Joysticks](romiJoysticks)
 - [Command Groups](romiCommandGroups)
+- [Motion Control](romiMotion)
 
 ## Advanced Programming
-- [Network Tables](romiNetworkTables)
-- [Motion Control](romiMotion)
 - [Path Planning and Trajectory Following](romiPathPlanning)
+- [Network Tables](romiNetworkTables)
 - [Vision Programming](romiVision)
 - [PID and Line Following](romiPID)
 - [Programming Servos](romiServos)
