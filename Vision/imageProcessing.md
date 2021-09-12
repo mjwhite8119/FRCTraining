@@ -1,6 +1,8 @@
 # Image Processing
 
 ## References
+- FRC Documentation [Identifying and Processing the Targets](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/identifying-and-processing-the-targets.html)
+
 - QUT Robot Academy [Getting images into a computer](https://robotacademy.net.au/masterclass/getting-images-into-a-computer/)
 
 - QUT Robot Academy [Image Processing](https://robotacademy.net.au/masterclass/image-processing/)

@@ -1,4 +1,6 @@
 # Sensors
+Sensors extract data...
+
 
 ## Encoders
 FRC Documentation - [Encoders](https://docs.wpilib.org/en/latest/docs/software/hardware-apis/sensors/encoders-software.html)
@@ -13,6 +15,11 @@ FRC Documentation - [Accelerometers](https://docs.wpilib.org/en/latest/docs/soft
 
 ## Cameras
 The camera corresponds to the eye in the robot. The images obtained from the camera are very useful for recognizing the environment around the robot. For example, object recognition using a camera image, facial recognition, a distance value obtained from the difference between two different images using two cameras (stereo camera), mono camera visual SLAM, color recognition using information obtained from an image and object tracking are very useful.
+
+### Active Ranging and Time-of-Flight
+Robots rely heavily on <i>Active Ranging</i> for obstacle detection and avoidance.  Common active ranging sensors are ultrasonic sensors and laser rangefinders. Active ranging sensors are also used extensively for mapping and localization.  The physics behind these types of sensors is <i>Time of Flight</i>. Time of Flight is a measurement of the time it takes for a sound or light wave to travel from a emitter and back to a receiver after bouncing off of an object. The time taken is used to calculate the distance, or range, to the object.
+
+![Time of Flight](../../images/FRCConcepts/FRCConcepts.009.jpeg)
 
 ## Laser Distance Sensors (LDS)
 Edit all of this....

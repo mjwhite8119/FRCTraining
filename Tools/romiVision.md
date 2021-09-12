@@ -1,13 +1,40 @@
 # <a name="code"></a>Vision Programming
-In this section we'll make use of the Raspberry Pi camera that's installed on the Romi.  The camera will recognize a line drawn on the ground.  The line should be a distinctive color that doesn't blend in with the surrounding colors.  During this lesson we'll decide on a color and tune the camera in to lock onto that color.  Once we've "locked on" to the color we'll draw a center line on the camera image so as we can follow the line. The camera server will use [Network Tables](https://docs.wpilib.org/en/latest/docs/software/networktables/index.html) to send data to the [Simulator](https://docs.wpilib.org/en/latest/docs/software/wpilib-tools/robot-simulation/index.html) and [Shuffleboard](https://docs.wpilib.org/en/latest/docs/software/dashboards/shuffleboard/index.html).  
+In this section we'll make use of the Raspberry Pi camera that's installed on the Romi.  The camera will recognize a line drawn on the ground.  The line should be a distinctive color that doesn't blend in with the surrounding colors.  During this lesson we'll decide on a color and tune the camera in to lock onto that color.  Once we've "locked on" to the color we'll draw a center line on the camera image so as we can follow the line. The camera server will use the Robotpy [Network Tables](https://robotpy.readthedocs.io/en/stable/guide/nt.html#networktables-guide) to send data to the [Simulator](https://docs.wpilib.org/en/latest/docs/software/wpilib-tools/robot-simulation/index.html) and [Shuffleboard](https://docs.wpilib.org/en/latest/docs/software/dashboards/shuffleboard/index.html).  
 
-The camera program uses the open source software called [OpenCV](https://opencv.org/) and can be written in Java, Python, or C++.  We're going to use the Python programming language since most of the OpenCV programming examples that you'll find online will use Python, so if you run into any problems with your program chances you'll find the solution in Python.  The following diagram shows the software components that we're going to use and how they're deployed between the Romi and your development PC. 
+The camera program uses the open source software called [OpenCV](https://opencv.org/) and can be written in Java, Python, or C++.  We're going to use the Python programming language since most of the OpenCV programming examples that you'll find online will use Python, so if you run into any problems with your program chances you'll find the solution in Python. The camera program uses the [CameraServer](cameraServer) libraries from Robotpy.
 
-![Camera Program Flow](../images/Romi/Romi.024.jpeg)
+The following diagram shows the software components that we're going to use and how they're deployed between the Romi and your development PC. 
 
+![Camera Program Interaction](../images/Romi/Romi.024.jpeg)
+
+## Development Setup for Python
+In order to use Python in VSCode you will need to install the **Python IntelliSence** plugin.
+
+Install robotpy on you computer:
+
+On Mac or Linux `pip3 install robotpy`
+
+On Windows `py -3 -m pip install robotpy`
+
+Install cscore library:
+
+On Mac/Linux `pip3 install robotpy-cscore`
+This errors out...  More investigation to be done.
+
+
+You won't be able to run the camera server code on your laptop since it's not currently supported.  You have to upload it to the Raspberry Pi to test it.  See the **Upload Python Program** section below.
+
+## Camera Program General Structure
+Before we start programming lets look at the general structure that our camera program will take on.  The main idea is to get a frame from the camera, process the frame to extract objects from the scene that we're interested in, and put data regarding those objects into the Network Tables.  Our program running on the laptop will find useful things to do with that data.
+
+The camera program can also send the data frames over to Shuffleboard in the form of a video stream. Before sending the frames the camera program can overlay them with useful visual information such as a center line of a target object.
+
+![Camera Program Structure](../images/Romi/Romi.040.jpeg)
+
+## Create your Vision Program
 For this lesson we'll use the [BasicVision](https://github.com/mjwhite8119/romi-examples/tree/main/BasicVision) project.  Clone this project to VSCode.  The **BasicVision** project uses the WPI example project **RomiReference** to run and view the camera data in the Simulator and Shuffleboard.  There are no changes made to the **RomiReference** code.
 
-The python code for running the camera has been included in this project so as we have both of the software components in one place.  You'll upload the camera program to the Raspberry Pi on the Romi in a later step.  The following sections explain how the program works and how you deploy and run it.
+The python code for running the camera has been included in this project so as we have both of the software components in one place.  It makes use of the [Camera Server](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/cameraserver-class.html) class from the WPI Library. You'll upload the camera program to the Raspberry Pi on the Romi in a later step.  The following sections explain how the program works and how you deploy and run it.
 
 ## Using GRIP to Recognize the Line
 In the above diagram you can see the camera sending frames to a piece of code called **GripPipeline**.  This code is generated from the FRC tool called [GRIP](https://docs.wpilib.org/en/latest/docs/software/vision-processing/grip/index.html).  A major part of this lesson will be to learn the GRIP tool and create a pipeline to process images coming from the camera.
@@ -85,11 +112,23 @@ Caution:
 The runCamera file keeps getting overwritten when you upload a new multiCameraServer.py file.  So just upload the tar file and then `Terminate` the application on the **Vision Status** page, and then press the `Up` button.
 
 ## References
-[OpenCV](https://opencv.org/)
+- [OpenCV](https://opencv.org/)
 
-[GRIP documentation](https://docs.wpilib.org/en/latest/docs/software/vision-processing/grip/index.html)
+- [Robotpy cscore](https://robotpy.readthedocs.io/projects/cscore/en/stable/api.html)
 
-[Robotpy examples - github](https://github.com/robotpy/robotpy-cscore/tree/main/examples)
+- Robotpy - [Network Tables](https://robotpy.readthedocs.io/en/stable/guide/nt.html#networktables-guide)
+
+- FRC Documentation - [Network Tables](https://docs.wpilib.org/en/latest/docs/software/networktables/index.html)
+
+- FRC Documentation - [Camera Server](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/cameraserver-class.html)
+
+- FRC Documentation - [Vision with WPILibPi](https://docs.wpilib.org/en/stable/docs/software/vision-processing/wpilibpi/index.html#)
+
+- FRC Documentation - [GRIP documentation](https://docs.wpilib.org/en/latest/docs/software/vision-processing/grip/index.html)
+
+- Robotpy - [Camera & Vision](https://robotpy.readthedocs.io/en/stable/vision/index.html)
+
+- [Robotpy examples - github](https://github.com/robotpy/robotpy-cscore/tree/main/examples)
 
 <h3><span style="float:left">
 <a href="romiNetworkTables">Previous</a></span>

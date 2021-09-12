@@ -6,7 +6,7 @@ This site hosts training material for teams involved in the First Robotics Compe
 
 So let's get started.
 
-- Development Tools 
+- Development/Training Tools 
   - [Romi Training Robot](Tools/romi.md)
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md) 
@@ -20,6 +20,8 @@ So let's get started.
   - [Objects](Programming/objects)
   - [State Machines](Programming/stateMachines)
 
+  <!-- - [Computer Science](Programming/csIndex) -->
+
 - Robotics Concepts
   - [Robot Systems](Concepts/RobotSystem/intro)
   - [Position & Orientation](Concepts/geometry)
@@ -29,12 +31,12 @@ So let's get started.
   - [Localization](Concepts/localization)
   
 - Vision  
-  - [Introduction to Vision](Vision/intro.md)
+  - [Introduction to Vision](Vision/introVision.md)
   - [Light & Color](Vision/lightColor)
   - [Image Formation](Vision/imageFormation)
   - [Image Processing](Vision/imageProcessing)
   - [Feature Extraction](Vision/featureExtraction)
-  - [Vision-Based Control](Vision/control)
+  - [Vision-Based Control](Vision/controlVision)
 
 ## References
 - [FIRST Robotic Competition Website](https://docs.wpilib.org/en/latest/index.html) 
