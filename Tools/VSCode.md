@@ -7,7 +7,11 @@ An Integrated Development Environment (IDE) is a piece of software that is used 
 - Applies colour schemes to your code so it’s easier to interpret.
 - Some will have code completion, which will actually fill in some code for you. 
 
-Visual Studio Code is the supported IDE for programming an FRC robot. If you don't have VSCode installed on your computer the best way of doing this is to follow the instructions on the [FRC Documentation Website](https://docs.wpilib.org/en/latest/docs/getting-started/getting-started-frc-control-system/wpilib-setup.html). These instructions will also install the WPI Library which is used for programming the FRC robot. Additional information is also found at [FRC Documentation VSCode Overview](https://docs.wpilib.org/en/latest/docs/software/vscode-overview/index.html).
+Visual Studio Code is the supported IDE for programming an FRC robot. If you don't have VSCode installed on your computer the best way of doing this is to follow the instructions on the [FRC Documentation Website](https://docs.wpilib.org/en/latest/docs/zero-to-robot/step-2/wpilib-setup.html). These instructions will also install the WPI Library which is used for programming the FRC robot. Additional information is also found at [FRC Documentation VSCode Overview](https://docs.wpilib.org/en/latest/docs/software/vscode-overview/index.html). The link to download the latest software is somewhat hidden, you can find it under [Prerequisites](https://docs.wpilib.org/en/latest/docs/zero-to-robot/step-2/wpilib-setup.html#prerequisites) and click on the Github link.  Scroll all the way down to the bottom of the Github release page to find the downloads.
+
+It's important that everyone has the latest software otherwise you won't be able to work on other team mates code.  After upgrading VSCode will import each project to the latest version.  Answer *Yes* to each prompt.
+
+![After Upgrade](../images/FRCTools/FRCTools.011.jpeg)
 
 ## Using Live Share
 Live Share enables you to quickly collaborate with a friend, classmate, or professor on the same code without the need to sync code or to configure the same development tools, settings, or environment.
@@ -54,6 +58,8 @@ To end a Live Share session click on the **X** next to the participants name.
 
 ![End Session](../images/Tools/LSEndSession.png)
 
+## Notes on Compilation
+There is an issue where a project created on a Windows laptop would not compile on the Mac.  Need to investigate further.
 
 ## References
 

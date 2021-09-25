@@ -11,7 +11,7 @@ So let's get started.
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md) 
   - [Robot Simulator](Tools/simulator.md)
-  - [Shuffleboard](Tools/romiShuffleboard)
+  - [Shuffleboard](Tools/shuffleboard)
   <!-- - [BabyBot](Tools/trainingRobot.md) -->
 - Programming
   - [Introduction to Programming](Programming/introProgramming)
@@ -27,6 +27,7 @@ So let's get started.
   - [Position & Orientation](Concepts/geometry)
   - [Time & Motion](Concepts/timeMotion)
   - [Mobile Robot Kinematics](Concepts/kinematics)
+  <!-- - [Paths & Trajectories](Concepts/pathsTrajectories) -->
   - [Navigation](Concepts/navigation)
   - [Localization](Concepts/localization)
   

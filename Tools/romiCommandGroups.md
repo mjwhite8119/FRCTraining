@@ -34,4 +34,4 @@ The four commands are composed in the class constructor using the `addCommands()
 <h3><span style="float:left">
 <a href="romiCommands">Previous</a></span>
 <span style="float:right">
-<a href="romiMotion">Next</a></span></h3>
+<a href="romiShuffleboard">Next</a></span></h3>
