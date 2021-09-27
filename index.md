@@ -7,7 +7,7 @@ This site hosts training material for teams involved in the First Robotics Compe
 So let's get started.
 
 - Development/Training Tools 
-  - [Romi Training Robot](Tools/romi.md)
+  - [Romi Training Robot](Romi/romi.md)
   - [VSCode](Tools/VSCode.md)
   - [Git](Tools/git.md) 
   - [Robot Simulator](Tools/simulator.md)

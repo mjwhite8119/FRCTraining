@@ -32,5 +32,3 @@ The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as 
 
 <h3><span style="float:left">
 <a href="../index">Home</a></span>
-<span style="float:right">
-<a href="ide">Next</a></span></h3>

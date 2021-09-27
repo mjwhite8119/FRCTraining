@@ -1,7 +1,7 @@
 # <a name="code"></a>Command Groups
 Simple commands can be composed into [Command Groups](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-groups.html) to accomplish more-complicated tasks. There are several ways in which Command Groups can be composed, as shown the documentation.  We'll look at a full example of a **Sequential** Command Group from the Romi sample code.
 
-## The AutonomousDistance
+## The AutonomousDistance Command
 The **AutonomousDistance** command is used to drive forward, turn 180 degrees, drive back, and turn another 180 degrees, hopefully ending up exactly where we started.  That's four commands executed one after another and is a prime candidate for a **SequentialCommandGroup**.
 We'll be using the **Drivetrain** subsystem in this command so that needs to be imported together with the SequentialCommandGroup library.
 
@@ -26,6 +26,10 @@ The four commands are composed in the class constructor using the `addCommands()
             new TurnDegrees(0.5, 180, drivetrain));
       }
     }
+
+### Change Inches to Meters
+This is an exercise to change the distance from inches to meters.  [solution](solutionInchMeters)
+
 
 ## References
 

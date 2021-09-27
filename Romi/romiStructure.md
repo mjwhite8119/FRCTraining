@@ -23,7 +23,11 @@ The `RobotContainer.java` file is where the main structure of the robot is built
 
 ## The Constants File
 
-The `Constants.java` file provides a central location for defining constants.  Constants are values assigned to variables that do not change throughout the execution of the program.
+The `Constants.java` file provides a central location for defining constants.  Constants are values assigned to variables that do not change throughout the execution of the program.  There are a few values in the *romiReference* program that really should be in the Constants file, so let's put them there now.
+
+...code
+
+The *Constants* file can end up getting very crowded so it's a good idea to group the constants under the appropriate subsystem as much as possible.  To do that we can create a subclass within the Constants file.  You must also change the constant to `public`.
 
 ## References
 - FRC Documentation - [Structuring a Command-Based Robot Project](https://docs.wpilib.org/en/latest/docs/software/commandbased/structuring-command-based-project.html?highlight=RobotContainer)
