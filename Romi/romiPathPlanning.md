@@ -16,6 +16,6 @@ Use Ramsete controller to follow a path.
 
 
 <h3><span style="float:left">
-<a href="romiMotion">Previous</a></span>
+<a href="romiPID">Previous</a></span>
 <span style="float:right">
 <a href="romiNetworkTables">Next</a></span></h3>

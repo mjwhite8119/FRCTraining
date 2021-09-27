@@ -10,13 +10,13 @@ The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as 
 - [Commands](romiCommands)
 - [Command Groups](romiCommandGroups)
 - [Shuffleboard](romiShuffleboard)
-- [Motion Control](romiPID)
-
-## Advanced Programming
+- [Motion PID Control](romiPID)
 - [Path Planning and Trajectory Following](romiPathPlanning)
+
+## Vision and Systems Control
 - [Network Tables](romiNetworkTables)
-- [Vision Programming](romiVision)
-- [PID and Line Following](romiLineFollow)
+- [Basic Vision Programming](romiVision)
+- [Line Following](romiLineFollow)
 - [Programming Servos](romiServos)
 - [Filters](romiFilters)
 
