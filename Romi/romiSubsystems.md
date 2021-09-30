@@ -6,7 +6,7 @@ Subsystems are the basic units of functionally for our robot, such as drive trai
 ![Subsystems](../images/Romi/Romi.012.jpeg)
 
 ## DriveTrain Subsystem
-The Romi uses a drive train called a [Differential Drive](https://docs.wpilib.org/en/stable/docs/software/actuators/wpi-drive-classes.html#using-the-differentialdrive-class-to-control-differential-drive-robots). There are three [drive train modes](https://docs.wpilib.org/en/stable/docs/software/actuators/wpi-drive-classes.html#drive-modes) that can be implemented. The Romi uses the **Arcade** drive mode. To understand what type of maneuvers are possible using a Differential Drive robots we need to learn a little bit about [Kinematics](../Concepts/kinematics).
+The Romi uses a drive train called a [Differential Drive](https://docs.wpilib.org/en/stable/docs/software/actuators/wpi-drive-classes.html#using-the-differentialdrive-class-to-control-differential-drive-robots). There are three [drive train modes](https://docs.wpilib.org/en/stable/docs/software/actuators/wpi-drive-classes.html#drive-modes) that can be implemented. The Romi uses the **Arcade** drive mode. To understand what type of maneuvers are possible using a Differential Drive robots you can look at the [Kinematics](../Concepts/kinematics) module. The *DifferentialDrive* class takes the left and right motors as parameters that are wrapped in the *PWMSpeedController* class.  The primary task of the *DifferentialDrive* class is to convert a single speed (unicycle model) into speed for the left and right side of the chassis (differential drive model).
 
 ![Differential Drive](../images/Romi/Romi.038.jpeg)
 

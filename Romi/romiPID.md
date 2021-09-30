@@ -86,10 +86,27 @@ We'll again add the *Drivetrain* and *targetDistance* parameters to the construc
 ### Tuning the PID Controller
 To get the PID controller to perform properly it will will most likely need to be tuned.  The [Tuning a PID Controller](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/tuning-pid-controller.html) documentation gives some information on the process.
 
-To tune the PID controller you will need to start Shuffleboard. The PID Controller parameters *setpoint, P, I*, and *D* can be found under LiveWindow.  You can pull it onto the *Drive* tab if you wish.  This will 
+To tune the PID controller you will need to start Shuffleboard. The PID Controller parameters *setpoint, P, I*, and *D* can be found under LiveWindow.  You can pull these onto the *Drive* tab if you wish.  We would want to change the PID values from Shuffleboard and see the results without restarting our program.  To do this we will add in the Network Tables instance and table to our program:
 
-Add in the Network Tables instance to get the data from Shuffleboard. 
-Override the PID command's `initialize()` and `execute()` method to add Shuffleboard diagnostics. 
+    private static NetworkTableInstance inst = NetworkTableInstance.getDefault();
+    private static NetworkTable table = inst.getTable("Shuffleboard/Drivetrain");
+
+Override the PID command's `initialize()` method to update the *P* and *D* parameters:
+
+    public void initialize() {
+      super.initialize();
+      // Override PID parameters from Shuffleboard
+      getController().setP(table.getEntry("kP").getDouble(1.0));
+      getController().setD(table.getEntry("kD").getDouble(0.0));
+    }
+
+You can also override the `execute()` method to add Shuffleboard diagnostics.
+
+    public void execute() {
+      super.execute();
+      SmartDashboard.putNumber("Pos. Error", getController().getPositionError());
+      SmartDashboard.putBoolean("atGoal", getController().atGoal());
+    }
 
 View [Testing and Tuning PID Loops](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/shuffleboard/advanced-usage/shuffleboard-tuning-pid.html)
 
@@ -144,7 +161,6 @@ The first is to understand which of the three angles represent the robot's headi
 Ensure that the gyro is calibrated, which is done on the Romi Website.  Follow the [IMU Calibration](https://docs.wpilib.org/en/stable/docs/romi-robot/web-ui.html#imu-calibration) instructions.
 
 The gyro on the Romi shows continuous angles and does not reset when it reaches 360 degrees.  In order for our PID controller to work we need to reset the angle to zero degrees when it passes 360 or -360 degrees.
-
 
 `enableContinuousInput(-180, 180)` Rather then using the max and min input range as constraints, it considers them to be the same point and automatically calculates the shortest route to the setpoint.
 

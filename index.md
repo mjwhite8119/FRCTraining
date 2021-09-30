@@ -1,6 +1,8 @@
 # Robotics Programmer Training
 
-This site hosts training material for teams involved in the First Robotics Competition (FRC). The aim is to give student a good grounding in both robotics and programming.  The outline of the course is based on the book [Robotics, Vision and Control](https://petercorke.com/rvc/home/) by Peter Corke, together with a lot of focus on the documentation shown on the [FIRST Robotic Competition](https://docs.wpilib.org/en/latest/index.html) Website.  This will prepare you to write code for the competition robot that your mechanical and electrical engineering teams will build. The subjects that will be covered in this course will include:
+This site hosts training material for teams involved in the First Robotics Competition (FRC). The aim is to give student a good grounding in both robotics and programming.  The outline of the course is based on the book [Robotics, Vision and Control](https://petercorke.com/rvc/home/) by Peter Corke, together with a lot of references to the documentation shown on the [FIRST Robotic Competition](https://docs.wpilib.org/en/latest/index.html) Website.  The purpose of these pages is to take you step-by-step through the process of becoming an FRC programmer.  This will prepare you to write code for the competition robot that your mechanical and electrical engineering teams will build. The FRC documentation is very comprehensive so there will be many links to it at the appropriate points.  
+
+The subjects that will be covered in this course will include:
 
 ![Course Overview](images/FRCConcepts/FRCConcepts.016.jpeg)
 

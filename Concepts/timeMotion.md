@@ -55,6 +55,8 @@ Testing for when we've reached the setpoint is the other key piece of code.  Tha
     }
 
 ## Trapezoid Motion Profile<a name="TrapezoidProfile"></a>
+The [Trapezoidal Trajectory](https://robotacademy.net.au/masterclass/paths-and-trajectories/?lesson=112) video gives a good introduction to this section.
+
 Initial and final values are specified, and usually set to zero.
 
 Velocity and acceleration are continuous.

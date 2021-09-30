@@ -4,3 +4,8 @@
 
 -  Haljni note found means you're missing the .VSCode/launch.json file.
 
+- ProfiledPIDCommand does not use getGoal()
+
+## References
+- [Auto driving example - github](https://github.com/calcmogul/auton-driving-presentation)
+

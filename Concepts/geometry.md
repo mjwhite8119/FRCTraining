@@ -58,6 +58,8 @@ Each Yaw, Pitch, Roll maneuver can be represented by a rotation matrix that uses
 
 - QUT Robot Academy [3D Geometry](https://robotacademy.net.au/masterclass/3d-geometry/)
 
+- FRC Documentation - [A Video Walkthrough of Model Based Validation of Autonomous in FRC](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/video-walkthrough.html)
+
 <h3><span style="float:left">
 <a href="RobotSystem/intro">Previous</a></span>
 <span style="float:right">

@@ -18,7 +18,7 @@ Create a new command called **ArcadeDrive**.  In the VSCode file menu right clic
 
     import java.util.function.Supplier;
 
-Add the suppliers
+Add the variables that will accept the parameters passed in from the game controller. The variable type is called a *Supplier*, which is an interface used for [Functional Programming Paradigm](https://en.wikipedia.org/wiki/Functional_programming).  This is a more complex programming concept that we won't cover here.
 
     private final Supplier<Double> m_xaxisSpeedSupplier;
     private final Supplier<Double> m_zaxisRotateSupplier;
