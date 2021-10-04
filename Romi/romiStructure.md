@@ -1,7 +1,7 @@
 # <a name="code"></a>Basic Robot Structure
 By this point you should have your development environment setup and have ensured that you can communicate with the Romi robot by running the [example program](romiExample).  It's now time to get down the serious work of learning how to program the robot.  We're going to start with an [Introduction to Programming](../Programming/introProgramming) where you'll get a high level overview of programming concepts.  Then we'll learn a little bit about [Robot Systems](../Concepts/RobotSystem/intro) so as you can understand what it is that you're programming. This will prepare you to understand how the code of an FRC robot is constructed.  
 
-There are four basic components that make up a program for an FRC robot.  Each component is kept in a separate java file that are called `Main.java, Robot.java, RobotContainer.java`, and `Constants.java`.  
+Programs based on the WPILib library are organized around two fundamental concepts: **Subsystems** and **Commands**. Subsystems and Commands run within the context of an FRC Robot program that is built using four basic components.  Each component is kept in separate java files called `Main.java, Robot.java, RobotContainer.java`, and `Constants.java`.  
 
 ![Robot Structure](../images/Romi/Romi.010.jpeg)
 
@@ -23,11 +23,14 @@ The `RobotContainer.java` file is where the main structure of the robot is built
 
 ## The Constants File
 
-The `Constants.java` file provides a central location for defining constants.  Constants are values assigned to variables that do not change throughout the execution of the program.  There are a few values in the *romiReference* program that really should be in the Constants file, so let's put them there now.
+The `Constants.java` file provides a central location for defining constants.  Constants are values assigned to variables that do not change throughout the execution of the program.  
 
-...code
+## Lab - Robot Structure.
+There are a few values in the *romiReference* program that really should be in the Constants file.  Move the two constants `kWheelDiameterInch` and `kCountsPerRevolution` that are in the DriveTrain class into the Constants.java file. 
 
-The *Constants* file can end up getting very crowded so it's a good idea to group the constants under the appropriate subsystem as much as possible.  To do that we can create a subclass within the Constants file.  You must also change the constant to `public`.
+### Quiz
+
+[Solution](solutionRobotStructure)
 
 ## References
 - FRC Documentation - [Structuring a Command-Based Robot Project](https://docs.wpilib.org/en/latest/docs/software/commandbased/structuring-command-based-project.html?highlight=RobotContainer)

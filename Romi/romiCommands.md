@@ -1,60 +1,12 @@
 # <a name="code"></a>Commands
 Commands define high-level robot actions or behaviors that utilize the methods defined by the subsystems. Before looking at the commands that are implemented on the Romi you should be very familiar with [Procedures](../Programming/procedures) and [State Machines](../Programming/stateMachines) from the programming sections.  You should also review the FRC Documentation on [Commands](https://docs.wpilib.org/en/latest/docs/software/commandbased/commands.html) before continuing.
 
-A command is a simple state machine that is either initializing, executing, ending, or idle. Users write code specifying which action should be taken in each state. Subsystems are used by the CommandScheduler resource management system to ensure multiple robot actions are not "fighting" over the same hardware resource. Commands that use a subsystem should include that subsystem in their `getRequirements()` method.
+A command is a simple state machine that is either *Initializing*, *Executing*, *Ending*, or *Idle*. Users write code specifying which action should be taken in each state.  Commands run when scheduled or in response to buttons being pressed on a gamepad or from [Shuffleboard](../Tools/shuffleboard). Each command has code in its `execute()` method to move it further along towards its goal and a method `isFinished()` that determines if the command has reached the goal. The `execute()` and `isFinished()` methods are called repeatedly.
 
 ![Commands](../images/Romi/Romi.015.jpeg)
 
-## The CommandScheduler
-Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled commands, running already-scheduled commands, removing finished or interrupted commands, and running the subsystem `periodic()` methods.  This must be called from the robot's `periodic()` block in order for anything in the Command-based framework to work.
-
-For more details see [The Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) documentation.
-
-## Default Commands
-The **setDefaultCommand( )** method sets the default Command of the subsystem. The default command will be automatically scheduled when no other commands are scheduled that require the subsystem. Default commands should generally not end on their own, i.e. their Command **isFinished()** method should always return false. Will automatically register this subsystem with the CommandScheduler
-
-## ArcadeDrive Command
-Create a new command called **ArcadeDrive**.  In the VSCode file menu right click on the **commands** folder and select "Create a new class/command".  Enter the name of the command in the box.  This will give you a template for creating your new command. 
-
-    import java.util.function.Supplier;
-
-Add the variables that will accept the parameters passed in from the game controller. The variable type is called a *Supplier*, which is an interface used for [Functional Programming Paradigm](https://en.wikipedia.org/wiki/Functional_programming).  This is a more complex programming concept that we won't cover here.
-
-    private final Supplier<Double> m_xaxisSpeedSupplier;
-    private final Supplier<Double> m_zaxisRotateSupplier;
-
-Pass the parameters to the ArcadeDrive constructor.  The completed constructor should look like this:
-
-    public ArcadeDrive(
-      Drivetrain subsystem,
-      Supplier<Double> xaxisSpeedSupplier,
-      Supplier<Double> zaxisRotateSuppplier) {
-        m_drivetrain = subsystem;
-        m_xaxisSpeedSupplier = xaxisSpeedSupplier;
-        m_zaxisRotateSupplier = zaxisRotateSuppplier;
-        addRequirements(subsystem);
-    }
-
-Update the execute() method:
-
-    public void execute() {
-      m_drivetrain.arcadeDrive(m_xaxisSpeedSupplier.get(),m_zaxisRotateSupplier.get());
-    }
-
-## Use the Joystick
-In the `RobotContainer` class create the Joystick object:
-
-    private final Joystick m_controller = new Joystick(0);
-
-Now we'll create a function in the `RobotContainer` class that we'll use the joystick to control the robot:
-
-    public Command getArcadeDriveCommand() {
-        return new ArcadeDrive(
-            m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
-      }
-
 ## The DriveDistance Command
-Another command in the Romi example code is used to drive the robot for a specified distance.  This is where [Parameters](https://www.w3schools.com/java/java_methods_param.asp) are very useful since we can decide how far to drive when the program runs.  This command demonstrates the classic [State Machine](../Programming/stateMachines) programming paradigm where we have an **Initialization Step** `initialize()` followed the **Next Step** `execute()` and an **Input Update** that repeatedly calls `execute()` until that threshold is met `isFinished()` and transititions it to the next major state `end()`.
+Let's take a look at the *DriveDistance* command to see how this all works. This command is used to drive the robot for a specified distance.  This is where [Parameters](https://www.w3schools.com/java/java_methods_param.asp) are very useful since we can decide how far to drive when the program runs.  This command demonstrates the classic [State Machine](../Programming/stateMachines) programming paradigm where we have an **Initialization Step** `initialize()` followed the **Next Step** `execute()` and an **Input Update** that repeatedly calls `execute()` until that threshold is met `isFinished()` and transititions it to the next major state `end()`.  After this state the command becomes *Idle*.
 
         public DriveDistance(double speed, double inches, Drivetrain drive) {
             m_distance = inches;
@@ -85,6 +37,60 @@ Another command in the Romi example code is used to drive the robot for a specif
             return Math.abs(m_drive.getAverageDistanceInch()) >= m_distance;
         }
 
+
+## ArcadeDrive Command
+The *ArcadeDrive* command is a simple command that will drive the robot using  values provided by the joysticks. The values are passed in as parameters with a variable type is called a *Supplier*, which is an interface used for [Functional Programming Paradigm](https://en.wikipedia.org/wiki/Functional_programming).  This is a more complex programming concept that we won't cover here.  This parameter type needs to be imported and defined before use.
+
+    import java.util.function.Supplier;
+
+    private final Supplier<Double> m_xaxisSpeedSupplier;
+    private final Supplier<Double> m_zaxisRotateSupplier;
+
+The constructor looks like this with the values for linear and angular speed together with the Drivetrain subsystem.
+
+    public ArcadeDrive(
+      Drivetrain subsystem,
+      Supplier<Double> xaxisSpeedSupplier,
+      Supplier<Double> zaxisRotateSupplier) {
+        m_drivetrain = subsystem;
+        m_xaxisSpeedSupplier = xaxisSpeedSupplier;
+        m_zaxisRotateSupplier = zaxisRotateSuppplier;
+        addRequirements(subsystem);
+    }
+
+The `execute()` method calls the Drivetrain subsystem to activate the motors.
+
+    public void execute() {
+      m_drivetrain.arcadeDrive(m_xaxisSpeedSupplier.get(),m_zaxisRotateSupplier.get());
+    }
+
+The `isFinished()` method always returns false meaning this command never
+completes on it's own. The reason we do this is that this command will be set as the default command for the subsystem. This means that whenever the subsystem is not running another command, it will run this command. If any other command is scheduled it will interrupt this command, then return to this command when the other command completes. 
+
+    public boolean isFinished() {
+        return false;
+    }
+
+The `setDefaultCommand()` method sets the default Command of the subsystem. The default command will be automatically scheduled when no other commands are scheduled that require the subsystem.  The following statement is called in the *RobotContainer* class.
+
+    m_drivetrain.setDefaultCommand(getArcadeDriveCommand());
+
+## Use the Joystick
+The Joystick object is created in the *RobotContainer* class.
+
+    private final Joystick m_controller = new Joystick(0);
+
+A method is created in the class that uses the joystick to control the robot:
+
+    public Command getArcadeDriveCommand() {
+        return new ArcadeDrive(
+            m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
+    }
+
+## The CommandScheduler
+Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled commands, running already-scheduled commands, removing finished or interrupted commands, and running the subsystem `periodic()` methods.  This must be called from the robot's `periodic()` block in order for anything in the Command-based framework to work.
+
+For more details see [The Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) documentation.
 
 ## References
 

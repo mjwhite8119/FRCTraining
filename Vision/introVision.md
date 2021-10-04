@@ -26,6 +26,8 @@ On the FRC game field they will use [Retroflective](https://docs.wpilib.org/en/s
 
 - QUT Robot Academy [Robot Vision](https://robotacademy.net.au/masterclass/robotic-vision/)
 
+- Peter Corke Lecture - [Introduction to Robot Vision](https://www.youtube.com/watch?v=N_a6IP6KUSE&list=PL1pxneANaikCO1-Z0XTaljLR3SE8tgRXY)
+
 <h3><span style="float:left">
 <a href="../index">Home</a></span>
 <span style="float:right">

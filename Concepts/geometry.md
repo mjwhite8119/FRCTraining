@@ -60,6 +60,8 @@ Each Yaw, Pitch, Roll maneuver can be represented by a rotation matrix that uses
 
 - FRC Documentation - [A Video Walkthrough of Model Based Validation of Autonomous in FRC](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/video-walkthrough.html)
 
+- Angela Sodemann - [Rotation Matrix Video](https://www.youtube.com/watch?v=lVjFhNv2N8o)
+
 <h3><span style="float:left">
 <a href="RobotSystem/intro">Previous</a></span>
 <span style="float:right">
