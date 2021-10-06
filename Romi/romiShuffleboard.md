@@ -21,6 +21,8 @@ Exercise - Travel in a square, need new command AutonomousSquare.
 
 - FRC Documentation - [Shuffleboard](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/shuffleboard/index.html)
 
+- Code Example - [RomiShuffleboard](https://github.com/mjwhite8119/romi-examples/tree/main/RomiShuffleboard)
+
 <h3><span style="float:left">
 <a href="romiCommandGroups">Previous</a></span>
 <span style="float:right">

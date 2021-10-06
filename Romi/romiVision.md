@@ -58,32 +58,23 @@ The class definition will look like this:
 
     public class GripPipeline implements VisionPipeline {
 
-## Update your Camera Server Program
-You'll need to upload a program to the Raspberry Pi on the Romi in order to run the camera.
-
-Need slide of application upload...
-
-![View Vision output](../images/Romi/Romi.021.jpeg)
-
-![Set Network Tables](../images/Romi/Romi.020.jpeg)
-
-### Display the Tracking View in Shuffleboard
-Shuffleboard uses the Network Tables to display the camera data so your java program must be running in order to see the live camera stream.
+<!-- ![Set Network Tables](../images/Romi/Romi.020.jpeg) -->
 
 ## Upload Python Program
-1. cd ~/Documents/romi-examples/BasicVision/Vision
+In a terminal or Powershell:
+
+1. `cd ~/Documents/romi-examples/BasicVision/Vision`
 2. The python program has multiple files so you need to upload them all.  This is done with a zip file.  Run `python3 build.py` to build the zip file.
 3. On the Romi WPILibPi.local webpage. Go to **Application**.
 4. Put Raspberry Pi file system into Writable mode.
 5. In the **Vision Application Configuration** section select "Uploaded Python File" from the dropdown menu.
 6. In the **File Upload** section select the file `wpilib.tar.gz` file for upload.  Make sure that file **Extract** is selected. Click the **Upload** button.
 
-
-<!-- 6. Select "Uploaded Python file" in the dropdown.
-7. Select multiCameraServer.py for the file.  You only need to upload this if you change it, which shouldn't be very often.  -->
-
 ![Upload Camera Program](../images/Romi/Romi.019.jpeg)
 
+To confirm that the vision program is running you can view the output from the **Vision Status** tab.  Make sure that you enable console output.
+
+![View Vision output](../images/Romi/Romi.021.jpeg)
 <!-- ## Upload Java Program
 1. cd ~/Documents/romi-examples/java-multiCameraServer
 2. run `./gradlew build` to build the jar file.  Make sure that the build is successful.
@@ -99,6 +90,7 @@ Run the your java program from VSCode by pressing the F5 key. In the **Simulator
 3. Press the joystick START button to run your custom PID line following routine.
 3. Press the joystick SELECT button to run the WPI `PIDCommand` line following routine.
 
+Shuffleboard uses the Network Tables to display the camera data so your java program must be running in order to see the live camera stream.
 
 ## Notes on Restarting the Romi
 When you first turn the Romi on the Application will default to "Custom".  You have to switch it to run the the your Python camera program and restart it: 
@@ -129,6 +121,8 @@ The runCamera file keeps getting overwritten when you upload a new multiCameraSe
 - Robotpy - [Camera & Vision](https://robotpy.readthedocs.io/en/stable/vision/index.html)
 
 - [Robotpy examples - github](https://github.com/robotpy/robotpy-cscore/tree/main/examples)
+
+- Code Example - [BasicVision](https://github.com/mjwhite8119/romi-examples/tree/main/BasicVision)
 
 <h3><span style="float:left">
 <a href="romiNetworkTables">Previous</a></span>

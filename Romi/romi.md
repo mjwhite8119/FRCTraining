@@ -10,6 +10,7 @@ The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as 
 - [Commands](romiCommands)
 - [Command Groups](romiCommandGroups)
 - [Shuffleboard](romiShuffleboard)
+- [Robot Characterization](romiCharacterization)
 - [Motion PID Control](romiPID)
 - [Path Planning and Trajectory Following](romiPathPlanning)
 

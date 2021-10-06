@@ -46,6 +46,7 @@ To use Shuffleboard add the following code to the `RobotContainer` class.
 
 [Controls Engineering in FRC](https://file.tavsys.net/control/controls-engineering-in-frc.pdf)
 
+- Code Example - [PIDLineFollow](https://github.com/mjwhite8119/romi-examples/tree/main/PIDLineFollow)
 
 <h3><span style="float:left">
 <a href="romiVision">Previous</a></span>
