@@ -39,3 +39,11 @@ If you're going to compete at the higher levels of the FIRST Robotics Competitio
 Vision processing is becoming a larger and larger part of robotics primarily because of the advances in machine learning and faster and cheaper graphics processors.  In fact, it's the technology that is used for Self Driving Cars.  At least for Teslas.
 
 We'll be using Raspberry Pi cameras and the Python programming language to do all of this.
+
+![1](images/ProgrammingTeam/ProgrammingTeam.001.jpeg)
+
+![2](images/ProgrammingTeam/ProgrammingTeam.002.jpeg)
+
+![3](images/ProgrammingTeam/ProgrammingTeam.003.jpeg)
+
+![4](images/ProgrammingTeam/ProgrammingTeam.004.jpeg)

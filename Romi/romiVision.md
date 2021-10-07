@@ -1,5 +1,5 @@
 # <a name="code"></a>Vision Programming
-In this section we'll make use of the Raspberry Pi camera that's installed on the Romi.  The camera will recognize a line drawn on the ground.  The line should be a distinctive color that doesn't blend in with the surrounding colors.  During this lesson we'll decide on a color and tune the camera in to lock onto that color.  Once we've "locked on" to the color we'll draw a center line on the camera image so as we can follow the line. The camera server will use the Robotpy [Network Tables](https://robotpy.readthedocs.io/en/stable/guide/nt.html#networktables-guide) to send data to the [Simulator](https://docs.wpilib.org/en/latest/docs/software/wpilib-tools/robot-simulation/index.html) and [Shuffleboard](https://docs.wpilib.org/en/latest/docs/software/dashboards/shuffleboard/index.html).  
+In this module we'll learn how to use the Raspberry Pi camera that's attached to the Romi.  We'll get it to stream camera images to [Shuffleboard](https://docs.wpilib.org/en/latest/docs/software/dashboards/shuffleboard/index.html), and use the Robotpy [Network Tables](https://robotpy.readthedocs.io/en/stable/guide/nt.html#networktables-guide) to send data to the [Simulator](https://docs.wpilib.org/en/latest/docs/software/wpilib-tools/robot-simulation/index.html) and to your robot program.  Lastly, we'll learn how to overlay a cross on the image to identify its center.  This will be a useful technique in subsequent learning modules to track image features that are captured by the camera.
 
 The camera program uses the open source software called [OpenCV](https://opencv.org/) and can be written in Java, Python, or C++.  We're going to use the Python programming language since most of the OpenCV programming examples that you'll find online will use Python, so if you run into any problems with your program chances you'll find the solution in Python. The camera program uses the [CameraServer](cameraServer) libraries from Robotpy.
 
@@ -19,49 +19,26 @@ On Windows `py -3 -m pip install robotpy`
 Install cscore library:
 
 On Mac/Linux `pip3 install robotpy-cscore`
-This errors out...  More investigation to be done.
-
-
-You won't be able to run the camera server code on your laptop since it's not currently supported.  You have to upload it to the Raspberry Pi to test it.  See the **Upload Python Program** section below.
+<!-- This errors out...  More investigation to be done. -->
 
 ## Camera Program General Structure
-Before we start programming lets look at the general structure that our camera program will take on.  The main idea is to get a frame from the camera, process the frame to extract objects from the scene that we're interested in, and put data regarding those objects into the Network Tables.  Our program running on the laptop will find useful things to do with that data.
+Before we start programming lets look at the general structure that our camera program will take on.  The main idea is to get an image frame from the camera and put data regarding the frame into the Network Tables.  Our program running on the laptop will find useful things to do with that data.
 
-The camera program can also send the data frames over to Shuffleboard in the form of a video stream. Before sending the frames the camera program can overlay them with useful visual information such as a center line of a target object.
+The camera program can also send the image frames over to Shuffleboard in the form of a video stream. Before sending the frames the camera program can overlay them with useful visual information such as a center line.
 
-![Camera Program Structure](../images/Romi/Romi.040.jpeg)
+![Camera Program Structure](../images/Romi/Romi.036.jpeg)
 
 ## Create your Vision Program
 For this lesson we'll use the [BasicVision](https://github.com/mjwhite8119/romi-examples/tree/main/BasicVision) project.  Clone this project to VSCode.  The **BasicVision** project uses the WPI example project **RomiReference** to run and view the camera data in the Simulator and Shuffleboard.  There are no changes made to the **RomiReference** code.
 
 The python code for running the camera has been included in this project so as we have both of the software components in one place.  It makes use of the [Camera Server](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/cameraserver-class.html) class from the WPI Library. You'll upload the camera program to the Raspberry Pi on the Romi in a later step.  The following sections explain how the program works and how you deploy and run it.
 
-## Using GRIP to Recognize the Line
-In the above diagram you can see the camera sending frames to a piece of code called **GripPipeline**.  This code is generated from the FRC tool called [GRIP](https://docs.wpilib.org/en/latest/docs/software/vision-processing/grip/index.html).  A major part of this lesson will be to learn the GRIP tool and create a pipeline to process images coming from the camera.
 
-1. On Mac start from Applications->GRIP
-2. Turn on the Romi
-3. Add Source -> IP Camera.  Put the URL of the camera stream.  wpilibpi.local:1181/stream.mjpg
-4. Follow [FRC GRIP documentation](https://docs.wpilib.org/en/latest/docs/software/vision-processing/grip/index.html) to create the filter.
-The last filter should be `Find Contours`.
-5. Generate the code Tools->Generate Code.  
-6. Select Python as the output language.
-7. Use `GripPipeline` as the class name.
-8. Put it into the `Vision` directory of your project.
-9. Name the module `grip`.
-
-<!-- If you're generating the java pipeline version make sure the the "Implement WPILIB VisionPipeline" box is checked.  This will place the following code into the generated GRIP file: -->
-
-    import edu.wpi.first.vision.VisionPipeline;
-
-The class definition will look like this:
-
-    public class GripPipeline implements VisionPipeline {
 
 <!-- ![Set Network Tables](../images/Romi/Romi.020.jpeg) -->
 
 ## Upload Python Program
-In a terminal or Powershell:
+You won't be able to run the camera server code on your laptop since it's not currently supported.  You have to upload it to the Raspberry Pi to test it. In a terminal or Powershell:
 
 1. `cd ~/Documents/romi-examples/BasicVision/Vision`
 2. The python program has multiple files so you need to upload them all.  This is done with a zip file.  Run `python3 build.py` to build the zip file.
@@ -125,6 +102,6 @@ The runCamera file keeps getting overwritten when you upload a new multiCameraSe
 - Code Example - [BasicVision](https://github.com/mjwhite8119/romi-examples/tree/main/BasicVision)
 
 <h3><span style="float:left">
-<a href="romiNetworkTables">Previous</a></span>
+<a href="romi">Previous</a></span>
 <span style="float:right">
-<a href="romiPID">Next</a></span></h3>
+<a href="romiImageProcessing">Next</a></span></h3>
