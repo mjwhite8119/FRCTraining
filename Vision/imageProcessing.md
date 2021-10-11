@@ -4,6 +4,10 @@
 
 ## Spacial Operations
 
+Blurring - 
+  Helps with boundary detection
+  box filter, Gaussian filter
+
 ## Mathematical Morphology
 
 ## Shape Changing
