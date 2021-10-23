@@ -30,10 +30,6 @@ The four commands are composed in the class constructor using the `addCommands()
 ### Change Motor Direction
 We'd like our Romi going in a different direction from that specified in the *romiReference* example.  So switch the first `DriveDistance()` parameter from -0.5 to 0.5.
 
-### Change Inches to Meters
-This is an exercise to change the distance from inches to meters.  [solution](solutionInchMeters)
-
-
 ## References
 
 - FRC Documentation - [Command Groups](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-groups.html)

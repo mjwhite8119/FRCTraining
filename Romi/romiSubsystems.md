@@ -28,6 +28,9 @@ This method is called periodically by the CommandScheduler. Useful for updating 
 ## The register( ) method 
  Subsystems must be registered with the scheduler with the CommandScheduler's `registerSubsystem()` method in order for the Subsystem `periodic()` method to be called. It is recommended that this method be called from the constructor of users' Subsystem implementations. The SubsystemBase class offers a simple base for user implementations that handles this.
 
+### Change Inches to Meters
+This is an exercise to change the distance from inches to meters.  [solution](solutionInchMeters)
+
 ## References
 
 - FRC Documentation - [Subsystems](https://docs.wpilib.org/en/latest/docs/software/commandbased/subsystems.html)

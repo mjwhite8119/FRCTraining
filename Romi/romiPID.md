@@ -1,5 +1,5 @@
-# Motion Control
-In this lesson we're going to add a new command that'll give us more control over how the robot moves.  The subject of Motion Control is part of a larger disipline called [Control Systems Engineering](https://en.wikipedia.org/wiki/Control_engineering). We'll just touch the surface of that disipline here and start with some of the basic [Control Systems](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/control-system-basics.html) terminology.
+# Motion Control PID
+In this lesson we're going to add a new command that'll give us more control over how the robot moves.  The subject of Motion Control is part of a larger disipline called [Control Systems Engineering](https://en.wikipedia.org/wiki/Control_engineering). We'll just touch the surface of that disipline here but for a more in-depth explaination refer to [Classical Control](../Concepts/Control/classicalControl) section.
 
 One of the key Control Systems algorithms is the **PID Controller**, so we'll start with that and see how it can be put it into Commands used by our robot. Finally, we'll learn some basics about tuning a PID Controllers.  
 

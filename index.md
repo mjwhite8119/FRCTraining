@@ -29,13 +29,12 @@ So let's get started.
   <!-- - [Computer Science](Programming/csIndex) -->
 
 - Robotics Concepts
-  - [Robot Systems](Concepts/RobotSystem/intro)
-  - [Position & Orientation](Concepts/geometry)
-  - [Time & Motion](Concepts/timeMotion)
-  - [Mobile Robot Kinematics](Concepts/kinematics)
-  <!-- - [Paths & Trajectories](Concepts/pathsTrajectories) -->
-  - [Navigation](Concepts/navigation)
-  - [Localization](Concepts/localization)
+  - [Robotic Systems](Concepts/RobotSystem/robotSystemsIndex)
+  - [Dynamics](Concepts/Dynamics/dynamicsIndex)
+  - [Optimal Estimation](Concepts/OptimalEstimation/optimalEstimationIndex)
+  - [Control Systems](Concepts/Control/controlIndex)
+  - [Localization and Mapping](Concepts/LocalizationMapping/localization)
+  - [Navigation](Concepts/Navigation/navigation)
   
 - Vision  
   - [Introduction to Vision](Vision/introVision.md)
@@ -46,9 +45,17 @@ So let's get started.
   - [Vision-Based Control](Vision/controlVision)
 
 ## References
-- [FIRST Robotic Competition Website](https://docs.wpilib.org/en/latest/index.html) 
+- [FIRST Robotic Competition Website](https://docs.wpilib.org/en/latest/index.html)
+
+- [Controls Engineering in the
+FIRST Robotics Competition](https://file.tavsys.net/control/controls-engineering-in-frc.pdf) - Tyler Veness 
+
 - [Robotics, Vision and Control](https://petercorke.com/rvc/home/) - Peter Corke
-- [QUT Robot Academy](https://robotacademy.net.au) - Peter Corke
+
+- [Mobile Robotics](https://www.cambridge.org/core/books/mobile-robotics/5BF238489F9BC337C0736432C87B3091) Alonzo Kelly
+
 - [W3Schools](https://www.w3schools.com/java/default.asp) - Java Tutorial 
+
+
 
 - [Romi Example Code](https://github.com/mjwhite8119/romi-examples) Github 

@@ -84,6 +84,8 @@ If you've switched the application to **Built-in multi-camera streaming** then y
 
 - FRC Documentation - [Network Tables](https://docs.wpilib.org/en/latest/docs/software/networktables/index.html)
 
+- Amazon - [Network Tables](https://s3.amazonaws.com/screensteps_live/exported/Wpilib/2078/89644/Robot_networking_using_NetworkTables.pdf?1536702139)
+
 - FRC Documentation - [Camera Server](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/cameraserver-class.html)
 
 - FRC Documentation - [Vision with WPILibPi](https://docs.wpilib.org/en/stable/docs/software/vision-processing/wpilibpi/index.html#)

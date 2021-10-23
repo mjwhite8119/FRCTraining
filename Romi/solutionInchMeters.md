@@ -35,3 +35,5 @@ You'll also need to update the *TurnDegrees* command with the new Drivetrain met
       double rightDistance = Math.abs(m_drive.getRightDistance());
       return (leftDistance + rightDistance) / 2.0;
     }
+
+You should also change the distance specified in the *AutonoumousDistance* command from 10 inches to 0.5 meters.  

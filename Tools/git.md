@@ -206,5 +206,7 @@ The output will tell you how many file objects have been downloaded.  Conceptual
 
 - FRC Documentation - [Git Version Control](https://docs.wpilib.org/en/latest/docs/software/basic-programming/git-getting-started.html)
 
+- YouTube video - [VSCode and Github](https://www.youtube.com/watch?v=Fk12ELJ9Bww)
+
 <h3><span style="float:left">
 <a href="../index">Home</a></span>

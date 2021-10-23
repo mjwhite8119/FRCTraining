@@ -28,6 +28,8 @@ The `Constants.java` file provides a central location for defining constants.  C
 ## Lab - Robot Structure.
 There are a few values in the *romiReference* program that really should be in the Constants file.  Move the two constants `kWheelDiameterInch` and `kCountsPerRevolution` that are in the DriveTrain class into the Constants.java file. 
 
+Also, we should change the name of the Joystick variable name to `m_joystick` instead of `m_controller`.  The reason for this will become clear in later lessons.
+
 ### Quiz
 
 [Solution](solutionRobotStructure)

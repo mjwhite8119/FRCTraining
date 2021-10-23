@@ -15,9 +15,12 @@ The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as 
 - [Path Planning and Trajectory Following](romiPathPlanning)
 
 ## Vision and Systems Control
+
 - [Basic Vision Program](romiBasicVision)
 - [Image Processing](romiImageProcessing)
 - [Line Following](romiLineFollow)
+    <!-- Velocity PID Control  -->
+- [State Space Control](romiStateSpace)
 - [Programming Servos](romiServos)
 <!-- - [Filters](romiFilters) -->
 
