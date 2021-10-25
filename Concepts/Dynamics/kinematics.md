@@ -31,12 +31,16 @@ These formulars are used in the <i>DifferentialDriveKinematics</i> class of the 
 
 ![Global Frame](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.007.jpeg)
 
+## Constraints
+Constraints can be position constraints (something in the way), control constraints (limited amount of torque), model constraints (system kinematics, holonomic constraint).
+
+A nonholonomic constraint does not restrain the possible configurations of the system, but rather the manner in which those configurations can be reached. While a holonomic constraint reduces the number of degrees of freedom of a system by one, a nonholonomic constraint does not.
 
 ## References
 
 - FRC Documentation - [Kinematics and Odometry](https://docs.wpilib.org/en/latest/docs/software/kinematics-and-odometry/index.html)
 
 <h3><span style="float:left">
-<a href="geometry">Previous</a></span>
-<span style="float:right">
-<a href="linearSystems">Next</a></span></h3>
+<a href="dynamicalSystems">Previous</a></span>
+<!-- <span style="float:right">
+<a href="dynamicalSystems">Next</a></span></h3> -->

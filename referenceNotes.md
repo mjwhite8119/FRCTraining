@@ -22,3 +22,6 @@
 - Russ Tedrake [Robotic Manipulation](https://manipulation.csail.mit.edu/)
 
 - Alonzo Kelly [Mobile Robotics](https://www.cambridge.org/core/books/mobile-robotics/5BF238489F9BC337C0736432C87B3091)
+
+- Nagy [TRAJECTORY GENERATION FOR CAR-LIKE ROBOTS USING CUBIC
+CURVATURE POLYNOMIALS](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.68.9993&rep=rep1&type=pdf)

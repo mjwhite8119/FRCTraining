@@ -1,25 +1,32 @@
 # Dynamical Systems
-Descibes the change in the state of a system over time. Formally, Describes the evolution of the state of a system.
+Descibes the change in the state of a system over time. More formally, it describes the evolution of the state of a system.
 
-Constraints can be position constraints (something in the way), control constraints (limited amount of torque), model constraints (system kinematics, holonomic constraint).
+## Linear Time-Invariant System
+Many systems behave in a way described by *Linear Time-Invariant (LTI)* systems.  It consists of a *control input* that is going to force a change in the state of the system, and a *measured output* that represents the current state of the system.  The control input is sometimes called a *forcing input*. We presume that we would have some control over the system and that the control input would be able to change its state over time. A system that changes over time is called a *dynamical system*.
 
-A nonholonomic constraint does not restrain the possible configurations of the system, but rather the manner in which those configurations can be reached. While a holonomic constraint reduces the number of degrees of freedom of a system by one, a nonholonomic constraint does not.
+![Linear Time-Invariant System](../../images/FRCControlSystems/FRCControlSystems.005.jpeg)
 
-Linear and Non-linear systems.
+A Linear Time-Invariant system, as the name suggests, has two parts to it:
+
+**Linear**
+- If we apply an input **a** and then an input **b**, it's the same as applying the input **b** and then the input *a*.
+
+- If we apply an input **a** and get a response **r**, applying an input **2Xa** will give the response **2Xr**.
+
+**Time Invariant**
+- This means that applying an input right now has the same effect as applying an input 5 seconds from now.
 
 
-Data-driven dynamical systems makes non-linear systems amenable to linear analysis.
+## Non-Linear Systems
 
-Motivation: Future state prediction, Design and Optimization, Estimation and Control, Physical Understanding
 
-Nonlinearity
 
-Unknown Dynamics
+<!-- Data-driven dynamical systems makes non-linear systems amenable to linear analysis. -->
 
 ## References
 
-- FRC Documentation [State Space Controllers](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/state-space/state-space-intro.html)
 
-- Tyler Veness [Controls Engineering in the
-FIRST Robotics Competition](https://file.tavsys.net/control/controls-engineering-in-frc.pdf)
-
+<h3><span style="float:left">
+<a href="geometry">Previous</a></span>
+<span style="float:right">
+<a href="kinematics">Next</a></span></h3>

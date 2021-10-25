@@ -65,4 +65,4 @@ Each Yaw, Pitch, Roll maneuver can be represented by a rotation matrix that uses
 <h3><span style="float:left">
 <a href="dynamicsIndex">Previous</a></span>
 <span style="float:right">
-<a href="kinematics">Next</a></span></h3>
+<a href="dynamicalSystems">Next</a></span></h3>
