@@ -1,4 +1,4 @@
-# Classical Control
+# <a name="top"></a>Classical Control
 <!-- Generic controller block diagram and explaination...
 Alonzo Kelly [Mobile Robotics](https://www.cambridge.org/core/books/mobile-robotics/5BF238489F9BC337C0736432C87B3091) Chapter 7.1 -->
 
@@ -9,7 +9,7 @@ In the [Geometry](geometry) section we descibed the Pose of an object in 2D and 
 ## Feedback Control - PID
 Before looking at the PID controller supplied by the WPI library, it would be useful to get an overview by watching the [PID Introduction Video by WPI](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/pid-video.html).  The [Introduction to PID](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/introduction-to-pid.html) section of the FRC documentation provides more details.
 
-![PID Controller](../../images/Romi/Romi.044.jpeg)
+![PID Controller](../../images/FRCControlSystems/FRCControlSystems.004.jpeg)
 
 The key method for the PID controller is the `calculate()` method. Let's examine that method and see how it implements what we know about PID control.
 
@@ -54,28 +54,22 @@ Testing for when we've reached the setpoint is the other key piece of code.  Tha
           && Math.abs(velocityError) < m_velocityTolerance;
     }
 
-## Feedforward
+## <a name="feedforward"></a>Feedforward
 <!-- Kelly 7.1.4.... -->
-Feedforward is used to generate the control that would drive the robot to its reference setpoint if executed in open loop.  Feedback is used to compensate for disturbances.
+*Feedforward* is used to generate the control that would drive the robot to its reference setpoint if executed in *Open Loop*.  Compare this to *Feedback*, that is used to compensate for disturbances and is more of a reactionary measure.  With purely Feedback control the system won’t start applying control effort until the system is already behind. Feedforward tells the controller about the desired movement and required input beforehand, which makes the system react quicker and allows the Feedback controller to do less work. A controller that feeds information forward into the plant like this is called a feedforward controller. 
 
-Open loop diagram...
+There are two types of Feedforwards, *model-based* feedforward and feedforward for *unmodeled dynamics*. 
 
-You may have noticed that we rarely use the *Integral* part of the PID controller.  The Integral part, which uses past information, can be replaced with FeedForward that is more of a kind of prediction.  Review the [Feedforward Control in WPILib](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/controllers/feedforward.html#feedforward-control-in-wpilib) documentation. 
+- Model-based feedforward solves a mathematical model of the system for the inputs required to meet desired velocities and accelerations.
 
-## Trapezoid Motion Profile<a name="TrapezoidProfile"></a>
-<!-- Controller Hierarchy Kelly Ch 7.1.1.3 create diagram... -->
+- Unmodeled dynamics compensates for unmodeled forces or behaviors directly so the feedback controller doesn’t have to.
 
-The [Trapezoidal Trajectory](https://robotacademy.net.au/masterclass/paths-and-trajectories/?lesson=112) video gives a good introduction to this section.
+![Open Loop and Feedforward](../../images/FRCControlSystems/FRCControlSystems.005.jpeg)
 
-Initial and final values are specified, and usually set to zero.
+You may have noticed that we rarely use the *Integral* part of the PID controller.  The Integral part, which uses past information, can be replaced with FeedForward control.  Review the [Feedforward Control in WPILib](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/controllers/feedforward.html#feedforward-control-in-wpilib) documentation for how to use Feedforward in you code. 
 
-Velocity and acceleration are continuous.
 
-To improve the handling of our mechanisms, we often wish to command mechanisms to a sequence of setpoints that smoothly interpolate between its current state, and its desired goal state.
-
-![Trapezoid Profile](../../images/FRCConcepts/FRCConcepts.018.jpeg)
-
-See [Trapezoidal Motion Profiles in WPILib](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/controllers/trapezoidal-profiles.html) in the FRC documentation.
+## Classical Control Lab
 
 
 ## References
@@ -86,7 +80,7 @@ See [Trapezoidal Motion Profiles in WPILib](https://docs.wpilib.org/en/stable/do
 - FRC Documentation - [PID Control through PIDSubsystems and PIDCommands](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html#)
 
 - Tyler Veness [Controls Engineering in the
-FIRST Robotics Competition](https://file.tavsys.net/control/controls-engineering-in-frc.pdf)
+FIRST Robotics Competition](https://file.tavsys.net/control/controls-engineering-in-frc.pdf) Chapter 6
 
 - Alonzo Kelly [Mobile Robotics](https://www.cambridge.org/core/books/mobile-robotics/5BF238489F9BC337C0736432C87B3091) Chapter 7.1
 

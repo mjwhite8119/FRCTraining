@@ -5,7 +5,6 @@ There are several control techniques for robotics, which we'll examine in this s
 
 - [Classical Control](classicalControl)
 - [State Space](stateSpaceControl)
-- [System Identification](systemId)
 - [Optimal Control LQR](LQR)
 <!-- - [Model Predictive Control](MPC) -->
 

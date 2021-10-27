@@ -1,4 +1,5 @@
 # Feature Extraction
+Algorithms that recognize or reason about the nature of objects or parts of a scene.  They try to understand or intepret the contents of the scene.
 
 ## Region Features
 

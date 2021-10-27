@@ -1,4 +1,4 @@
-## Robot Geometry
+## <a name="top"></a>Robot Geometry
 
 In order to control a robot it’s necessary to know its position and orientation — where it is at any particular time.  Its position in 3-D space is defined using the set of coordinates X, Y, and Z.  This coordinate system is called the Cartesian coordinate system.  When the robot moves from one position to another it’s referred to as a translation.  When it rotates about its center point then it has changed orientation. 
 
@@ -51,6 +51,8 @@ A robot that can move in all three dimensions of space and can orient itself abo
 
 Each Yaw, Pitch, Roll maneuver can be represented by a rotation matrix that uses sines and cosines to describe the offset from the previous orientation.
 
+## <a name="lab"></a>Geometry Lab
+
 ## References
 - FRC Documentation [Geometry](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/geometry/index.html)
 
@@ -63,6 +65,6 @@ Each Yaw, Pitch, Roll maneuver can be represented by a rotation matrix that uses
 - Angela Sodemann - [Rotation Matrix Video](https://www.youtube.com/watch?v=lVjFhNv2N8o)
 
 <h3><span style="float:left">
-<a href="dynamicsIndex">Previous</a></span>
+<a href="kinematics">Previous</a></span>
 <span style="float:right">
 <a href="dynamicalSystems">Next</a></span></h3>

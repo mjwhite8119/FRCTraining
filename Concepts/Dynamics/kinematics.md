@@ -1,4 +1,4 @@
-## Robot Kinematics
+## <a name="top"></a>Robot Kinematics
 
 Kinematics is the study of the geometry of motion. Kinematics is the branch of classical mechanics that describes various aspects of motion such as velocity, acceleration, displacement, time, and trajectory.  There is no description of the forces that cause the motion to happen. The word “kinematics” comes from a Greek word “kinesis” meaning motion, and is related to other English words such as “cinema” (movies) and “kinesiology” (the study of human motion).
 
@@ -36,11 +36,28 @@ Constraints can be position constraints (something in the way), control constrai
 
 A nonholonomic constraint does not restrain the possible configurations of the system, but rather the manner in which those configurations can be reached. While a holonomic constraint reduces the number of degrees of freedom of a system by one, a nonholonomic constraint does not.
 
+## <a name="lab"></a>Kinematics Lab
+Add the *DifferentialDriveKinematics*:
+
+    public static final double kTrackwidthMeters = 0.142072613;
+    public static final DifferentialDriveKinematics kDriveKinematics =
+      new DifferentialDriveKinematics(kTrackwidthMeters);
+
+Add the DifferentialDriveKinematics constraint that you just created and the feedforward:
+
+    public static final DifferentialDriveVoltageConstraint kAutoVoltageConstraint =
+          new DifferentialDriveVoltageConstraint(
+              new SimpleMotorFeedforward(ksVolts, 
+                                          kvVoltSecondsPerMeter, 
+                                          kaVoltSecondsSquaredPerMeter),
+              kDriveKinematics,
+              10);
+
 ## References
 
 - FRC Documentation - [Kinematics and Odometry](https://docs.wpilib.org/en/latest/docs/software/kinematics-and-odometry/index.html)
 
 <h3><span style="float:left">
-<a href="dynamicalSystems">Previous</a></span>
-<!-- <span style="float:right">
-<a href="dynamicalSystems">Next</a></span></h3> -->
+<a href="dynamicsIndex">Previous</a></span>
+<span style="float:right">
+<a href="geometry">Next</a></span></h3>

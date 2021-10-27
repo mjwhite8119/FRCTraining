@@ -1,4 +1,4 @@
-# <a name="code"></a>Path Planning and Trajectory Following
+# <a name="top"></a>Path Planning and Trajectory Following
 Up until this point we've been doing straight line paths and point turns to get to our destination.  Ideally, we would want to follow a smooth curved path, which is more direct and efficient.  The methods used to do this is expained in this section.  View the first part of the video [Paths & Trajectories](https://robotacademy.net.au/masterclass/paths-and-trajectories/?lesson=109) to understand the difference between a Path and a Trajectory. The [Trajectory Tutorial](https://docs.wpilib.org/en/latest/docs/software/pathplanning/trajectory-tutorial/index.html) FRC documentation provides the outline for this module.
 
 ## Setting up the Drivetrain Subsystem
@@ -17,20 +17,31 @@ Odometry update in Drivetrain's  `periodic()` method.  We can also view the odom
     }
 
 
-
 The second class is *DifferentialDriveWheelSpeeds* that implements the `getWheelSpeeds()` method to return the current speed of each wheel.  This will be needed for the measurement input to our trajectory controller. More information can be found in [Setting up the Drive System](https://docs.wpilib.org/en/latest/docs/software/pathplanning/trajectory-tutorial/creating-drive-subsystem.html) FRC documentation.
+
+Finally, a method called tankDriveVolts() is implemented so as to drive each wheel individually.
+
+    public void tankDriveVolts(double leftVolts, double rightVolts) {
+      m_leftMotor.setVoltage(leftVolts);
+      m_rightMotor.setVoltage(-rightVolts); // We invert this to maintain +ve = forward
+      m_diffDrive.feed();
+    }
+
+## Adding Constraints
+In order to compute the trajectory the WPILib uses a class called the *TrajectoryGenerator*.  The TrajectoryGenerator needs to know about the characteristics of the robot.  This is done by passing in the robot's constraints. 
+
+We first need to know about how many volts are required to move the drivetrain forward together with the maximum voltage that can be applied. The code to define these constraints were added in the [Kinematics](../Concepts/Dynamics/kinematics#lab) module.  It uses the *SimpleMotorFeedforward* class to compute the feedforward voltage.  The Ramsete command mostly uses [Feedforward](../Concepts/Control/classicalControl#feedforward) control to maintain its trajectory. Since we already know information about the computed trajectory the feedforward handles the control actions that we already know must be applied to make the system track its reference trajectory.
+
+Once we have the voltage constraints we can pass it into the trajectory configuration that defines in maximum speed and acceleration constraints. We added these constraints in the [Paths and Trajectories](../Concepts/Dynamics/pathsTrajectories#lab) module.
+
+These constraints will be passed into the next step that generates our required trajectory.
+
+![Trajectory Generation](../images/Romi/Romi.053.jpeg) 
 
 ## Creating the Trajectory
 The next step is to create a trajectory for the robot to follow.  This is done using the *TrajectoryGenerator* that takes in an initial and final Pose and outputs a smooth curve with velocities and accelerations at each point along the curve connecting two endpoints. Read the [Trajectory Generation](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/trajectories/trajectory-generation.html) section of the FRC documentation for more details.
 
 ![Trajectories](../images/Romi/Romi.052.jpeg) 
-
-
-
-## Adding Constraints
-In order to compute the Poses that make up the trajectory the *TrajectoryGenerator* needs to know about the characteristics of the robot.  This is done by passing in the robot's [Trajectory Constraints](https://docs.wpilib.org/en/latest/docs/software/advanced-controls/trajectories/constraints.html).  
-
-![Trajectory Generation](../images/Romi/Romi.053.jpeg) 
 
 ## Create the Ramsete Command
 The *RamseteCommand* pulls in all of the components needed to create a trajectory. It uses the *RamseteController* that takes in the current robot Pose and compares it to the next Pose required to carry out the trajectory. The outputs from the controller are **chassis speeds** that the robot should follow to complete the next step of the trajectory. 

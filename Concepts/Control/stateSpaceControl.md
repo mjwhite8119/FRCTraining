@@ -1,4 +1,4 @@
-# State Space Control
+# <a name="top"></a>State Space Control
 **State Space** control is based on the idea that if you know the internal physics of your system and can predict how it’ll react to a given input then you can tune the system in a way that’s similar to tuning PID controllers. State Space Control tries to control the system by developing an accurate model of the system that we are trying to control.  State Space control can be an alternative to PID control and is more flexible.  PID control does not use any knowledge of the internal physics of the system and therefore allows only limited control.  The advantage of PID is that you do not need an initial condition, which as you will is required for State Space control.
 
 The concept of the state of a dynamic system refers to a minimum set of variables, known as state variables, that fully describe the system and its response to any given set of inputs. In particular a state-determined system model has the characteristic that:
@@ -17,6 +17,15 @@ A system output is defined to be any system variable of interest. A description 
 An important property of the linear state equation description is that all system variables may be represented by a linear combination of the state variables **x** and the system inputs **u**.
 
 ![State and Output Equations](../../images/FRCControlSystems/FRCControlSystems.003.jpeg)
+
+## State Space Control Lab
+Add a LinearSystem for the Drivetrain to the *Constants* file. 
+
+    public static final LinearSystem<N2, N2, N2> kDrivetrainPlant =
+            LinearSystemId.identifyDrivetrainSystem(kvVoltSecondsPerMeter, 
+                                                    kaVoltSecondsSquaredPerMeter, 
+                                                    kvVoltSecondsPerRadian, 
+                                                    kaVoltSecondsSquaredPerRadian);
 
 
 ## References

@@ -1,4 +1,4 @@
-# Romi Training Robot
+# <a name="top"></a>Romi Training Robot
 The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as a teaching tool for programming teams involved in the <i>First Robotics Competition (FRC)</i>.  The following tutorials make use of the Romi Robot to teach beginning and intermediate programming.  By the time you finish the tutorials you will have a firm grasp on how to program robots, and the code that you develop will translate almost directly over to programming the robots used for FRC.
 
 ## Basic Programming
@@ -12,7 +12,7 @@ The [Romi Robot](https://www.pololu.com/product/4022) is designed to be used as 
 - [Shuffleboard](romiShuffleboard)
 - [Robot Characterization](romiCharacterization)
 - [Motion PID Control](romiPID)
-- [Path Planning and Trajectory Following](romiPathPlanning)
+- [Trajectory Following](romiTrajectory)
 
 ## Vision and Systems Control
 

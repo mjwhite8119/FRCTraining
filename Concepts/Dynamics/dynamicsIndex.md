@@ -1,15 +1,14 @@
-# Dynamics
+# <a name="top"></a>Dynamics
 Dynamics describe how a system moves in time and space under the action of forces.  More formally, it describes the evolution of the state of a system. Robot dynamics is concerned with the relationship between the forces acting on a robot and the accelerations that they produce. 
 
-We'll start by looking at the position and orientation of the robot and then get into a more formal definition of a dynamical system. We'll then describe how a mobile robot can move over time given its kinematics.  
+We'll start by looking at the Position and Orientation of the robot referred to as its Pose.  We'll then describe how a mobile robot can move given its *Kinematics* and constraints. *Dynamical Systems* will bring the notion of time into the equation and will present a more formal definition of a dynamical systems.  *System Identification* will characterize our physical robot to produce parameters that will allow us to control it. Finally, we'll then look at *Motion Profiles* and *Trajectories* that can be tracked by applying forces to the system.
 
-<!-- We'll then look at motion profiles and trajectories that can be produced by forces acting on the system. -->
-
+- [Mobile Robot Kinematics](kinematics)
 - [Position & Orientation](geometry)
 - [Dynamical Systems](dynamicalSystems)
-- [Mobile Robot Kinematics](kinematics)
-<!-- - [Motion Profiles](motionProfiles)
-- [Paths and Trajectories](pathsTrajectories) -->
+- [System Identification](systemId)
+- [Motion Profiles](motionProfiles)
+- [Paths and Trajectories](pathsTrajectories)
 
 ## References
 

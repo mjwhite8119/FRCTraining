@@ -36,4 +36,4 @@ You'll also need to update the *TurnDegrees* command with the new Drivetrain met
       return (leftDistance + rightDistance) / 2.0;
     }
 
-You should also change the distance specified in the *AutonoumousDistance* command from 10 inches to 0.5 meters.  
+In the *DriveDistance* command do a group change of the variable `inches` over to `meters`. You should also change the distance specified in the *AutonoumousDistance* command from `10` to `0.5`, since this is now meters.  

@@ -1,4 +1,5 @@
 # Image Processing
+Image processing uses algorithms that work on raw pixel arrays without regard for what they represent.  
 
 ## Obtaining an Image
 

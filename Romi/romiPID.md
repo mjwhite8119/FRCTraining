@@ -1,5 +1,5 @@
-# Motion Control PID
-In this lesson we're going to add a new command that'll give us more control over how the robot moves.  The subject of Motion Control is part of a larger disipline called [Control Systems Engineering](https://en.wikipedia.org/wiki/Control_engineering). We'll just touch the surface of that disipline here but for a more in-depth explaination refer to [Classical Control](../Concepts/Control/classicalControl) section.
+# <a name="top"></a>Motion Control PID
+In this lesson we're going to add a new command that'll give us more control over how the robot moves.  We'll just touch the surface of that disipline here but for a more in-depth explaination refer to [Classical Control](../Concepts/Control/classicalControl) section.
 
 One of the key Control Systems algorithms is the **PID Controller**, so we'll start with that and see how it can be put it into Commands used by our robot. Finally, we'll learn some basics about tuning a PID Controllers.  
 
@@ -12,8 +12,6 @@ In this section we'll create some new commands that we'll test from the *Autonom
 After that, we'll create two commands to move the robot more smoothly to the desired setpoints, and is an example of a methodology called **Motion Profiling**.
 
 - *DriveDistanceProfiled* that will use a Trapezoid Profile trajectory to drive the robot in a straight line.
-
-- *TurnDegreesProfiled* that will use a Trapezoid Profile trajectory to turn the robot.
 
 ## PID Controller
 Before looking at the PID controller supplied by the WPI library, it would be useful to get an understanding of what PID control is by watching the [PID Introduction Video by WPI](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/pid-video.html). A schematic of WPIlib PIDController is below with a detailed explaination found in the [Introduction to PID](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/introduction-to-pid.html) section of the FRC® documentation.
@@ -61,14 +59,13 @@ The full constructor for our **DriveDistancePID** command is listed below.
 The `setTolerance()` method sets the position and velocity error which is considered tolerable for use with the setpoint. For more details on what we've just done read the [PID Control through PIDSubsystems and PIDCommands](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html#) section of the FRC® documentation.
 
 ## Profiled PID Controller
-
 A major difference between a standard *PIDController* and a *ProfiledPIDController* is that the actual setpoint of the control loop is not directly specified by the user. Rather, the user specifies a goal position or state, and the setpoint for the controller is computed automatically from the generated motion profile between the current state and the goal. 
 
 ![PID Command](../images/Romi/Romi.043.jpeg)
 
 The specified goal value is not necessarily the current setpoint of the loop - rather, it is the eventual setpoint once the generated profile terminates.
 
-A common FRC® controls solution is to pair a [Trapezoidal Motion Profile](../Concepts/timeMotion#TrapezoidProfile) to generate setpoints with a PID controller for tracking the setpoint.
+A common FRC® controls solution is to pair a [Trapezoid Motion Profile](../Concepts/Dynamics/pathsTrajectories#trapezoidProfile) with a PID controller for tracking the setpoint.
 
 ## The DriveDistanceProfiled Command
 With the *DriveDistancePID* command there's no way of avoiding the sudden accelerations and changes in velocity at the beginning of the move, which makes it difficult to tune the PID controller to arrive at the setpoint.  It would be better if we can move more smoothly to the setpoint by gradually accelerating and decelerating at the beginning and end of the movement. To facilitate this, WPILib includes its own *ProfiledPIDController* class. Let's see if we can improve upon the results of the *DriveDistancePID* command.  
@@ -108,9 +105,9 @@ You can also override the `execute()` method to add Shuffleboard diagnostics.
       SmartDashboard.putBoolean("atGoal", getController().atGoal());
     }
 
-View [Testing and Tuning PID Loops](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/shuffleboard/advanced-usage/shuffleboard-tuning-pid.html)
+View [Testing and Tuning PID Loops](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/shuffleboard/advanced-usage/shuffleboard-tuning-pid.html) for more information.
 
-<!-- ## The TurnDegreesPID Command
+## The TurnDegreesPID Command
 Under the commands folder right click and select "Create a new class/command".  The select **PIDCommand** from the drop down.
 
 ![Commands](../images/Romi/Romi.041.jpeg)
@@ -147,32 +144,16 @@ The full constructor for our **TurnToAngle** command is listed below.
                                   DriveConstants.kTurnRateToleranceDegPerS);
   }
 
- `setTolerance(5, 10)` sets the position and velocity error which is considered tolerable for use with the setpoint. For more details on what we've just done read the [PID Control through PIDSubsystems and PIDCommands](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html#) section of the FRC® documentation. -->
+ `setTolerance(5, 10)` sets the position and velocity error which is considered tolerable for use with the setpoint. For more details on what we've just done read the [PID Control through PIDSubsystems and PIDCommands](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html#) section of the FRC® documentation.
 
 ### Setting up the Gyro    
-There are a few of things we need to do in order to setup the gyro as a measurement source.  
+We have already setup the getHeading() method in the [Subsystems](romiSubsystems#heading) module but there are a few of things we need to do in order to setup the gyro as a measurement source.  
 
-The first is to understand which of the three angles represent the robot's heading.  From our discussion on robot [geometry](../Concepts/geometry) we can see that the heading is represented by the Z-axis.  To make sure that we remember that let's create a wrapper around the Z-axis.
+- Ensure that the gyro is calibrated, which is done on the Romi Website.  Follow the [IMU Calibration](https://docs.wpilib.org/en/stable/docs/romi-robot/web-ui.html#imu-calibration) instructions.
 
-    public double getHeading() {
-        return getGyroAngleZ();
-      }
+- Set `enableContinuousInput(-180, 180)` Rather then using the max and min input range as constraints, it considers them to be the same point and automatically calculates the shortest route to the setpoint.
 
-Ensure that the gyro is calibrated, which is done on the Romi Website.  Follow the [IMU Calibration](https://docs.wpilib.org/en/stable/docs/romi-robot/web-ui.html#imu-calibration) instructions.
-
-The gyro on the Romi shows continuous angles and does not reset when it reaches 360 degrees.  In order for our PID controller to work we need to reset the angle to zero degrees when it passes 360 or -360 degrees.
-
-`enableContinuousInput(-180, 180)` Rather then using the max and min input range as constraints, it considers them to be the same point and automatically calculates the shortest route to the setpoint.
-
-Lastly, we should reset the gyro angles each time we start the program.  This is done in the Drivetrain constructor where is calls its own `resetGyro()` method.
-
-
-## The TurnToAngleProfiled Command
-With the *TurnToAngle* command there's no way of avoiding the sudden accelerations and changes in velocity, which makes it difficult to tune the PID controller to arrive at the setpoint angle.  It would be better if we can move more smoothly to the setpoint by gradually accelerating and decelerating at the beginning and end of the movement.  A common FRC® controls solution is to pair a [Trapezoidal Motion Profile](../Concepts/timeMotion#TrapezoidProfile) to generate setpoints with a PID controller for tracking the setpoint. To facilitate this, WPILib includes its own *ProfiledPIDController* class.
-
-A major difference between a standard *PIDController* and a *ProfiledPIDController* is that the actual setpoint of the control loop is not directly specified by the user. Rather, the user specifies a goal position or state, and the setpoint for the controller is computed automatically from the generated motion profile between the current state and the goal. 
-
-![PID Command](../images/Romi/Romi.046.jpeg)
+- Reset the gyro angles each time we start the program.  This is done in the Drivetrain constructor where is calls its own `resetGyro()` method.
 
 ## References
 
