@@ -8,9 +8,9 @@ The *Constants* file can end up getting very crowded so it's a good idea to grou
         }
     }    
 
-Now go to the Drivetrain class and comment out the two lines that you just copied.  Reference the new constants in the `setDistancePerPulse` method in the Drivetrain constructor.
+Now go to the Drivetrain class and comment out the two lines that you just copied.  Reference the new constants in the `setDistancePerPulse` method in the Drivetrain constructor. You'll be prompted to import the *DriveConstants* class that you created in the *Constants* file.
 
-    m_leftEncoder.setDistancePerPulse((Math.PI * Constants.DriveConstants.kWheelDiameterInch) / Constants.DriveConstants.kCountsPerRevolution);
-        m_rightEncoder.setDistancePerPulse((Math.PI * Constants.DriveConstants.kWheelDiameterInch) / Constants.DriveConstants.kCountsPerRevolution);
+    m_leftEncoder.setDistancePerPulse((Math.PI * DriveConstants.kWheelDiameterInch) / DriveConstants.kCountsPerRevolution);
+        m_rightEncoder.setDistancePerPulse((Math.PI * DriveConstants.kWheelDiameterInch) / DriveConstants.kCountsPerRevolution);
     
 ### Quiz Answers

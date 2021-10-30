@@ -25,6 +25,27 @@ The `RobotContainer.java` file is where the main structure of the robot is built
 
 The `Constants.java` file provides a central location for defining constants.  Constants are values assigned to variables that do not change throughout the execution of the program.  
 
+## <a name="joystick"></a>Joystick Controllers
+A joystick/gamepad can be connected to your laptop via a USB port or Bluetooth.  The WPI Library provides all of the necessary software to interface with XBox, PS3/4, or Logitech game controllers.
+
+![Joysticks](../images/Romi/Romi.032.jpeg)
+
+In the `RobotContainer` class create the Joystick object:
+
+    private final Joystick m_controller = new Joystick(0);
+
+### Use the Joystick
+The Joystick object is created in the *RobotContainer* class.
+
+    private final Joystick m_controller = new Joystick(0);
+
+A method is created in the class that uses the joystick to control the robot:
+
+    public Command getArcadeDriveCommand() {
+        return new ArcadeDrive(
+            m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
+    }
+
 ## Lab - Robot Structure.
 There are a few values in the *romiReference* program that really should be in the Constants file.  Move the two constants `kWheelDiameterInch` and `kCountsPerRevolution` that are in the DriveTrain class into the Constants.java file. 
 

@@ -1,10 +1,9 @@
 # Kalman Filters
-Kalman Filters fuse measurements from one or more sensors with a State Space model of the system to optimally estimate a system’s state.  They have methods of extending them to accommodate non-linear systems, something that is not possible with classical control methods such as PID.
-
-They are expressed in the form of differential equations.  
+*Kalman Filters* fuse measurements from one or more sensors with a State Space model of the system to optimally estimate a system’s state. Kalman filters have two parts: prediction and correction. Prediction projects our state estimate forward in time according to our system’s dynamics, and correct steers the estimated state towards the measured state.  
 
 ![Kalman Filter](../../images/FRCOptimalEstimation/FRCOptimalEstimation.001.jpeg)
 
+In prediction, our state estimate is updated according to the linear system dynamics.
 
 ![Project State Ahead](../../images/FRCOptimalEstimation/FRCOptimalEstimation.002.jpeg)
 

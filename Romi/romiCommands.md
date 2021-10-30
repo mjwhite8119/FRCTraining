@@ -75,22 +75,11 @@ The `setDefaultCommand()` method sets the default Command of the subsystem. The 
 
     m_drivetrain.setDefaultCommand(getArcadeDriveCommand());
 
-## Use the Joystick
-The Joystick object is created in the *RobotContainer* class.
 
-    private final Joystick m_controller = new Joystick(0);
+## Viewing the Robot Pose
+As the robot drives around it might be useful to view its position and orientation on in the Simulator.  We looked at that module previously so you ready to go onto the [Pose Estimation](../Concepts/OptimalEstimation/odometry) module.  There are a couple of classes that need to be implemented to do this so review that module next.
 
-A method is created in the class that uses the joystick to control the robot:
 
-    public Command getArcadeDriveCommand() {
-        return new ArcadeDrive(
-            m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
-    }
-
-## The CommandScheduler
-Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled commands, running already-scheduled commands, removing finished or interrupted commands, and running the subsystem `periodic()` methods.  This must be called from the robot's `periodic()` block in order for anything in the Command-based framework to work.
-
-For more details see [The Command Scheduler](https://docs.wpilib.org/en/latest/docs/software/commandbased/command-scheduler.html) documentation.
 
 ## References
 

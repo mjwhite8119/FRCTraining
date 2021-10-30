@@ -1,3 +1,7 @@
+# <a name="top"></a>Pose Estimation
+DifferentialDriveOdometry
+DifferentialDrivePoseEstimator
+
 ## Robot Odometry
 
 Odometry involves using sensors on the robot to create an estimate of the position of the robot on the field. In FRC, these sensors are typically encoders to measure position together with a gyro to measure robots' heading. It's important to understand the difference between odometry and kinematics; kinematics deals with movement so we are concerned with speeds, odometry deals with position so we are looking at distance.  
@@ -24,8 +28,23 @@ It's important that this calculation is done based on the change in heading sinc
 
 ![Translation Calculation](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.012.jpeg)
 
+## <a name="lab"></a>Odometry Lab
+Setup the Odometry class.
+
+    private final DifferentialDriveOdometry m_odometry;
+
+This is initialized in the Drivetrain's constructor:
+
+    public Drivetrain() {
+      ...
+      m_odometry = new DifferentialDriveOdometry(m_gyro.getRotation2d());
+      
+    }
+
 ## References
 - FRC Documentation [Odometry](https://docs.wpilib.org/en/stable/docs/software/kinematics-and-odometry/differential-drive-odometry.html)
+
+- FRC Documentation [WPILib Pose Estimators](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/state-space/state-space-pose_state-estimators.html)
 
 - QUT Robot Academy [Measuring Motion](https://robotacademy.net.au/masterclass/measuring-motion/)
 

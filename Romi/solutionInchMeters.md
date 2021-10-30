@@ -10,16 +10,16 @@ and initialize the encoder in the *Drivetrain* class with the new value.
 
 Change the methods in the Drivetrain class to get the metric distances instead of the distances measured in inches. 
 
-    public double getLeftDistance() {
+    public double getLeftDistanceMeters() {
       return m_leftEncoder.getDistance();
     }
 
-    public double getRightDistance() {
+    public double getRightDistanceMeters() {
       return m_rightEncoder.getDistance();
     }
 
     public double getAverageDistanceMeters() {
-      return (getLeftDistance() + getRightDistance()) / 2.0;
+      return (getLeftDistanceMeters() + getRightDistanceMeters()) / 2.0;
     }
 
 You'll also need to update the *TurnDegrees* command with the new Drivetrain methods.  Update the `isFinished()` and `getAverageTurningDistance()` methods as shown below.

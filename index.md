@@ -6,7 +6,7 @@ The subjects that will be covered in this course will include:
 
 ![Course Overview](images/FRCConcepts/FRCConcepts.016.jpeg)
 
-The main learning path is the **Romi Training Robot**.  From there we'll link to other parts of the training resources.
+The main [learning path](learningPath) is the **Romi Training Robot**.  From there we'll link to other parts of the training resources.
 
 So let's get started.
 

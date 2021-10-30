@@ -56,15 +56,25 @@ Testing for when we've reached the setpoint is the other key piece of code.  Tha
 
 ## <a name="feedforward"></a>Feedforward
 <!-- Kelly 7.1.4.... -->
-*Feedforward* is used to generate the control that would drive the robot to its reference setpoint if executed in *Open Loop*.  Compare this to *Feedback*, that is used to compensate for disturbances and is more of a reactionary measure.  With purely Feedback control the system won’t start applying control effort until the system is already behind. Feedforward tells the controller about the desired movement and required input beforehand, which makes the system react quicker and allows the Feedback controller to do less work. A controller that feeds information forward into the plant like this is called a feedforward controller. 
+*Feedforward* is used to generate the control that would drive the robot to its reference setpoint if executed in *Open Loop*.  Compare this to *Feedback*, that is used to compensate for disturbances and is more of a reactionary measure.  With purely Feedback control the system won’t start applying control effort until the system is already behind. Feedforward tells the controller about the desired movement and required input beforehand, which makes the system react quicker and allows the Feedback controller to do less work. A controller that feeds information forward into the plant like this is called a *Feedforward controller*. 
+
+![Open Loop and Feedforward](../../images/FRCControlSystems/FRCControlSystems.005.jpeg)
 
 There are two types of Feedforwards, *model-based* feedforward and feedforward for *unmodeled dynamics*. 
 
-- Model-based feedforward solves a mathematical model of the system for the inputs required to meet desired velocities and accelerations.
+- Model-based feedforward solves a mathematical model of the system for the inputs required to meet desired velocities and accelerations.  This is commonly done in [State Space Control](stateSpaceControl#top).
 
 - Unmodeled dynamics compensates for unmodeled forces or behaviors directly so the feedback controller doesn’t have to.
 
-![Open Loop and Feedforward](../../images/FRCControlSystems/FRCControlSystems.005.jpeg)
+*Feedforward* is measured in voltage. Specifically, we want to know how much voltage to apply to the motors to get it to move at a certain speed.  For example, if we want to move at 0.2 meters/sec then we may apply 4.7 volts.  A faster speed, say 0.5 meters/sec, may require 6.2 volts. The feedforward controller does this calculation for us. The feedforward controller is initialized with voltage gains:
+
+- kS inertia gain volts
+- kV velocity gain volts per (meter per second)
+- kA acceleration gain volts per (meter per second squared)
+
+These are obtained from running the robot characterization tool.
+
+![Calculating Feedforward](../../images/FRCDynamics/FRCDynamics.005.jpeg)
 
 You may have noticed that we rarely use the *Integral* part of the PID controller.  The Integral part, which uses past information, can be replaced with FeedForward control.  Review the [Feedforward Control in WPILib](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/controllers/feedforward.html#feedforward-control-in-wpilib) documentation for how to use Feedforward in you code. 
 
