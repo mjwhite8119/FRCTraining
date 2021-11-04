@@ -1,6 +1,7 @@
 # <a name="top"></a>Pose Estimation
-DifferentialDriveOdometry
-DifferentialDrivePoseEstimator
+A basic requirement for a mobile robot is to measure its own motion. This allows a robot to determine which way to go and if it ever got there. It'll use its *Pose* which is defined as its [Position and Orientation](../Dynamics/geometry) from some reference frame. 
+
+This module will explore two methods for determining the robot's pose, Odometry and Pose Estimation.  The WPILib classes *DifferentialDriveOdometry* and *DifferentialDrivePoseEstimator* are used for this purpose.
 
 ## Robot Odometry
 
@@ -28,7 +29,13 @@ It's important that this calculation is done based on the change in heading sinc
 
 ![Translation Calculation](../../images/FRCKinematics&Odometry/FRCKinematics&Odometry.012.jpeg)
 
-## <a name="lab"></a>Odometry Lab
+## The Pose Estimator
+Pose estimators are designed to be drop-in replacements for odometry classes, and can behave identically to their corresponding odometry classes if only update is called on these estimators.  Pose estimators utilize an [Unscented Kalman Filter](kalmanFilters#UKF) to fuse latency-compensated robot pose estimates with encoder and gyro measurements. These estimators can account for encoder drift and noisy vision data. 
+
+## <a name="lab"></a>Pose Estimation Lab
+We're going to setup the robot with two methods of esitmating its Pose.  The first uses the *DifferentialDriveOdometry* class and the second uses the *DifferentialDrivePoseEstimator*.  
+
+### Odometry Class
 Setup the Odometry class.
 
     private final DifferentialDriveOdometry m_odometry;
@@ -41,12 +48,46 @@ This is initialized in the Drivetrain's constructor:
       
     }
 
+Update the odometry in the `periodic()` block, and populate the Field2D object so that we can visualize this in the Simulator.
+
+    m_odometry.update(m_gyro.getRotation2d(), 
+                      m_leftEncoder.getDistance(), 
+                      m_rightEncoder.getDistance());
+               
+    m_field2d.setRobotPose(getPose());    
+
+### Pose Estimator Class
+Pose estimator State Space way for tracking the robot pose
+- State measurement standard deviations. X, Y, theta.
+- Local measurement standard deviations. Left encoder, right encoder, gyro.
+- Global measurement standard deviations. X, Y, and theta.
+
+      private DifferentialDrivePoseEstimator m_estimator = new DifferentialDrivePoseEstimator(new Rotation2d(), new Pose2d(),
+            new MatBuilder<>(Nat.N5(), Nat.N1()).fill(0.02, 0.02, 0.01, 0.02, 0.02), 
+            new MatBuilder<>(Nat.N3(), Nat.N1()).fill(0.02, 0.02, 0.01), 
+            new MatBuilder<>(Nat.N3(), Nat.N1()).fill(0.1, 0.1, 0.01)); 
+
+Update the estimator in the `periodic()` block, and populate the Field2D object so that we can visualize this in the Simulator.
+
+      m_estimator.update(m_gyro.getRotation2d(), 
+                          getWheelSpeeds(), 
+                          m_leftEncoder.getDistance(), 
+                          m_rightEncoder.getDistance());
+
+      m_estimatedField2d.setRobotPose(getEstimatedPose());
+
+
 ## References
 - FRC Documentation [Odometry](https://docs.wpilib.org/en/stable/docs/software/kinematics-and-odometry/differential-drive-odometry.html)
 
 - FRC Documentation [WPILib Pose Estimators](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/state-space/state-space-pose_state-estimators.html)
 
 - QUT Robot Academy [Measuring Motion](https://robotacademy.net.au/masterclass/measuring-motion/)
+
+- Tyler Veness [Controls Engineering in the
+FIRST Robotics Competition](https://file.tavsys.net/control/controls-engineering-in-frc.pdf) Chapter 6.
+
+- Alonzo Kelly [Mobile Robotics](https://www.cambridge.org/core/books/mobile-robotics/5BF238489F9BC337C0736432C87B3091) Chapter 6
 
 <h3><span style="float:left">
 <a href="optimalEstimationIndex">Previous</a></span>

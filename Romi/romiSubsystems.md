@@ -23,77 +23,19 @@ Other procedures in the Drivetrain class will take care of resetting and reading
 The RomiGyro subsystem reads values from its gyro in order to perform [Pose Estimation](../Concepts/OptimalEstimation/odomety). The raw data that comes from gyros is very complex and difficult to intepret.  The RomiGyro subsystem translates the data into simple angles and rates-of-turn that are much easier to understand.
 
 ## Subsystems Lab
-There are three tasks for this lab:
+There are two tasks for this lab:
 
-- Modify Drivetrain to change inches to meters.
-- Create a method to get the current heading of the robot.
 - Update the RomiGyro to make use of an Interface.
+- Create a method to get the current heading of the robot.
 
-### Change Inches to Meters
-This is an exercise to change the distance from inches to meters.  [solution](solutionInchMeters)
+### Add Interface to RomiGyro
+[RomiGyro Interface solution](solutionRomiGyro)
 
 ### <a name="heading"></a>Create Heading Method
 In future modules we're going to need to get the current heading of the Drivetrain.  This heading is obtained from the Gyro that is defined as a subsystem of the Drivetrain as indicated above.
 
-The first is to understand which of the three angles represent the robot's heading.  From our discussion on [Position and Orientation](../Concepts/OptimalEstimation/geometry) we can see that the heading is represented by the Z-axis.  To make sure that we remember that let's create a wrapper around the Z-axis.
+[Add heading solution](solutionCreateHeading)
 
-Create the heading:
-
-    public double getHeading() {
-      return m_gyro.getRotation2d().getDegrees();
-    }
-
-Also, the gyro on the Romi shows continuous angles and does not reset when it reaches 360 degrees.  In order for our PID controller to work we need to reset the angle to zero degrees when it passes 360 or -360 degrees.  The new `getHeading()` method is shown below.
-
-    public double getHeading() {
-      double angle = getGyroAngleZ();
-      double rotations = Math.round(angle/360);
-      double heading = angle - (rotations*360);
-      return heading;
-    }
-
-We also need to be able to reset the heading:
-
-    public void zeroHeading() {
-      m_gyro.reset();
-    }
-
-
-### Add Interface to RomiGyro
-Have the *RomiGyro* class implement Gyro:
-
-    import edu.wpi.first.wpilibj.interfaces.Gyro;
-
-    public class RomiGyro implements Gyro {
-      ...
-
-We are now required to implement all of the methods in the interface that we haven't already implemented.  These can be placed at the end of the file:
-
-    @Override
-    public void close() throws Exception {
-      if (m_gyroSimDevice != null) {
-        m_gyroSimDevice.close();
-      }
-    }
-
-    @Override
-    public void calibrate() {
-      // no-op
-    }
-
-    @Override
-    public double getAngle() {
-      return getAngleZ();
-    }
-
-    @Override
-    public double getRate() {
-      return getRateZ();
-    }
-
-You'll need to create an object variable `m_gyroSimDevice` placed before the constructor.
-
-    private SimDevice m_gyroSimDevice;
 
 ## References
 - FRC Documentation - [Subsystems](https://docs.wpilib.org/en/latest/docs/software/commandbased/subsystems.html)

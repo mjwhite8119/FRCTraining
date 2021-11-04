@@ -1,7 +1,9 @@
 # <a name="top"></a>State Space Control
-**State Space** control is based on the idea that if you know the internal physics of your system and can predict how it’ll react to a given input then you can tune the system in a way that’s similar to tuning PID controllers. State Space Control tries to control the system by developing an accurate model of the system that we are trying to control.  State Space control can be an alternative to PID control and is more flexible.  PID control does not use any knowledge of the internal physics of the system and therefore allows only limited control.  The advantage of PID is that you do not need an initial condition, which as you will is required for State Space control.
+*State Space Control* is based on the idea that if you know the internal physics of your system and can predict how it’ll react to a given input then you can tune the system in a way that’s similar to tuning PID controllers. State Space Control tries to control the system by developing an accurate model of the system that we are trying to control.  It can be an alternative to PID control and is more flexible.  PID control does not use any knowledge of the internal physics of the system and therefore allows only limited control.  The advantage of PID is that you do not need an initial condition, which as you will is required for State Space control.
 
-The concept of the state of a dynamic system refers to a minimum set of variables, known as state variables, that fully describe the system and its response to any given set of inputs. In particular a state-determined system model has the characteristic that:
+State Space Control starts with a *State Space Model* that describes the relationship between input and output. This is also referred to as the *Dynamic Model*. The concept of the state of a dynamic system refers to a minimum set of variables, known as state variables, that fully describe the system and its response to any given set of inputs. 
+
+In particular a state-determined system model has the characteristic that:
 
     A mathematical description of the system in terms of a minimum set of variables *xi(t)*, *i* = 1,..., *n*, together with knowledge of those variables at an initial time t0 and the system inputs for time *t ≥ t0*, are sufficient to predict the future system state and outputs for all time *t>t0*.
 

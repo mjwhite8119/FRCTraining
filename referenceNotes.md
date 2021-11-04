@@ -25,3 +25,7 @@
 
 - Nagy [TRAJECTORY GENERATION FOR CAR-LIKE ROBOTS USING CUBIC
 CURVATURE POLYNOMIALS](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.68.9993&rep=rep1&type=pdf)
+
+- [PhotonVision](https://docs.photonvision.org/en/latest/docs/getting-started/installation/romi.html)
+
+- FRC Simulation Unity [Getting Started](https://github.com/kinahawi/FRC-2021-Starter-Project)

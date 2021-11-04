@@ -30,30 +30,44 @@ A joystick/gamepad can be connected to your laptop via a USB port or Bluetooth. 
 
 ![Joysticks](../images/Romi/Romi.032.jpeg)
 
-In the `RobotContainer` class create the Joystick object:
-
-    private final Joystick m_controller = new Joystick(0);
-
-### Use the Joystick
 The Joystick object is created in the *RobotContainer* class.
 
-    private final Joystick m_controller = new Joystick(0);
+    private final Joystick m_joystick = new Joystick(0);
+
+To use the Xbox controller use this initialization:
+
+    private final XboxController m_joystick = new XboxController(0);
 
 A method is created in the class that uses the joystick to control the robot:
 
     public Command getArcadeDriveCommand() {
         return new ArcadeDrive(
-            m_drivetrain, () -> -m_controller.getRawAxis(1), () -> m_controller.getRawAxis(2));
+            m_drivetrain, () -> -m_joystick.getRawAxis(1), () -> m_controller.getRawAxis(2));
     }
 
+You may need to change the second `getRawAxis()` to suit your controller.    
+
 ## Lab - Robot Structure.
+There are three tasks for this lab:
+
+- Modify Drivetrain to change inches to meters.
+- Move constants to the *Constants* file.
+- Rename the Joystick variable.
+
+### Change Inches to Meters
+This is an exercise to change the distance from inches to meters. 
+
+[Inches to meters solution](solutionInchMeters)
+
+### Move constants to Constants File
 There are a few values in the *romiReference* program that really should be in the Constants file.  Move the two constants `kWheelDiameterInch` and `kCountsPerRevolution` that are in the DriveTrain class into the Constants.java file. 
 
+[Move constants solution](solutionMoveConstants)
+
+### Rename Joystick Variable
 Also, we should change the name of the Joystick variable name to `m_joystick` instead of `m_controller`.  The reason for this will become clear in later lessons.
 
-### Quiz
 
-[Solution](solutionRobotStructure)
 
 ## References
 - FRC Documentation - [Structuring a Command-Based Robot Project](https://docs.wpilib.org/en/latest/docs/software/commandbased/structuring-command-based-project.html?highlight=RobotContainer)
