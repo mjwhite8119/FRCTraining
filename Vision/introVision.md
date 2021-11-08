@@ -17,7 +17,10 @@ We will use the camera for two purposes:
 
 ![Camera Program Structure](../images/FRCVision/FRCVision.001.jpeg)
 
-On the FRC game field they will use [Retroflective](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/target-info-and-retroreflection.html) tape to identify targets. We'll use [Image Processing](imageProcessing) to determine the location and distance of the target and act accordingly.
+On the FRC game field they will use [Retroflective](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/target-info-and-retroreflection.html) tape to identify targets. We'll use [Image Processing](imageProcessing) to determine the location and distance of the target and act accordingly.  Image processing is done using an FRC application called *GRIP*.
+
+## Using GRIP
+You can download GRIP from the [GRIP Releases](https://github.com/WPIRoboticsProjects/GRIP/releases) link.  Scroll to the botton of the page and select the install for your computer.  The FRC documentation [Vision with GRIP](https://docs.wpilib.org/en/stable/docs/software/vision-processing/grip/index.html) details its use.
 
 ## References
 - FRC Documentation - [Introduction to Vision](https://docs.wpilib.org/en/stable/docs/software/vision-processing/introduction/what-is-vision.html)

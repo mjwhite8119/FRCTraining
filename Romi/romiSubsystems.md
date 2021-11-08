@@ -17,7 +17,7 @@ The primary job of the *Drivetrain* subsystem is to send speed commands to its m
         m_diffDrive.arcadeDrive(xaxisSpeed, zaxisRotate);
       }
 
-Other procedures in the Drivetrain class will take care of resetting and reading the wheel encoders.  It'll also translate the wheel encoder values into distances, as explained in the [Pose Estimation](../Concepts/OptimalEstimation/odometry) module.
+Other procedures in the Drivetrain class will take care of resetting and reading the wheel encoders.  It'll also translate the wheel encoder values into distances, as explained in the [Pose Estimation](../Concepts/OptimalEstimation/odometry) module.  Also checkout [Using the WPILib Classes to Drive your Robot](https://docs.wpilib.org/en/stable/docs/software/actuators/wpi-drive-classes.html?highlight=speedcontroller#multi-motor-differentialdrive-with-speedcontrollergroups) for more information on implementing a drive train in FRC.
 
 ## RomiGyro Subsystem
 The RomiGyro subsystem reads values from its gyro in order to perform [Pose Estimation](../Concepts/OptimalEstimation/odomety). The raw data that comes from gyros is very complex and difficult to intepret.  The RomiGyro subsystem translates the data into simple angles and rates-of-turn that are much easier to understand.
@@ -41,6 +41,8 @@ In future modules we're going to need to get the current heading of the Drivetra
 - FRC Documentation - [Subsystems](https://docs.wpilib.org/en/latest/docs/software/commandbased/subsystems.html)
 
 - FRC Documentation - [Differential Drive Robots](https://docs.wpilib.org/en/stable/docs/software/actuators/wpi-drive-classes.html)
+
+- FRC Documentation - [Using the WPILib Classes to Drive your Robot](https://docs.wpilib.org/en/stable/docs/software/actuators/wpi-drive-classes.html?highlight=speedcontroller#multi-motor-differentialdrive-with-speedcontrollergroups)
 
 - QUT Robot Academy [Measuring Motion](https://robotacademy.net.au/masterclass/measuring-motion/)
 
