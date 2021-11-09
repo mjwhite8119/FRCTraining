@@ -47,11 +47,11 @@ You won't be able to run the camera server code on your laptop since it's not cu
 5. In the **Vision Application Configuration** section select "Uploaded Python File" from the dropdown menu.
 6. In the **File Upload** section select the file `wpilib.tar.gz` file for upload.  Make sure that file **Extract** is selected. Click the **Upload** button.
 
-![Upload Camera Program](../images/Romi/Romi.019.jpeg)
+![Upload Camera Program](../images/FRCVision/FRCVision.006.jpeg)
 
 To confirm that the vision program is running you can view the output from the **Vision Status** tab.  Make sure that you enable console output.
 
-![View Vision output](../images/Romi/Romi.021.jpeg)
+![View Vision output](../images/FRCVision/FRCVision.005.jpeg)
 
 ## Test your Program
 1. Run the your java program from VSCode by pressing the F5 key. In the **Simulator** you will see the Network Tables showing the `targetData` coming in from the python camera server program.  This data tracks the line that you have on the floor.

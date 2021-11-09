@@ -29,9 +29,11 @@ The python camera program is the same one used in the [Image Processing Project]
 ## Testing the Program
 1. Run the your java program from VSCode by pressing the F5 key. In the **Simulator** you will see the Network Tables showing the `targetData` coming in from the python camera server program.  This data tracks the line that you have marked on the floor.
 
-2. Start Shuffleboard and click on the Vision tab that was created from your java program. It should display the center position of the camera image.
+2. You can view the camera stream from Shuffleboard or in a browser.
 
-3. Open the CameraServer dropdown.  Drag the *Target* camera stream onto the **Vision** tab. An alternative way to view the overlayed camera stream is to bring it up in a browser.  The URL is `wpilibpi.local:1182/stream.mjpg`.
+- In Shuffleboard click on the Vision tab that was created from your java program. It should display the center position of the camera image.  Then open the CameraServer dropdown, and drag the *Target* camera stream onto the **Vision** tab. 
+
+- In a browser you can view the overlayed camera stream at the URL `wpilibpi.local:1182/stream.mjpg`.
 
 ![View camera stream in Shuffleboard](../images/FRCVision/FRCVision.009.jpeg)
 
