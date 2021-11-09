@@ -5,11 +5,13 @@ In this module we'll create three new commands that we'll test from the *Autonom
 
 - *DriveDistancePID* that will drive the robot in a straight line.
 
-- *TurnDegreesPID* that will allow the robot to turn to a specified angle.  
+- *TurnToAnglePID* that will allow the robot to turn to a specified angle.  
 
 After that, we'll create two commands to move the robot more smoothly to the desired setpoints, and is an example of a methodology called **Motion Profiling**.
 
 - *DriveDistanceProfiled* that will use a Trapezoid Profile trajectory to drive the robot in a straight line.
+
+- *TurnToAngleProfiled* that will allow the robot to turn to a specified angle using a Trapezoid Profile trajectory.
 
 ## PID Controller
 Before looking at the PID controller supplied by the WPI library, it would be useful to get an understanding of what PID control is by watching the [PID Introduction Video by WPI](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/pid-video.html). A schematic of WPIlib PIDController is below with a detailed explaination found in the [Introduction to PID](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/introduction-to-pid.html) section of the FRC® documentation.
@@ -177,6 +179,9 @@ The full constructor for our **TurnToAngle** command is listed below.
  `setTolerance()` sets the position and velocity error which is considered tolerable for use with the setpoint. For more details on what we've just done read the [PID Control through PIDSubsystems and PIDCommands](https://docs.wpilib.org/en/latest/docs/software/commandbased/pid-subsystems-commands.html#) section of the FRC® documentation.
 
 The command tends to overshoot the target angle by about 10 degrees.  To improve that result you can try adding a very small amount to the **D** parameter.  Try a value of *0.005* to begin with.
+
+### The TurnToAngleProfiled Command
+This is very similar to the *DriveDistanceProfiled* command in that it uses a *TrapezoidProfile* to make the turn.  Be aware of the maximum turn rate and acceleration used with TrapezoidProfile constraint, which must be specified in degrees.  For the Romi, values of 360 for turn rate and 250 for acceleration seem to work.
 
 ### Setting up the Gyro    
 We have already setup the getHeading() method in the [Subsystems](romiSubsystems#heading) module but there are a few of things we need to do in order to setup the gyro as a measurement source.  
