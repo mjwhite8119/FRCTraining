@@ -1,5 +1,5 @@
 # <a name="code"></a>Romi Robot Arm
-In this lesson we'll be creating code to control the [Robot Arm kit for Romi](https://www.pololu.com/product/3550) from Pololu. This program will be called [BasicArm](https://github.com/mjwhite8119/romi-examples/tree/main/BasicArm) which will include the following updates to the **RomiReference** project.
+In this module we'll be creating code to control the [Robot Arm kit for Romi](https://www.pololu.com/product/3550) from Pololu. This program will be called [BasicArm](https://github.com/mjwhite8119/romi-examples/tree/main/BasicArm) which will include the following updates to the **RomiReference** project.
 
 ![BasicArm](../images/Romi/Romi.029.jpeg)
 
